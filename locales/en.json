@@ -1,0 +1,1154 @@
+{
+  "nav": {
+    "home": "Home",
+    "tours": "Tours",
+    "carServices": "Car Services",
+    "security": "Security",
+    "contacts": "Contacts",
+    "dropdown": {
+      "kzTours": "Tours in Kazakhstan",
+      "kgTours": "Tours in Kyrgyzstan",
+      "carRent": "Car Rental",
+      "carRentWithDriver": "Car Rent with Driver",
+      "transfer": "Transfer",
+      "apartments": "Apartments",
+      "escort": "Escort",
+      "personalSecurity": "Personal Security"
+    }
+  },
+  "hero": {
+    "breadcrumbHome": "Home",
+    "breadcrumbPage": "Tours in Kazakhstan",
+    "titleLine1": "Tours in",
+    "titleAccent": "Almaty",
+    "titleLine2": "& Kazakhstan",
+    "description": "All our routes on one page — easy to browse and choose. Half-day trips, two-day getaways and immersive multi-day expeditions.",
+    "features": [
+      "Tours from half a day to 5 days",
+      "Private & small group format",
+      "Almaty & the whole region"
+    ],
+    "viewTours": "View Tours",
+    "messageWhatsapp": "Message on WhatsApp"
+  },
+  "catalog": {
+    "sectionLabel": "All Tours",
+    "title": "Choose Your Format",
+    "description": "Browse all our tours in one place. Click any card to see the full itinerary and details.",
+    "noResults": "No tours found for this filter.",
+    "filters": {
+      "all": "Show All Tours",
+      "half-day": "Half Day",
+      "full-day": "Full Day",
+      "multi-day": "2+ Days"
+    },
+    "cityFilters": {
+      "all": "All Cities",
+      "almaty": "Almaty",
+      "astana": "Astana",
+      "aktau": "Aktau"
+    }
+  },
+  "card": {
+    "details": "Details",
+    "book": "Book"
+  },
+  "modal": {
+    "description": "Description",
+    "parameters": "Parameters",
+    "itinerary": "Itinerary",
+    "included": "Included",
+    "whatToBring": "What to Bring",
+    "duration": "DURATION",
+    "group": "GROUP",
+    "category": "CATEGORY",
+    "bookTour": "Book This Tour",
+    "askQuestion": "Ask a Question"
+  },
+  "customItinerary": {
+    "sectionLabel": "Custom Itineraries",
+    "titleLine1": "Didn't find",
+    "titleLine2": "the right tour?",
+    "description": "We specialise in custom itineraries. Tell us your pace, duration, and interests — we'll build the perfect route around you.",
+    "requestRoute": "Request a Route",
+    "features": [
+      {
+        "title": "Your pace, your route",
+        "desc": "Half-day, multi-day, or a full week — we adapt to your schedule."
+      },
+      {
+        "title": "Private & small group",
+        "desc": "All tours are private or in groups of up to 8, never a crowded bus."
+      },
+      {
+        "title": "Any destination in Kazakhstan",
+        "desc": "Almaty mountains to steppe lakes — we cover the whole country."
+      },
+      {
+        "title": "Fast reply on WhatsApp",
+        "desc": "We respond within 1 hour, 7 days a week. No forms, no waiting."
+      }
+    ]
+  },
+  "guides": {
+    "sectionLabel": "Our Guides",
+    "titleLine1": "Travel With People Who",
+    "titleLine2": "Know These Roads",
+    "description": "Local guides, careful drivers and route planners — people who've done these routes hundreds of times and still love them.",
+    "badges": [
+      {
+        "label": "Safe Driving",
+        "sub": "All vehicles insured"
+      },
+      {
+        "label": "English Speaking",
+        "sub": "Fluent guides"
+      },
+      {
+        "label": "Punctual",
+        "sub": "Always on time"
+      },
+      {
+        "label": "Eco Responsible",
+        "sub": "Leave no trace"
+      }
+    ]
+  },
+  "reviews": {
+    "sectionLabel": "Reviews",
+    "title": "What Guests Say After Tours",
+    "description": "Real feedback from travellers who've explored Kazakhstan with us.",
+    "rating": "5.0 · 60+ reviews on Google"
+  },
+  "cta": {
+    "button": "Message on WhatsApp",
+    "replyFast": "+7 707 229 36 35 · We reply fast",
+    "home": {
+      "sectionLabel": "Get In Touch",
+      "titleLine1": "Ready to Start",
+      "titleLine2": "Your Journey?",
+      "description": "Message us on WhatsApp and we'll get back to you within an hour — 7 days a week. Tell us what you're looking for and we'll take it from there."
+    },
+    "kazakhstan": {
+      "sectionLabel": "Plan Your Tour",
+      "titleLine1": "Ready to Explore",
+      "titleLine2": "Kazakhstan?",
+      "description": "Tell us your preferred dates and group size on WhatsApp — we'll craft a perfect itinerary for you."
+    },
+    "kyrgyzstan": {
+      "sectionLabel": "Plan Your Tour",
+      "titleLine1": "Discover the Magic",
+      "titleLine2": "of Kyrgyzstan",
+      "description": "Send us your travel dates on WhatsApp and we'll arrange an unforgettable journey through Kyrgyzstan."
+    },
+    "carRent": {
+      "sectionLabel": "Book a Vehicle",
+      "titleLine1": "Need a Reliable",
+      "titleLine2": "Ride in Almaty?",
+      "description": "Message us on WhatsApp to check availability and rates. We'll match you with the right car for your trip."
+    },
+    "apartments": {
+      "sectionLabel": "Book Your Stay",
+      "titleLine1": "Looking for a",
+      "titleLine2": "Place to Stay?",
+      "description": "Message us on WhatsApp and we'll help you find the perfect apartment in Almaty for your dates."
+    },
+    "carWithDriver": {
+      "sectionLabel": "Hire a Chauffeur",
+      "titleLine1": "Need a Professional",
+      "titleLine2": "Driver in Almaty?",
+      "description": "Message us on WhatsApp to book a car with a professional driver. Flexible hourly and daily rates, available 7 days a week."
+    },
+    "transfer": {
+      "sectionLabel": "Book Transfer",
+      "titleLine1": "Need a Punctual",
+      "titleLine2": "Transfer?",
+      "description": "Message us on WhatsApp to arrange a fixed-price transfer to or from Almaty airport — or anywhere in the city."
+    },
+    "security": {
+      "sectionLabel": "Get Protected",
+      "titleLine1": "Professional Security",
+      "titleLine2": "at Your Service",
+      "description": "Contact us on WhatsApp for a confidential consultation about your security requirements. We respond within the hour."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Crown Almaty Services. All rights reserved.",
+    "links": {
+      "home": "Home",
+      "tours": "Tours",
+      "carRental": "Car Rental",
+      "apartments": "Apartments",
+      "contacts": "Contacts"
+    }
+  },
+  "tours": {
+    "1": {
+      "title": "Big Almaty Lake",
+      "durationDisplay": "Full day",
+      "groupSize": "any size",
+      "description": "Journey through Presidential Park, Almarasan Gorge, and Ausai Waterfall, culminating at the stunning turquoise Big Almaty Lake surrounded by snow-capped peaks.",
+      "fullDescription": "Join us on an unforgettable journey through some of Almaty's most scenic locations, culminating in the stunning Big Almaty Lake. On the way, we'll visit the serene Presidential Park, offering beautiful views of the Almaty mountains. We'll continue through the picturesque Almarasan Gorge, a peaceful retreat into nature, before making a stop at the hidden gem of Ausai Waterfall. Finally, we'll reach the highlight of the trip — Big Almaty Lake, where you'll be captivated by its vibrant turquoise waters and the surrounding mountain peaks. This tour offers a perfect blend of nature, beauty, and relaxation.",
+      "itinerary": [
+        {
+          "time": "09:00",
+          "activity": "Pickup from Almaty city centre"
+        },
+        {
+          "time": "10:15",
+          "activity": "Arrive at Big Almaty Lake"
+        },
+        {
+          "time": "10:30",
+          "activity": "Guided shoreline walk & viewpoints"
+        },
+        {
+          "time": "13:00",
+          "activity": "Scenic stops on return drive"
+        },
+        {
+          "time": "14:30",
+          "activity": "Return to Almaty"
+        }
+      ],
+      "included": [
+        "Transfer from / to your hotel",
+        "English-speaking guide",
+        "Bottled water",
+        "Entrance fees"
+      ],
+      "whatToBring": [
+        "Warm jacket (cold at altitude)",
+        "Comfortable hiking shoes",
+        "Camera",
+        "Sunscreen"
+      ]
+    },
+    "2": {
+      "title": "Medeu Shymbulak",
+      "durationDisplay": "Half day",
+      "groupSize": "any size",
+      "description": "Medeu — the world's highest winter sports complex — plus a 9 km cable car ride to Shymbulak at 3,200 m with breathtaking Tien Shan panoramas.",
+      "fullDescription": "Medeu, the world's highest winter sports complex, is one of Kazakhstan's top attractions. A trip here offers breathtaking views of the Tien Shan Mountains and showcases Kazakhstan's tourism achievements. You'll enjoy the fresh mountain air and a scenic ride to the Shymbulak ski resort on a 9-kilometer modern cable car. The 60-minute ascent takes you from 1,690 to 3,200 meters, with the option of a glass-floor cabin for an unforgettable experience.",
+      "itinerary": [
+        {
+          "time": "10:00",
+          "activity": "Pickup from Almaty city centre"
+        },
+        {
+          "time": "10:45",
+          "activity": "Medeo ice rink & dam walk"
+        },
+        {
+          "time": "12:00",
+          "activity": "Gondola ride to Shymbulak"
+        },
+        {
+          "time": "12:30",
+          "activity": "Panoramic views & free time"
+        },
+        {
+          "time": "14:00",
+          "activity": "Return to Almaty"
+        }
+      ],
+      "included": [
+        "Private transfer",
+        "English-speaking guide",
+        "Gondola ticket"
+      ],
+      "whatToBring": [
+        "Comfortable shoes",
+        "Light jacket",
+        "Cash for lunch or snacks"
+      ]
+    },
+    "3": {
+      "title": "Almarasan",
+      "durationDisplay": "Full day",
+      "groupSize": "up to 10",
+      "description": "Almarasan Gorge, President Park, Ausai Waterfall and natural hot springs — where nature's beauty meets relaxation. Optional mountain spa experience at Tau Spa.",
+      "fullDescription": "Embark on an unforgettable adventure through Almarasan Gorge, where the beauty of nature meets relaxation. This tour includes a visit to President Park, where you can stroll through lush landscapes and enjoy stunning views. Next, witness the majestic Ausai Waterfall, surrounded by serene nature, before rejuvenating in the natural hot springs, perfect for relaxation. If desired, you can indulge in a mountain spa experience at Tau Spa for ultimate wellness. Discover the breathtaking beauty of Almarasan Gorge with Crown Almaty Tours.",
+      "itinerary": [
+        {
+          "time": "07:00",
+          "activity": "Early departure from Almaty"
+        },
+        {
+          "time": "10:00",
+          "activity": "Arrive at Charyn Canyon"
+        },
+        {
+          "time": "10:30",
+          "activity": "Valley of Castles guided walk"
+        },
+        {
+          "time": "13:00",
+          "activity": "Riverside picnic lunch"
+        },
+        {
+          "time": "15:00",
+          "activity": "Return drive to Almaty"
+        },
+        {
+          "time": "18:00",
+          "activity": "Arrive back in Almaty"
+        }
+      ],
+      "included": [
+        "Transfer from / to Almaty",
+        "English-speaking guide",
+        "Picnic lunch",
+        "Canyon entrance fee"
+      ],
+      "whatToBring": [
+        "Sun hat & high-SPF sunscreen",
+        "Sturdy shoes",
+        "Extra water (2L+)",
+        "Sunglasses"
+      ]
+    },
+    "4": {
+      "title": "Kolsai Lake and Charyn Tour",
+      "durationDisplay": "2 days",
+      "groupSize": "up to 8",
+      "description": "Walk through Charyn Canyon's million-year-old formations, then drive 100 km to Kolsai Lakes — the pride of Kazakhstan whose name means 'gorge of lakes'.",
+      "fullDescription": "For millions of years, wind and water carved unique natural sculptures from sedimentary rocks, constantly deepening the formed canyon. You will have a few hours to walk through the canyon and see the wonders of natural creativity. Next, we will drive additional 100 km from Charyn Canyon to have an excursion walk along the path leading around the largest of the lakes. Kolsay lakes are the pride of Kazakhstan. Translated from Kazakh, \"kolsay\" means \"gorge of lakes\".",
+      "itinerary": [
+        {
+          "time": "Day 1 · 08:00",
+          "activity": "Depart Almaty"
+        },
+        {
+          "time": "Day 1 · 12:00",
+          "activity": "Arrive Lower Lake, guided trek"
+        },
+        {
+          "time": "Day 1 · 16:00",
+          "activity": "Reach Middle Lake"
+        },
+        {
+          "time": "Day 1 · 18:00",
+          "activity": "Guesthouse check-in & dinner"
+        },
+        {
+          "time": "Day 2 · 09:00",
+          "activity": "Middle Lake morning hike"
+        },
+        {
+          "time": "Day 2 · 15:00",
+          "activity": "Return drive to Almaty"
+        }
+      ],
+      "included": [
+        "4x4 transport",
+        "Guesthouse accommodation",
+        "Breakfast & dinner",
+        "English guide",
+        "Park entrance fees"
+      ],
+      "whatToBring": [
+        "Hiking boots",
+        "Warm layers & rain jacket",
+        "Sleeping comfort items",
+        "Camera"
+      ]
+    },
+    "5": {
+      "title": "Bear Waterfall and Assy Plateau",
+      "durationDisplay": "Full day",
+      "groupSize": "any size",
+      "description": "Visit beautiful lake Issyk and the high-mountain plateau of Assy for one day — scenic views, a nomad camp in the mountains, and alpine meadows of the Zailiyskiy Alatau.",
+      "fullDescription": "On this one-day excursion you will visit the beautiful lake Issyk, surrounded by a tragic mystery, and the high mountain plateau of Assy. During the tour, you will enjoy the views of the most picturesque lake in the Almaty region and visit the nomad camp located in the mountains. This tour is suitable for lovers of beautiful landscapes and high mountains.",
+      "itinerary": [
+        {
+          "time": "09:00",
+          "activity": "Pickup from Almaty"
+        },
+        {
+          "time": "10:30",
+          "activity": "Arrive at Turgen Gorge trailhead"
+        },
+        {
+          "time": "11:00",
+          "activity": "Waterfall trek (Bear Falls)"
+        },
+        {
+          "time": "13:00",
+          "activity": "Alpine meadow picnic lunch"
+        },
+        {
+          "time": "15:00",
+          "activity": "Return hike & departure"
+        },
+        {
+          "time": "17:00",
+          "activity": "Back in Almaty"
+        }
+      ],
+      "included": [
+        "Transfer from / to Almaty",
+        "English guide",
+        "Packed lunch"
+      ],
+      "whatToBring": [
+        "Waterproof hiking boots",
+        "Rain jacket",
+        "Insect repellent",
+        "Camera"
+      ]
+    },
+    "6": {
+      "title": "Altyn Emel",
+      "durationDisplay": "2 days",
+      "groupSize": "up to 6",
+      "description": "Martian landscapes, a mysterious singing dune, Red Book animals, and frozen lava in Kazakhstan's largest National Park — a tour that feels like another planet.",
+      "fullDescription": "Touch the million-year-old secrets of nature in the largest National Park of Kazakhstan. A one-day tour to the National Park Altyn Emel is a great opportunity to visit the unique natural monuments of Kazakhstan. Martian landscapes, the mysterious singing of a dune, the Red Book animals and the frozen lava make this tour unforgettable. The feeling that you are on another planet during this tour does not leave you for a minute.",
+      "itinerary": [
+        {
+          "time": "Day 1 · 07:00",
+          "activity": "Depart Almaty by 4x4"
+        },
+        {
+          "time": "Day 1 · 11:00",
+          "activity": "Arrive — Singing Dunes"
+        },
+        {
+          "time": "Day 1 · 14:00",
+          "activity": "Lunch & petroglyphs walk"
+        },
+        {
+          "time": "Day 1 · 19:00",
+          "activity": "Overnight camp under the stars"
+        },
+        {
+          "time": "Day 2 · 08:00",
+          "activity": "Wildlife drive (Przewalski horses)"
+        },
+        {
+          "time": "Day 2 · 13:00",
+          "activity": "Return journey to Almaty"
+        }
+      ],
+      "included": [
+        "4x4 transport",
+        "Camping accommodation & meals",
+        "Park ranger guide",
+        "All entrance fees"
+      ],
+      "whatToBring": [
+        "Warm sleeping bag",
+        "Sturdy boots",
+        "Headlamp",
+        "High-SPF sunscreen",
+        "Personal medications"
+      ]
+    },
+    "7": {
+      "title": "Konaev city, Nomad fortress and Tamgaly Tas tour",
+      "durationDisplay": "Half day",
+      "groupSize": "any size",
+      "description": "Over 1,000 petroglyphs, Buddhist inscriptions, and mysterious deity carvings on black rocks along the Ili River — dating back to the 12th century.",
+      "fullDescription": "Just a few kilometers from the city of Konayev, on the right bank of the Ili River, there is a place that takes us back to ancient times. There are many petroglyphs, images of mysterious deities, late Buddhist inscriptions on the black rocks with a tan. There are about 1000 various rock paintings available to observe. Historians date the inscriptions and drawings to the 12th century. Not far from the altar, there is another stone with inscriptions on the ancient Turkic runic writing dating back to the 8th-9th centuries. Presumably they were left by the ancient tribes of the Kipchaks.",
+      "itinerary": [
+        {
+          "time": "10:00",
+          "activity": "Central Park & fountains"
+        },
+        {
+          "time": "11:00",
+          "activity": "Zenkov Cathedral"
+        },
+        {
+          "time": "12:00",
+          "activity": "Green Bazaar market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Lunch break (own cost)"
+        },
+        {
+          "time": "14:30",
+          "activity": "State Museum of Kazakhstan"
+        },
+        {
+          "time": "16:00",
+          "activity": "Arbat pedestrian street"
+        }
+      ],
+      "included": [
+        "Private vehicle",
+        "English-speaking guide",
+        "Museum entrance"
+      ],
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Small daypack",
+        "Cash for market & lunch",
+        "Camera"
+      ]
+    },
+    "8": {
+      "title": "Issyk Lake",
+      "durationDisplay": "Full day",
+      "groupSize": "any size",
+      "description": "Issyk has an enchanting power — the water constantly changes color from gray to turquoise to green. It is possible to enjoy the calm beauty endlessly.",
+      "fullDescription": "Issyk has an enchanting power. The water constantly changes color depending on the weather. When the sky frowns, then the lake turns gray, and under the bright sunlight, the water becomes blue, turquoise or green. It is possible to enjoy the calm beauty endlessly. A lot of instagramic sights are waiting for you on the road to Issyk Lake.",
+      "itinerary": [
+        {
+          "time": "09:00",
+          "activity": "Pickup from Almaty"
+        },
+        {
+          "time": "11:00",
+          "activity": "Arrive Assy Plateau (2,700 m)"
+        },
+        {
+          "time": "11:30",
+          "activity": "Guided plateau walk"
+        },
+        {
+          "time": "13:00",
+          "activity": "Picnic with highland views"
+        },
+        {
+          "time": "14:30",
+          "activity": "Astrophysical Observatory visit"
+        },
+        {
+          "time": "16:30",
+          "activity": "Return to Almaty"
+        }
+      ],
+      "included": [
+        "Transfer from / to Almaty",
+        "English guide",
+        "Picnic lunch"
+      ],
+      "whatToBring": [
+        "Warm layers (cold at 2,700 m)",
+        "Hiking boots",
+        "Camera",
+        "Sunscreen"
+      ]
+    },
+    "9": {
+      "title": "Oi-Qaragai",
+      "durationDisplay": "Full day",
+      "groupSize": "any size",
+      "description": "Just 40 minutes from Almaty — horse riding, ski slopes, a rope park and mountain tranquility. The perfect family getaway where nature meets comfort.",
+      "fullDescription": "Just a 40-minute drive from Almaty, you can enjoy a family vacation in nature, ride the ski slopes or ride horses at the hippodrome. Now you don't have to choose between nature and comfort. At the resort, you can ride horses, give your child the joy of communication and relieve stress away from the noisy city. For outdoor enthusiasts, more than 22 kilometers of the best ski slopes are offered. For children, a rope park, riding ponies, and much more are offered. Your child will be happy!",
+      "itinerary": [
+        {
+          "time": "09:00",
+          "activity": "Pickup from Almaty"
+        },
+        {
+          "time": "10:30",
+          "activity": "Arrive at Oi-Qaragai resort"
+        },
+        {
+          "time": "11:00",
+          "activity": "Pine forest hike with guide"
+        },
+        {
+          "time": "13:00",
+          "activity": "Picnic lunch in the forest"
+        },
+        {
+          "time": "14:30",
+          "activity": "Panoramic viewpoint & free time"
+        },
+        {
+          "time": "16:30",
+          "activity": "Return to Almaty"
+        }
+      ],
+      "included": [
+        "Transfer from / to Almaty",
+        "English-speaking guide",
+        "Picnic lunch"
+      ],
+      "whatToBring": [
+        "Comfortable hiking shoes",
+        "Light jacket",
+        "Sunscreen",
+        "Camera"
+      ]
+    },
+    "10": {
+      "title": "Astana City Tour",
+      "durationDisplay": "3–5 hours",
+      "groupSize": "private & group",
+      "description": "A sightseeing tour around the main attractions of Kazakhstan's capital. Visit Baiterek, EXPO, Khan Shatyr, Hazret Sultan Mosque, the embankment, and the city's best modern locations.",
+      "fullDescription": "Discover the futuristic capital of Kazakhstan on a comprehensive sightseeing tour covering its most iconic landmarks. From the legendary Baiterek observation tower to the EXPO 2017 pavilions, the magnificent Khan Shatyr entertainment centre, and the grand Hazret Sultan Mosque — this tour showcases why Astana is one of Central Asia's most extraordinary cities. A relaxing drive along the embankment reveals the city's best modern architecture and scenic views. Perfect for first-time visitors who want to see all the highlights in one day.",
+      "included": [
+        "Private vehicle or minibus",
+        "English and Russian speaking guides",
+        "Entrance to Baiterek",
+        "Photo stops at all key sites"
+      ],
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Camera",
+        "Light jacket",
+        "Cash for lunch"
+      ]
+    },
+    "11": {
+      "title": "Night Astana Tour",
+      "durationDisplay": "3 hours",
+      "groupSize": "private",
+      "description": "Discover the unique atmosphere of Astana at night with stunning city lights and modern architecture. The tour includes the best evening locations, photo spots, restaurants, and a relaxing city drive.",
+      "fullDescription": "Astana transforms completely after dark. Neon-lit towers, illuminated bridges, and glowing fountains create a dazzling visual spectacle unlike any other city in Central Asia. This evening tour takes you on a curated drive through the most photogenic night spots — from the glowing Baiterek to the lit-up embankment — with stops for photos and a relaxed city drive through the illuminated boulevards. Perfect for content creators and photography enthusiasts.",
+      "included": [
+        "Comfortable vehicle",
+        "English-speaking guide",
+        "All scenic stops & photo spots"
+      ],
+      "whatToBring": [
+        "Camera or smartphone",
+        "Light jacket (cooler at night)",
+        "Cash for dining"
+      ]
+    },
+    "12": {
+      "title": "Burabay Tour",
+      "durationDisplay": "1–2 days",
+      "groupSize": "private & group",
+      "description": "A trip to Burabay, one of the most beautiful natural destinations in Kazakhstan. Lakes, mountains, fresh air, and breathtaking landscapes make it a perfect getaway near Astana.",
+      "fullDescription": "Burabay National Park — known as the 'Switzerland of Kazakhstan' — is a stunning natural reserve just 240 km north of Astana. Ancient granite rocks rise dramatically from crystal-clear lakes surrounded by pine forests. The park is home to Lake Burabay, the iconic rock formations of Borovoye, and the legendary Zhumbaktas boulder. Whether you choose a one-day sprint or a relaxed two-day stay, Burabay offers an unforgettable immersion in untouched Kazakh nature.",
+      "included": [
+        "Comfortable transportation",
+        "English-speaking guide",
+        "Hotel accommodation (2-day option)",
+        "Stops at the best viewpoints"
+      ],
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Light jacket",
+        "Camera",
+        "Sunscreen"
+      ]
+    },
+    "13": {
+      "title": "Historical & Cultural Tour",
+      "durationDisplay": "4–6 hours",
+      "groupSize": "private & group",
+      "description": "Explore the history and culture of Kazakhstan by visiting museums, national landmarks, mosques, and cultural centers in Astana.",
+      "fullDescription": "Astana is not just about futuristic architecture — it carries the rich heritage of the Kazakh nation. This cultural tour takes you inside the grand National Museum of Kazakhstan, home to thousands of artifacts spanning nomadic history to Soviet-era life. You'll visit the magnificent Hazret Sultan Mosque, one of Central Asia's largest, and explore the Palace of Peace and Reconciliation. A knowledgeable guide brings Kazakh traditions, customs, and historical context to life throughout the tour.",
+      "included": [
+        "Private vehicle",
+        "English-speaking guide",
+        "National Museum entrance",
+        "Mosque visit"
+      ],
+      "whatToBring": [
+        "Modest dress for mosque visit",
+        "Comfortable walking shoes",
+        "Camera",
+        "Cash for lunch"
+      ]
+    },
+    "14": {
+      "title": "Aktau City Tour",
+      "durationDisplay": "3–5 hours",
+      "groupSize": "private & group",
+      "description": "Discover the main resort city on the coast of the Caspian Sea. Beautiful embankments, the best viewpoints, modern districts, and the unique atmosphere of a seaside city.",
+      "fullDescription": "Aktau is Kazakhstan's only coastal city — a sun-drenched resort on the eastern shore of the Caspian Sea. This city tour takes you through its most scenic embankments, striking modern districts, and the best viewpoints overlooking the sea. Discover the unique blend of Soviet-era architecture and contemporary development that gives Aktau its distinctive character. Photo stops are included at every key location along the route.",
+      "included": [
+        "Private vehicle or minibus",
+        "English and Russian speaking guides",
+        "Photo stops at all key sites"
+      ],
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Camera",
+        "Sunscreen",
+        "Light jacket for evenings"
+      ]
+    },
+    "15": {
+      "title": "Bozzhyra Tour",
+      "durationDisplay": "1–2 days",
+      "groupSize": "private & group",
+      "description": "Travel to one of the most incredible places in Kazakhstan. Unique canyons, cliffs, and breathtaking landscapes of Mangystau. A true adventure for nature lovers and photography enthusiasts.",
+      "fullDescription": "Bozzhyra is one of the most dramatic landscapes on Earth — a vast white plateau sliced by deep canyons, with solitary rock spires rising from an ancient seabed in the heart of Mangystau. This off-road jeep tour takes you deep into this alien terrain, stopping at the most breathtaking viewpoints over the canyon system. Whether you come for photography, adventure, or simply to witness something truly otherworldly, Bozzhyra will leave you speechless.",
+      "included": [
+        "4x4 jeep transport",
+        "English-speaking guide",
+        "Individual route planning",
+        "Stops at the best viewpoints",
+        "Hotel accommodation (2-day option)"
+      ],
+      "whatToBring": [
+        "Sturdy closed-toe shoes",
+        "Warm layers (cold at night)",
+        "High-SPF sunscreen",
+        "Camera",
+        "Extra water"
+      ]
+    },
+    "17": {
+      "title": "Almaty City Tour",
+      "durationDisplay": "3–5 hours",
+      "groupSize": "any size",
+      "description": "Discover Almaty's most iconic landmarks — the Kok Tobe TV tower, Zenkov Cathedral, Kazakhstan Hotel, Green Bazaar, and Republic Square park — all framed by the snow-capped Tian Shan mountains.",
+      "fullDescription": "A curated sightseeing tour through the highlights of Almaty, Kazakhstan's largest and most vibrant city. You'll visit the legendary Kok Tobe TV tower with its sweeping panorama, the ornate Zenkov Cathedral — one of the tallest wooden churches in the world — the Soviet-era Kazakhstan Hotel fountain square, the colourful and lively Green Bazaar, and the grand Republic Square park with the iconic colonnade framed by Tian Shan mountains. A perfect first introduction to the city.",
+      "itinerary": [
+        { "time": "10:00", "activity": "Pickup from your hotel" },
+        { "time": "10:30", "activity": "Kok Tobe TV tower & panoramic city views" },
+        { "time": "11:30", "activity": "Zenkov Cathedral & Panfilov Park" },
+        { "time": "12:30", "activity": "Kazakhstan Hotel & central fountain square" },
+        { "time": "13:00", "activity": "Green Bazaar — Almaty's famous market" },
+        { "time": "14:00", "activity": "Republic Square park & colonnade" },
+        { "time": "15:00", "activity": "Return drop-off" }
+      ],
+      "included": [
+        "Private vehicle",
+        "English-speaking guide",
+        "All scenic stops & viewpoints"
+      ],
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Camera",
+        "Cash for market & lunch",
+        "Light jacket"
+      ]
+    },
+    "16": {
+      "title": "Caspian Sea Tour",
+      "durationDisplay": "Upon request",
+      "groupSize": "private & group",
+      "description": "Relax by the seaside with beautiful sunsets, walks, and the best beaches of Aktau. A perfect option for peaceful relaxation and photo sessions.",
+      "fullDescription": "The Caspian Sea at Aktau offers some of the most serene seaside scenery in Central Asia. This flexible tour takes you to the best beaches, scenic coastal viewpoints, and the most spectacular sunset spots along the shore. Whether you want a peaceful family day by the water or a golden-hour photography session with the vast Caspian as your backdrop, we'll tailor the experience to your wishes.",
+      "included": [
+        "Comfortable transfer service",
+        "English-speaking guide",
+        "Beach and coastal stops",
+        "Sunset viewing spots"
+      ],
+      "whatToBring": [
+        "Swimwear",
+        "Sunscreen",
+        "Camera",
+        "Light clothing",
+        "Cash for refreshments"
+      ]
+    }
+  },
+  "guidesData": {
+    "1": {
+      "role": "Mountain Guide",
+      "bio": "Born in the Tian Shan foothills. 8 years leading alpine routes, fluent in English and Russian."
+    },
+    "2": {
+      "role": "City & Culture Guide",
+      "bio": "Almaty native, history graduate, passionate about sharing Kazakhstan's rich culture and hidden corners."
+    },
+    "3": {
+      "role": "Driver & Nature Guide",
+      "bio": "15 years on mountain roads. Knows every route in southern Kazakhstan. Relaxed, safe, and fun."
+    }
+  },
+  "reviewsData": {
+    "1": {
+      "text": "The Charyn Canyon tour was absolutely breathtaking. Amir knew every viewpoint and the route was perfectly paced. Best day of our trip!"
+    },
+    "2": {
+      "text": "We did a custom 3-day itinerary covering Kolsai Lakes and Charyn. Everything was arranged smoothly — hotel, transport, meals. Highly recommend."
+    },
+    "3": {
+      "text": "Big Almaty Lake in the morning light was magical. Our driver was punctual, careful, and very friendly. Will book again on our next visit."
+    },
+    "4": {
+      "text": "Aigerim made the city tour come alive with stories about Kazakh history. She showed us places no guidebook mentions. A truly special experience."
+    },
+    "5": {
+      "text": "Stunning trek up to Ile-Alatau — the guide matched our pace perfectly and knew exactly when to pause for photos. The mountain views were worth every step."
+    },
+    "6": {
+      "text": "Came all the way from India and this tour was the best decision. The Kolsai Lakes overnight stay was dreamlike — woke up to complete silence and crystal water."
+    },
+    "7": {
+      "text": "The Charyn Canyon sunset tour was spectacular. Our driver was safe and knowledgeable, and the timing of arrival was perfect for golden hour light."
+    },
+    "8": {
+      "text": "Did the Turgen Gorge waterfall hike as a solo traveller and felt completely safe. The guide made sure I reached every best viewpoint on the trail."
+    },
+    "9": {
+      "text": "Booked the multi-day Altyn-Emel trip on short notice and they handled everything — tent, food, permits. The singing sand dune was unlike anything I've experienced."
+    },
+    "10": {
+      "text": "Perfect private tour for our family. The driver was patient with our kids and the guide adjusted the pace so everyone could enjoy. Totally stress-free day."
+    },
+    "11": {
+      "text": "We came for a winter tour and weren't disappointed. Shymbulak in the snow is breathtaking and the team was prepared for cold conditions. Highly professional."
+    },
+    "12": {
+      "text": "My first time in Central Asia and Crown Almaty Services made it unforgettable. Combining city sights and nature in one day was a brilliant idea. Already planning my return."
+    },
+    "13": {
+      "text": "The Big Almaty Lake plus Kok-Jailau trail combination was exactly what I wanted. Longer than expected but our guide kept energy high with great mountain stories."
+    },
+    "14": {
+      "text": "Five-star service from first message to the last drop-off. Snacks, warm tea at altitude, spare layers — the attention to detail showed real care for every guest."
+    }
+  },
+  "kgTours": {
+    "1": {
+      "title": "Bishkek City Tour",
+      "durationDisplay": "3–5 hours",
+      "groupSize": "any size",
+      "description": "A comfortable introduction to Bishkek, the capital of Kyrgyzstan. The tour covers the main landmarks, parks, squares, and the city's most popular spots — a blend of Soviet architecture, modern districts, and leafy green streets. Your guide will bring the history, culture, and everyday life of the capital to life."
+    },
+    "2": {
+      "title": "Issyk-Kul Tour",
+      "durationDisplay": "1–3 days",
+      "groupSize": "any size",
+      "description": "A journey to Kyrgyzstan's most famous lake. Comfortable transfer from Bishkek through scenic mountain roads with stops at viewpoints along the way. At the lake: beach walks, swimming in clear water, and the option to visit natural hot springs."
+    },
+    "3": {
+      "title": "Skazka Canyon Tour",
+      "durationDisplay": "2–4 hours",
+      "groupSize": "any size",
+      "description": "A thrilling jeep tour to one of Kyrgyzstan's most unique natural canyons. The route follows the scenic southern shore of Issyk-Kul to dramatic red and orange rock formations that look like a fantasy world — with the best photo spots and a canyon sunset."
+    },
+    "4": {
+      "title": "Karakol Tour",
+      "durationDisplay": "1–2 days",
+      "groupSize": "any size",
+      "description": "A journey to the Karakol mountain region — one of Kyrgyzstan's most beautiful areas. The tour follows the Issyk-Kul shoreline with stops, then explores the town. In summer: trekking through gorges, waterfalls, and mountain hikes. In winter: skiing at the famous Karakol ski resort."
+    },
+    "5": {
+      "title": "Kel-Suu Tour",
+      "durationDisplay": "2–3 days",
+      "groupSize": "any size",
+      "description": "An expedition tour to one of Kyrgyzstan's most remote and beautiful lakes. The route crosses high-mountain passes before revealing a breathtaking turquoise lake surrounded by cliffs. A full adventure — jeep transfer, overnight in yurts or a camp, and total immersion in untouched nature."
+    },
+    "page": {
+      "sectionLabel": "Kyrgyzstan",
+      "title": "Tours in Kyrgyzstan",
+      "description": "Discover the unspoiled highlands, nomadic culture, and natural wonders of one of Central Asia's most breathtaking destinations."
+    }
+  },
+  "carRent": {
+    "1": {
+      "name": "Hyundai Sonata",
+      "classLabel": "Comfort",
+      "description": "Comfortable and reliable Korean sedan, ideal for city transfers and short trips around Almaty.",
+      "seats": "5",
+      "transmission": "Automatic",
+      "price": "from $30"
+    },
+    "2": {
+      "name": "Toyota Camry 75",
+      "classLabel": "Business",
+      "description": "Classic business-class sedan, popular for corporate transfers and longer regional journeys.",
+      "seats": "5",
+      "transmission": "Automatic",
+      "price": "from $45"
+    },
+    "3": {
+      "name": "Toyota Camry 80",
+      "classLabel": "Premium",
+      "description": "Latest generation Camry with refined interior, advanced features, and smooth performance on any road.",
+      "seats": "5",
+      "transmission": "Automatic",
+      "price": "from $55"
+    },
+    "4": {
+      "name": "Lexus",
+      "classLabel": "Executive",
+      "description": "Premium Japanese executive sedan with whisper-quiet cabin and impeccable finish — perfect for VIP airport and city transfers.",
+      "seats": "5",
+      "transmission": "Automatic",
+      "price": "from $80"
+    },
+    "5": {
+      "name": "Hyundai Staria",
+      "classLabel": "Minivan",
+      "description": "Premium 7-seat minivan with VIP captain seats and electric sliding doors. Perfect for group transfers and family trips.",
+      "seats": "7",
+      "transmission": "Automatic",
+      "price": "from $80"
+    },
+    "page": {
+      "sectionLabel": "Car Rental",
+      "title": "Rent a Car in Kazakhstan",
+      "description": "Clean, modern vehicles with experienced local drivers. Flexible bookings available across Almaty and the wider region."
+    },
+    "labels": {
+      "seats": "seats",
+      "book": "Book",
+      "perDay": "/day"
+    }
+  },
+  "apartments": {
+    "1": {
+      "name": "Studio, City Center",
+      "districtLabel": "Almaty Center",
+      "description": "Bright modern studio in the heart of Almaty, walking distance to cafés, restaurants, and the city's green parks.",
+      "rooms": "Studio",
+      "floor": "5th floor",
+      "price": "from $40"
+    },
+    "2": {
+      "name": "1-BR Modern Apartment",
+      "districtLabel": "Bostandyk",
+      "description": "Stylishly furnished 1-bedroom in a quiet residential tower, 15 minutes from the center with easy transport access.",
+      "rooms": "1 bedroom",
+      "floor": "8th floor",
+      "price": "from $55"
+    },
+    "3": {
+      "name": "2-BR Family Apartment",
+      "districtLabel": "Medeu District",
+      "description": "Spacious 2-bedroom near the Medeu skating rink — ideal for families or two couples who want room to spread out.",
+      "rooms": "2 bedrooms",
+      "floor": "3rd floor",
+      "price": "from $75"
+    },
+    "4": {
+      "name": "3-BR Penthouse",
+      "districtLabel": "Almaty Center",
+      "description": "Top-floor penthouse with panoramic Tian Shan mountain views, full kitchen, open living area, and all premium amenities.",
+      "rooms": "3 bedrooms",
+      "floor": "19th floor",
+      "price": "from $150"
+    },
+    "5": {
+      "name": "1-BR near Shymbulak",
+      "districtLabel": "Upper Almaty",
+      "description": "Cozy apartment just minutes from Shymbulak ski resort and Medeu ice rink — perfect for mountain lovers.",
+      "rooms": "1 bedroom",
+      "floor": "2nd floor",
+      "price": "from $60"
+    },
+    "page": {
+      "sectionLabel": "Accommodation",
+      "title": "Apartments in Almaty",
+      "description": "Comfortable, centrally located apartments for short and long stays — fully equipped and ready to move in."
+    },
+    "labels": {
+      "book": "Book",
+      "perNight": "/night"
+    }
+  },
+  "home": {
+    "hero": {
+      "sectionLabel": "Crown Almaty Services",
+      "title": "Your Premier",
+      "titleAccent": "Travel & Security",
+      "titleSub": "Partner in Kazakhstan",
+      "description": "Private tours, premium car services, and professional security — all from one trusted local team based in Almaty.",
+      "exploreTours": "Explore Tours",
+      "contactUs": "Contact Us",
+      "stat1": "Available Tours",
+      "stat2": "Google Rating",
+      "stat3": "WhatsApp Reply"
+    },
+    "services": {
+      "sectionLabel": "What We Offer",
+      "title": "All Our Services",
+      "explore": "Explore",
+      "tours": {
+        "title": "Tours",
+        "description": "Private guided tours across Kazakhstan and Kyrgyzstan. Mountains, canyons, lakes, and cities — explored at your own pace."
+      },
+      "cars": {
+        "title": "Car Services",
+        "description": "Clean, reliable vehicles with experienced local drivers for city rides, airport transfers, and mountain expeditions."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Professional security services for individuals and groups. Discreet, reliable, and always prepared for any situation."
+      },
+      "apartments": {
+        "title": "Apartments",
+        "description": "Comfortable furnished apartments in central Almaty. Perfect for short stays, business trips, and extended visits — with all the amenities of home."
+      }
+    }
+  },
+  "carWithDriver": {
+    "1": {
+      "name": "Hyundai Sonata + Driver",
+      "classLabel": "Comfort",
+      "description": "Reliable Korean sedan with a professional driver. Ideal for daily city rides, business meetings, and short trips around Almaty.",
+      "seats": "4",
+      "transmission": "Automatic",
+      "price": "from $50"
+    },
+    "2": {
+      "name": "Toyota Camry 75 + Driver",
+      "classLabel": "Business",
+      "description": "Business-class sedan with an experienced chauffeur. Perfect for corporate meetings, airport runs, and VIP guest transport.",
+      "seats": "4",
+      "transmission": "Automatic",
+      "price": "from $65"
+    },
+    "3": {
+      "name": "Toyota Camry 80 + Driver",
+      "classLabel": "Premium",
+      "description": "Latest-gen Camry with a professional chauffeur. Refined comfort for executives, events, and premium city transfers.",
+      "seats": "4",
+      "transmission": "Automatic",
+      "price": "from $75"
+    },
+    "4": {
+      "name": "Lexus LX + Chauffeur",
+      "classLabel": "Luxury",
+      "description": "Full luxury experience — a Lexus LX with a livery-trained chauffeur. Ideal for VIP guests, official visits, and prestige occasions.",
+      "seats": "4",
+      "transmission": "Automatic",
+      "price": "from $120"
+    },
+    "5": {
+      "name": "Hyundai Staria + Driver",
+      "classLabel": "Minivan",
+      "description": "Spacious 7-seat Staria with a professional driver. Perfect for group transfers, family outings, and airport runs.",
+      "seats": "7",
+      "transmission": "Automatic",
+      "price": "from $100"
+    },
+    "page": {
+      "sectionLabel": "Car Rental with Driver",
+      "title": "Hire a Car with Driver",
+      "description": "Professional, punctual chauffeurs ready to take you anywhere across Almaty and Kazakhstan. Flexible hourly and daily rates."
+    },
+    "labels": {
+      "seats": "seats",
+      "book": "Book",
+      "perDay": "/day"
+    }
+  },
+  "transfer": {
+    "1": {
+      "name": "Economy Airport Transfer",
+      "typeLabel": "Economy",
+      "description": "Comfortable, fixed-price transfer between Almaty airport and any city address. Your driver waits at arrivals with a name sign.",
+      "passengers": "Up to 3",
+      "vehicle": "Hyundai Sonata",
+      "price": "from $20"
+    },
+    "2": {
+      "name": "Business Transfer",
+      "typeLabel": "Business",
+      "description": "Business-class transfer in a Toyota Camry with a professional driver. Ideal for corporate travellers and time-sensitive trips.",
+      "passengers": "Up to 3",
+      "vehicle": "Toyota Camry",
+      "price": "from $35"
+    },
+    "3": {
+      "name": "Group Transfer",
+      "typeLabel": "Minivan",
+      "description": "Spacious minivan transfer for groups. Perfect for families, delegations, or tour groups arriving or departing Almaty.",
+      "passengers": "Up to 7",
+      "vehicle": "Hyundai Staria",
+      "price": "from $50"
+    },
+    "4": {
+      "name": "VIP Transfer",
+      "typeLabel": "VIP",
+      "description": "Luxury Lexus LX transfer with a livery-trained chauffeur. Meet-and-greet at arrivals, personalised name sign, and luggage assistance.",
+      "passengers": "Up to 4",
+      "vehicle": "Lexus LX",
+      "price": "from $80"
+    },
+    "page": {
+      "sectionLabel": "Transfer Service",
+      "title": "Airport & City Transfers",
+      "description": "Punctual door-to-door transfers across Almaty and beyond. Fixed rates, professional drivers, and meet-and-greet at the airport."
+    },
+    "labels": {
+      "passengers": "passengers",
+      "book": "Book Transfer",
+      "perTrip": "/trip"
+    }
+  },
+  "security": {
+    "1": {
+      "name": "Escort Service",
+      "typeLabel": "Escort",
+      "description": "Professional vehicle escort for VIP movement, valuables transport, and business delegations. Experienced drivers and security officers in coordinated convoy.",
+      "coverage": "Almaty & region",
+      "team": "2–4 officers",
+      "price": "from $200",
+      "included": [
+        "Coordinated multi-vehicle convoy",
+        "Experienced security officers on board",
+        "Route planning & advance risk assessment",
+        "24/7 availability",
+        "Discreet, unmarked vehicles available"
+      ]
+    },
+    "2": {
+      "name": "Personal Security",
+      "typeLabel": "Personal",
+      "description": "Dedicated close-protection officer for executives, public figures, or visiting guests. Discreet, professional, always prepared.",
+      "coverage": "Any location",
+      "team": "1–2 officers",
+      "price": "from $150",
+      "included": [
+        "Dedicated close-protection officer",
+        "24/7 personal protection coverage",
+        "Hotel & venue security advance checks",
+        "Airport meet-and-secure escort",
+        "Daily security briefing & situation reports"
+      ]
+    },
+    "services": {
+      "bodyguard": {
+        "name": "Personal Bodyguard Protection",
+        "desc": "Dedicated close-protection officers providing 24/7 personal security for executives, diplomats, and high-profile VIP guests."
+      },
+      "airport": {
+        "name": "VIP Airport Meet & Greet Assistance",
+        "desc": "Professional meet-and-greet with a secure escort from arrival gate to destination, ensuring seamless airport transitions."
+      },
+      "chauffeur": {
+        "name": "Secure Chauffeur & Transportation",
+        "desc": "Discreet or armored vehicle options with trained security drivers for safe, confidential transportation throughout Kazakhstan."
+      },
+      "executive": {
+        "name": "Executive Protection for Business Meetings",
+        "desc": "Comprehensive security coverage for high-profile business meetings, negotiations, and corporate events at any venue."
+      },
+      "event": {
+        "name": "Event & Conference Security",
+        "desc": "Full perimeter and in-venue security management for private events, international conferences, and exclusive gatherings."
+      },
+      "escort": {
+        "name": "Security Escort Across Kazakhstan",
+        "desc": "Coordinated escorts for VIP movement, delegation transfers, and high-value asset transportation anywhere in the country."
+      },
+      "allday": {
+        "name": "24/7 Dedicated Protection Services",
+        "desc": "Around-the-clock personal security coverage with rapid response capability, available whenever and wherever you need us."
+      }
+    },
+    "page": {
+      "sectionLabel": "VIP Security & Executive Protection",
+      "title": "VIP Security & Executive Protection Services",
+      "description": "At Crown Prestige Travel, we provide premium VIP security and executive protection services designed to ensure the highest level of safety, privacy, and comfort for our distinguished guests.",
+      "ourServicesLabel": "Our Services",
+      "ourServicesTitle": "Comprehensive Protection Solutions",
+      "whyLabel": "Why Choose Us",
+      "whyTitle": "Excellence You Can Trust",
+      "why": [
+        "Highly Trained and Experienced Security Personnel",
+        "Absolute Confidentiality and Professionalism",
+        "Customized Security Solutions for Every Need",
+        "Reliable and Discreet Service at All Times",
+        "Premium Fleet and Secure Transportation Options"
+      ],
+      "packagesLabel": "Security Packages",
+      "packagesTitle": "Tailored Security Plans"
+    },
+    "labels": {
+      "team": "team",
+      "book": "Enquire",
+      "perDay": "/day"
+    }
+  }
+}

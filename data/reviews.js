@@ -1,0 +1,16 @@
+export const reviews = [
+  { id: 1,  name: 'Sophie M.',  country: 'France',    rating: 5 },
+  { id: 2,  name: 'James T.',   country: 'UK',        rating: 5 },
+  { id: 3,  name: 'Yuki K.',    country: 'Japan',     rating: 5 },
+  { id: 4,  name: 'Anna R.',    country: 'Germany',   rating: 5 },
+  { id: 5,  name: 'Carlos M.',  country: 'Spain',     rating: 5 },
+  { id: 6,  name: 'Priya S.',   country: 'India',     rating: 5 },
+  { id: 7,  name: 'Chen W.',    country: 'China',     rating: 5 },
+  { id: 8,  name: 'Emma L.',    country: 'Australia', rating: 5 },
+  { id: 9,  name: 'Michael K.', country: 'USA',       rating: 5 },
+  { id: 10, name: 'Fatima A.',  country: 'UAE',       rating: 5 },
+  { id: 11, name: 'Lars B.',    country: 'Sweden',    rating: 5 },
+  { id: 12, name: 'Amara D.',   country: 'Nigeria',   rating: 5 },
+  { id: 13, name: 'Diego R.',   country: 'Argentina', rating: 5 },
+  { id: 14, name: 'Nadia V.',   country: 'Russia',    rating: 5 },
+];
