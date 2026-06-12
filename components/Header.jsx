@@ -104,7 +104,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav ref={navRef} className="hidden md:flex items-center gap-4 lg:gap-7">
+          <nav ref={navRef} aria-label="Main navigation" className="hidden md:flex items-center gap-4 lg:gap-7">
             <Link
               href="/"
               className={`flex items-center gap-1.5 text-[0.82rem] no-underline transition-colors duration-200 whitespace-nowrap
@@ -226,6 +226,9 @@ export default function Header() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             className="md:hidden p-2 text-white/80 bg-transparent border-0 cursor-pointer"
           >
             {menuOpen
@@ -237,7 +240,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="bg-surface border-t border-divider px-6 pt-4 pb-5">
+          <div id="mobile-menu" role="navigation" aria-label="Mobile navigation" className="bg-surface border-t border-divider px-6 pt-4 pb-5">
             <Link href="/" onClick={() => setMenuOpen(false)}
               className={`flex items-center gap-2 py-[7px] text-[0.9rem] no-underline
                 ${pathname === '/' ? 'text-amber font-semibold' : 'text-white/80 font-medium'}`}>

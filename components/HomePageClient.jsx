@@ -175,17 +175,17 @@ export default function HomePageClient() {
             </span>
           </div>
 
-          <div className="ha2 mb-[26px]">
-            <div className="font-sans font-bold text-[clamp(2.8rem,6.5vw,5.2rem)] text-white tracking-[-0.03em] leading-[0.96]">
+          <h1 className="ha2 mb-[26px] m-0">
+            <span className="block font-sans font-bold text-[clamp(2.8rem,6.5vw,5.2rem)] text-white tracking-[-0.03em] leading-[0.96]">
               {t('home.hero.title')}
-            </div>
-            <div className="font-serif italic font-normal text-[clamp(2.8rem,6.5vw,5.2rem)] text-amber tracking-[-0.02em] leading-[1.02]">
+            </span>
+            <span className="block font-serif italic font-normal text-[clamp(2.8rem,6.5vw,5.2rem)] text-amber tracking-[-0.02em] leading-[1.02]">
               {t('home.hero.titleAccent')}
-            </div>
-            <div className="font-sans font-bold text-[clamp(2.8rem,6.5vw,5.2rem)] text-white/30 tracking-[-0.03em] leading-[0.96]">
+            </span>
+            <span className="block font-sans font-bold text-[clamp(2.8rem,6.5vw,5.2rem)] text-white/30 tracking-[-0.03em] leading-[0.96]">
               {t('home.hero.titleSub')}
-            </div>
-          </div>
+            </span>
+          </h1>
 
           <p className="ha3 text-white/60 text-base leading-[1.75] max-w-[450px] mb-[38px]">
             {t('home.hero.description')}

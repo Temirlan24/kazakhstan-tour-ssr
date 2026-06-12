@@ -24,9 +24,19 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-6 w-full">
         <div className="max-w-[720px] pt-[140px] pb-20">
-          <p className="text-brand-orange text-[0.78rem] font-bold tracking-[0.12em] uppercase m-0 mb-3">
-            {t('hero.breadcrumbPage')}
-          </p>
+          <nav aria-label="Breadcrumb" className="m-0 mb-3">
+            <ol className="flex items-center gap-1.5 list-none p-0 m-0">
+              <li>
+                <a href="/" className="text-white/50 text-[0.78rem] font-medium hover:text-white/80 transition-colors no-underline">
+                  {t('hero.breadcrumbHome')}
+                </a>
+              </li>
+              <li aria-hidden="true" className="text-white/30 text-[0.78rem]">/</li>
+              <li aria-current="page" className="text-brand-orange text-[0.78rem] font-bold tracking-[0.12em] uppercase">
+                {t('hero.breadcrumbPage')}
+              </li>
+            </ol>
+          </nav>
           <h1 className="m-0 mb-4 leading-[1.05] font-sans font-bold">
             <span className="block text-[clamp(2.2rem,5vw,3.6rem)] text-white tracking-[-0.02em]">
               {t('hero.titleLine1')}{' '}
