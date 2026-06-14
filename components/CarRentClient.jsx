@@ -32,7 +32,7 @@ const GearIcon = () => (
   </svg>
 );
 
-export default function CarRentClient() {
+export default function  CarRentClient() {
   const { t } = useTranslation();
 
   return (

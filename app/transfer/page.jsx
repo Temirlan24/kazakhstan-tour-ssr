@@ -6,9 +6,9 @@ const PAGE_URL = `${SITE_URL}/transfer`;
 const OG_IMAGE = 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&q=80';
 
 export const metadata = {
-  title: 'Airport Transfer Almaty — Economy, Business & VIP',
+  title: 'Airport Transfer in Almaty — Economy, Business & VIP',
   description:
-    'Reliable airport and city transfers in Almaty. Economy, Business, Minivan and VIP class vehicles. Meet & greet service. Book via WhatsApp.',
+    'Reliable airport and city transfers in Almaty. Economy, Business, Minivan and VIP class vehicles with professional drivers. Meet & greet service. Book via WhatsApp.',
   keywords: [
     'airport transfer Almaty',
     'Almaty airport taxi',

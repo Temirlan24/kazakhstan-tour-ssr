@@ -6,7 +6,7 @@ const PAGE_URL = `${SITE_URL}/car-rent-with-driver`;
 const OG_IMAGE = 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&q=80';
 
 export const metadata = {
-  title: 'Car with Driver Almaty — Chauffeur Service',
+  title: 'Car with Driver in Almaty — Personal Chauffeur Service',
   description:
     'Professional chauffeur service in Almaty. Comfort, Premium, and Luxury cars with experienced English-speaking drivers. Hourly and daily rates. Book via WhatsApp.',
   keywords: [
@@ -19,14 +19,14 @@ export const metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Car with Driver Almaty — Chauffeur Service',
+    title: 'Car with Driver in Almaty — Personal Chauffeur Service',
     description:
       'Professional chauffeur service in Almaty. Comfort, Premium, and Luxury cars with experienced drivers.',
     url: PAGE_URL,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Chauffeur service in Almaty' }],
   },
   twitter: {
-    title: 'Car with Driver Almaty — Chauffeur Service',
+    title: 'Car with Driver in Almaty — Personal Chauffeur Service',
     description: 'Professional chauffeur service in Almaty. Comfort to Luxury class vehicles.',
     images: [OG_IMAGE],
   },

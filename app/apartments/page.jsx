@@ -6,7 +6,7 @@ const PAGE_URL = `${SITE_URL}/apartments`;
 const OG_IMAGE = 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80';
 
 export const metadata = {
-  title: 'Apartments for Rent in Almaty — Daily & Monthly',
+  title: 'Apartments for Rent in Almaty — Daily & Monthly Rental',
   description:
     'Premium furnished apartments for rent in Almaty city center, Medeu, and other districts. Comfortable daily and monthly rentals. Book via WhatsApp.',
   keywords: [
@@ -19,14 +19,14 @@ export const metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Apartments for Rent in Almaty — Daily & Monthly',
+    title: 'Apartments for Rent in Almaty — Daily & Monthly Rental',
     description:
       'Premium furnished apartments for rent in Almaty city center, Medeu, and other districts. Daily and monthly rentals.',
     url: PAGE_URL,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Apartments for rent in Almaty' }],
   },
   twitter: {
-    title: 'Apartments for Rent in Almaty — Daily & Monthly',
+    title: 'Apartments for Rent in Almaty — Daily & Monthly Rental',
     description: 'Premium furnished apartments in Almaty. Daily and monthly rentals.',
     images: [OG_IMAGE],
   },

@@ -12,7 +12,7 @@ const OG_IMAGE =
   'https://www.pelago.com/img/products/KZ-Kazakhstan/full-day-private-tour-in-big-almaty-lake/a94846f9-2685-485c-a7f9-e5101d2da7fc_full-day-private-tour-in-big-almaty-lake-xlarge.jpg';
 
 export const metadata = {
-  title: 'Tours in Kazakhstan — Almaty, Astana, Aktau | Crown Almaty Services',
+  title: 'Guided Tours in Kazakhstan — Almaty, Astana & Aktau',
   description:
     'Discover Kazakhstan with guided tours: Big Almaty Lake, Charyn Canyon, Kolsay Lakes, Burabay, Astana city and Aktau steppe. Private & group tours from Almaty.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Tours in Kazakhstan — Almaty, Astana, Aktau | Crown Almaty Services',
+    title: 'Guided Tours in Kazakhstan — Almaty, Astana & Aktau',
     description:
       'Discover Kazakhstan with guided tours: Big Almaty Lake, Charyn Canyon, Kolsay Lakes, Burabay, Astana city and Aktau steppe.',
     url: PAGE_URL,

@@ -6,6 +6,16 @@ export const metadata = {
   title: 'Crown Almaty Services — Premium Tours, Car Rent & More in Almaty',
   description:
     'Book premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartments in Almaty. Fast booking via WhatsApp.',
+  keywords: [
+    'Crown Almaty Services',
+    'tours Kazakhstan',
+    'Almaty tours',
+    'car rent Almaty',
+    'transfer Almaty',
+    'security escort Kazakhstan',
+    'apartments Almaty',
+    'Kyrgyzstan tours',
+  ],
   alternates: { canonical: SITE_URL },
   openGraph: {
     title: 'Crown Almaty Services — Premium Tours, Car Rent & More in Almaty',
