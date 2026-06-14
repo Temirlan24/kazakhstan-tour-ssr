@@ -77,6 +77,9 @@ export const metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  verification: {
+    google: 'JtFAZczBxH2wxk1grL0mO0RHsw4HqpXi5OFr4R1kc0A',
+  },
 };
 
 const localBusinessSchema = {
