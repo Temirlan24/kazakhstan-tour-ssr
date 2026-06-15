@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 
 const STYLES = `
@@ -18,9 +18,18 @@ export default function PhotoLightbox({ images, initialIdx = 0, title, onClose }
   const [idx, setIdx] = useState(initialIdx);
   const [ready, setReady] = useState(false);
   const thumbsRef = useRef(null);
+  const touchStartX = useRef(null);
 
   const prev = useCallback(() => setIdx(i => Math.max(0, i - 1)), []);
   const next = useCallback(() => setIdx(i => Math.min(images.length - 1, i + 1)), [images.length]);
+
+  const handleTouchStart = useCallback(e => { touchStartX.current = e.touches[0].clientX; }, []);
+  const handleTouchEnd = useCallback(e => {
+    if (touchStartX.current === null) return;
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 48) { delta > 0 ? next() : prev(); }
+    touchStartX.current = null;
+  }, [next, prev]);
 
   useEffect(() => {
     const raf = requestAnimationFrame(() => setReady(true));
@@ -88,7 +97,9 @@ export default function PhotoLightbox({ images, initialIdx = 0, title, onClose }
 
       <div
         onClick={e => e.stopPropagation()}
-        className="flex-1 w-full flex items-center justify-center pt-[80px] px-[80px] pb-4 relative"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="flex-1 w-full flex items-center justify-center pt-[80px] px-4 md:px-[80px] pb-4 relative touch-pan-y"
       >
         <img
           key={idx}
@@ -99,7 +110,7 @@ export default function PhotoLightbox({ images, initialIdx = 0, title, onClose }
         {idx > 0 && (
           <button
             onClick={e => { e.stopPropagation(); prev(); }}
-            className="lb-arrow absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/[0.06] border border-white/[0.14] text-white cursor-pointer flex items-center justify-center transition-colors duration-200"
+            className="lb-arrow hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/[0.06] border border-white/[0.14] text-white cursor-pointer items-center justify-center transition-colors duration-200"
           >
             <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
               <path d="M15 18l-6-6 6-6"/>
@@ -109,7 +120,7 @@ export default function PhotoLightbox({ images, initialIdx = 0, title, onClose }
         {idx < images.length - 1 && (
           <button
             onClick={e => { e.stopPropagation(); next(); }}
-            className="lb-arrow absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/[0.06] border border-white/[0.14] text-white cursor-pointer flex items-center justify-center transition-colors duration-200"
+            className="lb-arrow hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/[0.06] border border-white/[0.14] text-white cursor-pointer items-center justify-center transition-colors duration-200"
           >
             <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
               <path d="M9 18l6-6-6-6"/>
