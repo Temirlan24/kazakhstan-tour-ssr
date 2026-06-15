@@ -18,8 +18,8 @@ const OG_IMAGE = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Crown Almaty Services — Tours, Car Rent, Security & Apartments',
-    template: '%s | Crown Almaty Services',
+    default: 'Crown Services — Tours, Car Rent, Security & Apartments',
+    template: '%s | Crown Services',
   },
   description:
     'Premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartment booking in Almaty. Book via WhatsApp.',
@@ -35,9 +35,9 @@ export const metadata = {
     'Charyn Canyon tour',
     'Burabay tour',
   ],
-  authors: [{ name: 'Crown Almaty Services', url: SITE_URL }],
-  creator: 'Crown Almaty Services',
-  publisher: 'Crown Almaty Services',
+  authors: [{ name: 'Crown Services', url: SITE_URL }],
+  creator: 'Crown Services',
+  publisher: 'Crown Services',
   robots: {
     index: true,
     follow: true,
@@ -54,8 +54,8 @@ export const metadata = {
     locale: 'en_US',
     alternateLocale: ['ru_RU', 'kk_KZ'],
     url: SITE_URL,
-    siteName: 'Crown Almaty Services',
-    title: 'Crown Almaty Services — Tours, Car Rent, Security & Apartments',
+    siteName: 'Crown Services',
+    title: 'Crown Services — Tours, Car Rent, Security & Apartments',
     description:
       'Premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartment booking in Almaty.',
     images: [
@@ -63,13 +63,13 @@ export const metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Crown Almaty Services — Premium tours in Kazakhstan',
+        alt: 'Crown Services — Premium tours in Kazakhstan',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Crown Almaty Services — Tours, Car Rent, Security & Apartments',
+    title: 'Crown Services — Tours, Car Rent, Security & Apartments',
     description:
       'Premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartment booking in Almaty.',
     images: [OG_IMAGE],
@@ -85,7 +85,7 @@ export const metadata = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'TravelAgency',
-  name: 'Crown Almaty Services',
+  name: 'Crown Services',
   url: SITE_URL,
   telephone: PHONE,
   description:

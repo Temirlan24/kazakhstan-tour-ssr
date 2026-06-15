@@ -46,7 +46,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Car Rental with Driver in Almaty',
   description: 'Professional chauffeur service in Almaty with Comfort, Premium, and Luxury vehicles.',
-  provider: { '@type': 'TravelAgency', name: 'Crown Almaty Services', url: SITE_URL },
+  provider: { '@type': 'TravelAgency', name: 'Crown Services', url: SITE_URL },
   areaServed: { '@type': 'City', name: 'Almaty', addressCountry: 'KZ' },
   serviceType: 'Chauffeur Service',
 };

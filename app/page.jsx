@@ -3,11 +3,11 @@ import JsonLd from '@/components/JsonLd';
 import { SITE_URL } from '@/lib/config';
 
 export const metadata = {
-  title: 'Crown Almaty Services — Premium Tours, Car Rent & More in Almaty',
+  title: 'Crown Services — Premium Tours, Car Rent & More in Almaty',
   description:
     'Book premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartments in Almaty. Fast booking via WhatsApp.',
   keywords: [
-    'Crown Almaty Services',
+    'Crown Services',
     'tours Kazakhstan',
     'Almaty tours',
     'car rent Almaty',
@@ -18,7 +18,7 @@ export const metadata = {
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: 'Crown Almaty Services — Premium Tours, Car Rent & More in Almaty',
+    title: 'Crown Services — Premium Tours, Car Rent & More in Almaty',
     description:
       'Book premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartments in Almaty.',
     url: SITE_URL,
@@ -27,12 +27,12 @@ export const metadata = {
         url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80',
         width: 1200,
         height: 630,
-        alt: 'Premium tours in Kazakhstan — Crown Almaty Services',
+        alt: 'Premium tours in Kazakhstan — Crown Services',
       },
     ],
   },
   twitter: {
-    title: 'Crown Almaty Services — Premium Tours, Car Rent & More in Almaty',
+    title: 'Crown Services — Premium Tours, Car Rent & More in Almaty',
     description:
       'Book premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartments in Almaty.',
     images: ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80'],
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Crown Almaty Services',
+  name: 'Crown Services',
   url: SITE_URL,
 };
 

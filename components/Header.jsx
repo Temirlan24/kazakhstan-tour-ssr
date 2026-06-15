@@ -93,13 +93,13 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2.5 shrink-0 no-underline">
             <img
               src={LOGO_URL}
-              alt="Crown Almaty Services"
+              alt="Crown Services"
               className="h-9 w-auto object-contain"
               style={{ filter: 'brightness(0) invert(1) opacity(0.9)' }}
               onError={e => { e.currentTarget.style.display = 'none'; }}
             />
             <span className="hidden lg:block text-brand-orange font-semibold text-[0.95rem] tracking-[0.01em] font-sans">
-              Crown Almaty Services
+              Crown Services
             </span>
           </Link>
 

@@ -47,7 +47,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Car Rental in Almaty',
   description: 'Self-drive car rental in Almaty: Comfort, Business, Premium, Luxury and Minivan classes.',
-  provider: { '@type': 'TravelAgency', name: 'Crown Almaty Services', url: SITE_URL },
+  provider: { '@type': 'TravelAgency', name: 'Crown Services', url: SITE_URL },
   areaServed: { '@type': 'City', name: 'Almaty', addressCountry: 'KZ' },
   serviceType: 'Car Rental',
 };

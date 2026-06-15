@@ -46,7 +46,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Airport Transfer Almaty',
   description: 'Reliable airport and city transfer service in Almaty with Economy, Business, Minivan and VIP options.',
-  provider: { '@type': 'TravelAgency', name: 'Crown Almaty Services', url: SITE_URL },
+  provider: { '@type': 'TravelAgency', name: 'Crown Services', url: SITE_URL },
   areaServed: { '@type': 'City', name: 'Almaty', addressCountry: 'KZ' },
   serviceType: 'Airport Transfer',
 };

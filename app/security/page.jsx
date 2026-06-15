@@ -46,7 +46,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Security & Escort Services in Kazakhstan',
   description: 'Professional security escort, bodyguard and executive protection services in Kazakhstan.',
-  provider: { '@type': 'TravelAgency', name: 'Crown Almaty Services', url: SITE_URL },
+  provider: { '@type': 'TravelAgency', name: 'Crown Services', url: SITE_URL },
   areaServed: { '@type': 'Country', name: 'Kazakhstan' },
   serviceType: 'Security Services',
 };

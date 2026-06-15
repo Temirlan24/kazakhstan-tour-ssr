@@ -30,15 +30,15 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col gap-4 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-[10px] no-underline" aria-label="Crown Almaty Services — Home">
+            <Link href="/" className="flex items-center gap-[10px] no-underline" aria-label="Crown Services — Home">
               <img
                 src={LOGO_URL}
-                alt="Crown Almaty Services"
+                alt="Crown Services"
                 className="h-9 w-auto"
                 style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
                 onError={e => { e.currentTarget.style.display = 'none'; }}
               />
-              <span className="text-brand-orange font-semibold text-[0.9rem]">Crown Almaty Services</span>
+              <span className="text-brand-orange font-semibold text-[0.9rem]">Crown Services</span>
             </Link>
             <p className="text-muted text-[0.82rem] leading-[1.6] m-0 max-w-[220px]">
               Premium travel &amp; transport services in Kazakhstan.
