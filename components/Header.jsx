@@ -21,6 +21,7 @@ const carItems = [
 ];
 
 const STYLES = `
+  /* Desktop dropdown */
   .header-dropdown-link {
     display: block;
     padding: 9px 14px;
@@ -47,6 +48,67 @@ const STYLES = `
     border-color: rgba(255,255,255,0.2) !important;
   }
   .wa-btn:hover { background: #F0E5CE !important; }
+
+  /* Mobile drawer animations */
+  @keyframes _drawerOverlay { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes _drawerSlide   { from { transform: translateX(100%); } to { transform: translateX(0); } }
+  @keyframes _drawerItem    { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: translateX(0); } }
+
+  .mob-overlay { animation: _drawerOverlay 0.22s ease both; }
+  .mob-drawer  { animation: _drawerSlide 0.34s cubic-bezier(0.32,0.72,0,1) both; }
+  .mob-item    { animation: _drawerItem 0.38s cubic-bezier(0.22,1,0.36,1) both; }
+
+  .mob-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 11px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.78);
+    transition: background 0.15s, color 0.15s, padding-left 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mob-link:hover, .mob-link:active { background: rgba(255,255,255,0.05); color: #fff; }
+  .mob-link--active { color: #C9A86C !important; background: rgba(201,168,108,0.08); }
+
+  .mob-sub-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 10px 14px 10px 28px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    transition: background 0.15s, color 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mob-sub-link:hover, .mob-sub-link:active { background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.9); }
+  .mob-sub-link--active { color: #C9A86C !important; }
+
+  .mob-lang-pill {
+    flex: 1;
+    padding: 11px 0;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.4);
+    transition: all 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mob-lang-pill--active {
+    background: #C9A86C !important;
+    border-color: #C9A86C !important;
+    color: #0a0a0b !important;
+  }
+  .mob-lang-pill:not(.mob-lang-pill--active):hover { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.07); }
 `;
 
 export default function Header() {
@@ -74,6 +136,13 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Lock body scroll when drawer is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
   const toggle = (name) => setOpenDropdown(prev => prev === name ? null : name);
 
   return (
@@ -114,7 +183,6 @@ export default function Header() {
               {t('nav.home')}
             </Link>
 
-            {/* Tours dropdown */}
             <div className="relative">
               <DropdownButton
                 label={t('nav.tours')}
@@ -125,12 +193,8 @@ export default function Header() {
               {openDropdown === 'tours' && (
                 <div className="absolute top-[calc(100%+12px)] left-1/2 -translate-x-1/2 bg-surface border border-divider rounded-[14px] p-[6px] min-w-[220px] shadow-[0_20px_60px_rgba(0,0,0,0.6)] z-[100]">
                   {tourItems.map(item => (
-                    <Link
-                      key={item.key}
-                      href={item.to}
-                      onClick={() => setOpenDropdown(null)}
-                      className={`header-dropdown-link ${pathname === item.to ? 'header-dropdown-link--active' : ''}`}
-                    >
+                    <Link key={item.key} href={item.to} onClick={() => setOpenDropdown(null)}
+                      className={`header-dropdown-link ${pathname === item.to ? 'header-dropdown-link--active' : ''}`}>
                       {t(`nav.dropdown.${item.key}`)}
                     </Link>
                   ))}
@@ -138,7 +202,6 @@ export default function Header() {
               )}
             </div>
 
-            {/* Car Services dropdown */}
             <div className="relative">
               <DropdownButton
                 label={t('nav.carServices')}
@@ -149,12 +212,8 @@ export default function Header() {
               {openDropdown === 'cars' && (
                 <div className="absolute top-[calc(100%+12px)] left-1/2 -translate-x-1/2 bg-surface border border-divider rounded-[14px] p-[6px] min-w-[220px] shadow-[0_20px_60px_rgba(0,0,0,0.6)] z-[100]">
                   {carItems.map(item => (
-                    <Link
-                      key={item.key}
-                      href={item.to}
-                      onClick={() => setOpenDropdown(null)}
-                      className={`header-dropdown-link ${pathname === item.to ? 'header-dropdown-link--active' : ''}`}
-                    >
+                    <Link key={item.key} href={item.to} onClick={() => setOpenDropdown(null)}
+                      className={`header-dropdown-link ${pathname === item.to ? 'header-dropdown-link--active' : ''}`}>
                       {t(`nav.dropdown.${item.key}`)}
                     </Link>
                   ))}
@@ -162,42 +221,34 @@ export default function Header() {
               )}
             </div>
 
-            <Link
-              href="/security"
+            <Link href="/security"
               className={`flex items-center gap-1.5 text-[0.82rem] no-underline transition-colors duration-200 whitespace-nowrap
-                ${pathname === '/security' ? 'text-amber font-semibold' : 'text-white/[0.82] font-medium hover:text-white'}`}
-            >
+                ${pathname === '/security' ? 'text-amber font-semibold' : 'text-white/[0.82] font-medium hover:text-white'}`}>
               <ShieldIcon />
               {t('nav.security')}
             </Link>
 
-            <Link
-              href="/apartments"
+            <Link href="/apartments"
               className={`flex items-center gap-1.5 text-[0.82rem] no-underline transition-colors duration-200 whitespace-nowrap
-                ${pathname === '/apartments' ? 'text-amber font-semibold' : 'text-white/[0.82] font-medium hover:text-white'}`}
-            >
+                ${pathname === '/apartments' ? 'text-amber font-semibold' : 'text-white/[0.82] font-medium hover:text-white'}`}>
               <BuildingIcon />
               {t('nav.dropdown.apartments')}
             </Link>
 
-            <a
-              href="#contact"
-              className="flex items-center gap-1.5 text-white/[0.82] hover:text-white text-[0.82rem] font-medium no-underline transition-colors duration-200 whitespace-nowrap"
-            >
+            <a href="#contact"
+              className="flex items-center gap-1.5 text-white/[0.82] hover:text-white text-[0.82rem] font-medium no-underline transition-colors duration-200 whitespace-nowrap">
               <PhoneIcon />
               {t('nav.contacts')}
             </a>
           </nav>
 
-          {/* Right side */}
+          {/* Desktop right side */}
           <div className="hidden md:flex items-center gap-4">
             <div ref={langRef} className="relative">
               <button
                 onClick={() => setLangOpen(v => !v)}
                 className={`lang-btn w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 shrink-0 cursor-pointer border
-                  ${langOpen
-                    ? 'lang-btn--open bg-amber/[0.12] border-amber/40 text-amber'
-                    : 'bg-white/[0.08] border-white/10 text-white/65'}`}
+                  ${langOpen ? 'lang-btn--open bg-amber/[0.12] border-amber/40 text-amber' : 'bg-white/[0.08] border-white/10 text-white/65'}`}
                 title={lang}
               >
                 <GlobeIcon />
@@ -210,14 +261,9 @@ export default function Header() {
                 </div>
               )}
             </div>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
               className="wa-btn flex items-center gap-2 font-semibold text-[0.875rem] py-2 px-[18px] rounded-full no-underline transition-colors duration-200"
-              style={{ background: '#E8D9BC', color: '#1a1a1a' }}
-            >
+              style={{ background: '#E8D9BC', color: '#1a1a1a' }}>
               <WhatsAppIcon color="#25D366" />
               WhatsApp
             </a>
@@ -225,98 +271,166 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen(v => !v)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-            className="md:hidden p-2 text-white/80 bg-transparent border-0 cursor-pointer"
+            aria-controls="mobile-drawer"
+            className="md:hidden w-10 h-10 flex items-center justify-center text-white/80 bg-transparent border-0 cursor-pointer rounded-lg -mr-1"
           >
             {menuOpen
-              ? <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-              : <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              ? <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              : <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
             }
           </button>
         </div>
+      </header>
 
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div id="mobile-menu" role="navigation" aria-label="Mobile navigation" className="bg-surface border-t border-divider px-6 pt-4 pb-5">
-            <Link href="/" onClick={() => setMenuOpen(false)}
-              className={`flex items-center gap-2 py-[7px] text-[0.9rem] no-underline
-                ${pathname === '/' ? 'text-amber font-semibold' : 'text-white/80 font-medium'}`}>
-              <HomeIcon /> {t('nav.home')}
-            </Link>
-            <div className="border-t border-divider my-2" />
+      {/* Mobile full-screen drawer */}
+      {menuOpen && (
+        <div className="md:hidden fixed inset-0 z-[9999]">
 
-            <p className="flex items-center gap-1.5 text-muted text-[0.72rem] font-bold tracking-[0.1em] uppercase m-0 mb-1">
-              <MountainIcon /> {t('nav.tours')}
-            </p>
-            {tourItems.map(item => (
-              <Link key={item.key} href={item.to} onClick={() => setMenuOpen(false)}
-                className={`block py-[7px] pl-[10px] text-[0.9rem] font-medium no-underline
-                  ${pathname === item.to ? 'text-amber' : 'text-white/80'}`}>
-                {t(`nav.dropdown.${item.key}`)}
-              </Link>
-            ))}
+          {/* Backdrop */}
+          <div
+            className="mob-overlay absolute inset-0"
+            style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}
+            onClick={closeMenu}
+          />
 
-            <p className="flex items-center gap-1.5 text-muted text-[0.72rem] font-bold tracking-[0.1em] uppercase m-0 mt-3 mb-1">
-              <CarIcon /> {t('nav.carServices')}
-            </p>
-            {carItems.map(item => (
-              <Link key={item.key} href={item.to} onClick={() => setMenuOpen(false)}
-                className="block py-[7px] pl-[10px] text-white/80 text-[0.9rem] font-medium no-underline">
-                {t(`nav.dropdown.${item.key}`)}
-              </Link>
-            ))}
-
-            <Link href="/security" onClick={() => setMenuOpen(false)}
-              className={`flex items-center gap-2 py-[7px] text-[0.9rem] no-underline
-                ${pathname === '/security' ? 'text-amber font-semibold' : 'text-white/80 font-medium'}`}>
-              <ShieldIcon /> {t('nav.security')}
-            </Link>
-
-            <div className="border-t border-divider mt-3 pt-2">
-              <Link href="/apartments" onClick={() => setMenuOpen(false)}
-                className={`flex items-center gap-2 py-2 text-[0.9rem] font-medium no-underline
-                  ${pathname === '/apartments' ? 'text-amber' : 'text-white/80'}`}>
-                <BuildingIcon /> {t('nav.dropdown.apartments')}
-              </Link>
-              <a href="#contact" onClick={() => setMenuOpen(false)}
-                className="flex items-center gap-2 py-2 text-white/80 text-[0.9rem] font-medium no-underline">
-                <PhoneIcon /> {t('nav.contacts')}
-              </a>
+          {/* Drawer panel */}
+          <div
+            id="mobile-drawer"
+            role="navigation"
+            aria-label="Mobile navigation"
+            className="mob-drawer absolute top-0 right-0 bottom-0 flex flex-col"
+            style={{
+              width: 'min(88vw, 340px)',
+              background: 'rgba(12,12,14,0.98)',
+              borderLeft: '1px solid rgba(255,255,255,0.07)',
+              boxShadow: '-24px 0 80px rgba(0,0,0,0.7)',
+            }}
+          >
+            {/* Drawer header */}
+            <div className="flex items-center justify-between px-5 h-16 border-b border-white/[0.06] shrink-0">
+              <div className="flex items-center gap-2">
+                <img src={LOGO_URL} alt="Crown Services" className="h-7 w-auto object-contain"
+                  style={{ filter: 'brightness(0) invert(1) opacity(0.85)' }}
+                  onError={e => { e.currentTarget.style.display = 'none'; }}
+                />
+                <span className="text-brand-orange font-semibold text-[0.85rem] tracking-[0.01em]">Crown Services</span>
+              </div>
+              <button
+                onClick={closeMenu}
+                aria-label="Close menu"
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-white/50 hover:text-white hover:bg-white/[0.07] transition-colors border-0 bg-transparent cursor-pointer"
+              >
+                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </button>
             </div>
 
-            <div className="flex gap-3 mt-3 pt-3 border-t border-divider items-center">
-              <div className="relative">
-                <button
-                  onClick={() => setLangOpen(v => !v)}
-                  className={`w-[34px] h-[34px] rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer border
-                    ${langOpen
-                      ? 'bg-amber/[0.12] border-amber/40 text-amber'
-                      : 'bg-white/[0.08] border-white/10 text-white/65'}`}
-                  title={lang}
-                >
-                  <GlobeIcon />
-                </button>
-                {langOpen && (
-                  <div className="absolute bottom-[calc(100%+8px)] left-0 bg-surface border border-divider rounded-xl p-[5px] min-w-[110px] shadow-[0_-16px_48px_rgba(0,0,0,0.6)] z-[200]">
-                    {languages.map(l => (
-                      <LangOption key={l} l={l} current={lang} onSelect={() => { setLang(l); setLangOpen(false); }} />
-                    ))}
-                  </div>
-                )}
+            {/* Scrollable nav */}
+            <div className="flex-1 overflow-y-auto py-4 px-3">
+
+              {/* Home */}
+              <Link href="/" onClick={closeMenu}
+                className={`mob-item mob-link ${pathname === '/' ? 'mob-link--active' : ''}`}
+                style={{ animationDelay: '0.04s' }}>
+                <HomeIcon />&nbsp;&nbsp;{t('nav.home')}
+              </Link>
+
+              {/* Tours section */}
+              <div className="mob-item px-3 pt-5 pb-1" style={{ animationDelay: '0.08s' }}>
+                <span className="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-amber/70 flex items-center gap-2">
+                  <MountainIcon /> {t('nav.tours')}
+                </span>
               </div>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 font-semibold text-[0.85rem] py-[7px] px-4 rounded-full no-underline"
-                style={{ background: '#E8D9BC', color: '#1a1a1a' }}>
-                <WhatsAppIcon color="#25D366" size={16} />
+              {tourItems.map((item, i) => (
+                <Link key={item.key} href={item.to} onClick={closeMenu}
+                  className={`mob-item mob-sub-link ${pathname === item.to ? 'mob-sub-link--active' : ''}`}
+                  style={{ animationDelay: `${0.11 + i * 0.04}s` }}>
+                  <svg width="5" height="5" viewBox="0 0 6 6" fill="currentColor" className="opacity-40 shrink-0"><circle cx="3" cy="3" r="3"/></svg>
+                  {t(`nav.dropdown.${item.key}`)}
+                </Link>
+              ))}
+
+              {/* Car Services section */}
+              <div className="mob-item px-3 pt-5 pb-1" style={{ animationDelay: '0.20s' }}>
+                <span className="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-amber/70 flex items-center gap-2">
+                  <CarIcon /> {t('nav.carServices')}
+                </span>
+              </div>
+              {carItems.map((item, i) => (
+                <Link key={item.key} href={item.to} onClick={closeMenu}
+                  className={`mob-item mob-sub-link ${pathname === item.to ? 'mob-sub-link--active' : ''}`}
+                  style={{ animationDelay: `${0.23 + i * 0.04}s` }}>
+                  <svg width="5" height="5" viewBox="0 0 6 6" fill="currentColor" className="opacity-40 shrink-0"><circle cx="3" cy="3" r="3"/></svg>
+                  {t(`nav.dropdown.${item.key}`)}
+                </Link>
+              ))}
+
+              {/* Divider */}
+              <div className="mob-item mx-3 my-4 h-px bg-white/[0.06]" style={{ animationDelay: '0.36s' }} />
+
+              {/* Security */}
+              <Link href="/security" onClick={closeMenu}
+                className={`mob-item mob-link ${pathname === '/security' ? 'mob-link--active' : ''}`}
+                style={{ animationDelay: '0.38s' }}>
+                <ShieldIcon />&nbsp;&nbsp;{t('nav.security')}
+              </Link>
+
+              {/* Apartments */}
+              <Link href="/apartments" onClick={closeMenu}
+                className={`mob-item mob-link ${pathname === '/apartments' ? 'mob-link--active' : ''}`}
+                style={{ animationDelay: '0.42s' }}>
+                <BuildingIcon />&nbsp;&nbsp;{t('nav.dropdown.apartments')}
+              </Link>
+
+              {/* Contacts */}
+              <a href="#contact" onClick={closeMenu}
+                className="mob-item mob-link"
+                style={{ animationDelay: '0.46s' }}>
+                <PhoneIcon />&nbsp;&nbsp;{t('nav.contacts')}
+              </a>
+
+            </div>
+
+            {/* Bottom: language + WhatsApp */}
+            <div className="shrink-0 px-4 pt-4 pb-6 border-t border-white/[0.06]"
+              style={{ background: 'rgba(8,8,10,0.6)' }}>
+
+              {/* Language tabs */}
+              <p className="text-[0.65rem] font-bold tracking-[0.14em] uppercase text-white/30 mb-2 px-1">
+                Language
+              </p>
+              <div className="flex gap-2 mb-4">
+                {languages.map(l => (
+                  <button
+                    key={l}
+                    onClick={() => setLang(l)}
+                    className={`mob-lang-pill ${lang === l ? 'mob-lang-pill--active' : ''}`}
+                  >
+                    {l}
+                  </button>
+                ))}
+              </div>
+
+              {/* WhatsApp CTA */}
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="flex items-center justify-center gap-2.5 w-full py-[14px] rounded-[14px] no-underline font-bold text-[0.95rem] transition-opacity active:opacity-80"
+                style={{ background: '#E8D9BC', color: '#0a0a0b' }}
+              >
+                <WhatsAppIcon color="#25D366" size={18} />
                 WhatsApp
               </a>
             </div>
           </div>
-        )}
-      </header>
+        </div>
+      )}
     </>
   );
 }
@@ -327,9 +441,7 @@ function LangOption({ l, current, onSelect }) {
     <button
       onClick={onSelect}
       className={`flex items-center justify-between w-full px-3 py-2 rounded-lg border-0 cursor-pointer font-sans text-[0.85rem] transition-colors duration-150
-        ${active
-          ? 'bg-amber/10 text-amber font-bold'
-          : 'bg-transparent text-white/75 font-medium hover:bg-white/[0.06] hover:text-white'}`}
+        ${active ? 'bg-amber/10 text-amber font-bold' : 'bg-transparent text-white/75 font-medium hover:bg-white/[0.06] hover:text-white'}`}
     >
       {l}
       {active && (
@@ -350,10 +462,8 @@ function DropdownButton({ label, icon, open, onClick }) {
     >
       {icon}
       {label}
-      <svg
-        width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
-        className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-      >
+      <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
+        className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/>
       </svg>
     </button>
