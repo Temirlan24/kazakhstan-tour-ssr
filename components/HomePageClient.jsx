@@ -254,7 +254,9 @@ export default function HomePageClient() {
 
 function ServiceCard({ svc, t }) {
   return (
-    <div className="hsvc bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col">
+    <div className="hsvc relative bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col cursor-pointer">
+      <Link href={svc.to} className="absolute inset-0 z-[1]" aria-label={t(`home.services.${svc.key}.title`)} />
+
       <div
         className="relative h-[215px] shrink-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${svc.bg})` }}
@@ -274,7 +276,7 @@ function ServiceCard({ svc, t }) {
           {t(`home.services.${svc.key}.description`)}
         </p>
 
-        <div className="flex flex-col gap-2">
+        <div className="relative z-[2] flex flex-col gap-2">
           {svc.items.map((item, i) => (
             <Link key={i} href={item.to} className="hsvc-item">
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
