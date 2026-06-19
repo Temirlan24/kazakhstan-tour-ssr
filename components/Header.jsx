@@ -136,6 +136,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    const map = { EN: 'en', RU: 'ru', KZ: 'kk' };
+    document.documentElement.setAttribute('lang', map[lang] || 'ru');
+  }, [lang]);
+
   // Lock body scroll when drawer is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';

@@ -3,38 +3,38 @@ import JsonLd from '@/components/JsonLd';
 import { SITE_URL } from '@/lib/config';
 
 export const metadata = {
-  title: 'Crown Services — Premium Tours, Car Rent & More in Almaty',
+  title: 'Crown Services — Трансфер, Туры, Аренда Авто и Апартаменты в Алматы',
   description:
-    'Book premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartments in Almaty. Fast booking via WhatsApp.',
+    'Премиальный сервис в Казахстане: VIP-трансфер из аэропорта, аренда авто, туры, охрана и апартаменты в Алматы. Один звонок — полная логистика. Заказ через WhatsApp.',
   keywords: [
     'Crown Services',
-    'tours Kazakhstan',
-    'Almaty tours',
-    'car rent Almaty',
-    'transfer Almaty',
-    'security escort Kazakhstan',
-    'apartments Almaty',
-    'Kyrgyzstan tours',
+    'туры Казахстан',
+    'туры Алматы',
+    'аренда авто Алматы',
+    'трансфер Алматы',
+    'охрана Казахстан',
+    'апартаменты Алматы',
+    'туры Кыргызстан',
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: 'Crown Services — Premium Tours, Car Rent & More in Almaty',
+    title: 'Crown Services — Трансфер, Туры, Аренда Авто и Апартаменты в Алматы',
     description:
-      'Book premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartments in Almaty.',
+      'Премиальный сервис в Казахстане: VIP-трансфер из аэропорта, аренда авто, туры, охрана и апартаменты в Алматы.',
     url: SITE_URL,
     images: [
       {
         url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80',
         width: 1200,
         height: 630,
-        alt: 'Premium tours in Kazakhstan — Crown Services',
+        alt: 'Crown Services — Премиальный сервис в Казахстане',
       },
     ],
   },
   twitter: {
-    title: 'Crown Services — Premium Tours, Car Rent & More in Almaty',
+    title: 'Crown Services — Трансфер, Туры, Аренда Авто и Апартаменты в Алматы',
     description:
-      'Book premium tours in Kazakhstan & Kyrgyzstan, luxury car rental, airport transfer, security escort and apartments in Almaty.',
+      'Премиальный сервис в Казахстане: VIP-трансфер из аэропорта, аренда авто, туры, охрана и апартаменты в Алматы.',
     images: ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80'],
   },
 };

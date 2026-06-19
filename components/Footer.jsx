@@ -6,21 +6,21 @@ import { WHATSAPP_URL, PHONE } from '@/lib/config';
 
 const LOGO_URL = "https://drive.google.com/thumbnail?id=1Ruoprk8P8DLCSYibesti599hx4VpCxR2&sz=w200";
 
-const tourLinks = [
-  { href: '/kazakhstan', label: 'Tours in Kazakhstan' },
-  { href: '/kyrgyzstan', label: 'Tours in Kyrgyzstan' },
-];
-
-const serviceLinks = [
-  { href: '/car-rent',             label: 'Car Rental' },
-  { href: '/car-rent-with-driver', label: 'Car with Driver' },
-  { href: '/transfer',             label: 'Airport Transfer' },
-  { href: '/apartments',           label: 'Apartments' },
-  { href: '/security',             label: 'Security Services' },
-];
-
 export default function Footer() {
   const { t } = useTranslation();
+
+  const tourLinks = [
+    { href: '/kazakhstan', label: t('footer.links.kzTours') },
+    { href: '/kyrgyzstan', label: t('footer.links.kgTours') },
+  ];
+
+  const serviceLinks = [
+    { href: '/car-rent',             label: t('footer.links.carRental') },
+    { href: '/car-rent-with-driver', label: t('footer.links.carWithDriver') },
+    { href: '/transfer',             label: t('footer.links.transfer') },
+    { href: '/apartments',           label: t('footer.links.apartments') },
+    { href: '/security',             label: t('footer.links.security') },
+  ];
 
   return (
     <footer className="bg-surface border-t border-divider">
@@ -41,7 +41,7 @@ export default function Footer() {
               <span className="text-brand-orange font-semibold text-[0.9rem]">Crown Services</span>
             </Link>
             <p className="text-muted text-[0.82rem] leading-[1.6] m-0 max-w-[220px]">
-              Premium travel &amp; transport services in Kazakhstan.
+              {t('footer.tagline')}
             </p>
             <address className="not-italic">
               <a
@@ -56,13 +56,15 @@ export default function Footer() {
                 </svg>
                 {PHONE}
               </a>
-              <p className="text-muted text-[0.78rem] m-0 mt-1">Almaty, Kazakhstan</p>
+              <p className="text-muted text-[0.78rem] m-0 mt-1">{t('footer.city')}</p>
             </address>
           </div>
 
           {/* Tours */}
-          <nav aria-label="Tour links">
-            <h3 className="text-white text-[0.8rem] font-bold tracking-[0.1em] uppercase m-0 mb-4">Tours</h3>
+          <nav aria-label={t('footer.sections.tours')}>
+            <h3 className="text-white text-[0.8rem] font-bold tracking-[0.1em] uppercase m-0 mb-4">
+              {t('footer.sections.tours')}
+            </h3>
             <ul className="list-none p-0 m-0 flex flex-col gap-2">
               {tourLinks.map(link => (
                 <li key={link.href}>
@@ -78,8 +80,10 @@ export default function Footer() {
           </nav>
 
           {/* Services */}
-          <nav aria-label="Service links">
-            <h3 className="text-white text-[0.8rem] font-bold tracking-[0.1em] uppercase m-0 mb-4">Services</h3>
+          <nav aria-label={t('footer.sections.services')}>
+            <h3 className="text-white text-[0.8rem] font-bold tracking-[0.1em] uppercase m-0 mb-4">
+              {t('footer.sections.services')}
+            </h3>
             <ul className="list-none p-0 m-0 flex flex-col gap-2">
               {serviceLinks.map(link => (
                 <li key={link.href}>
@@ -96,7 +100,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white text-[0.8rem] font-bold tracking-[0.1em] uppercase m-0 mb-4">Contact</h3>
+            <h3 className="text-white text-[0.8rem] font-bold tracking-[0.1em] uppercase m-0 mb-4">
+              {t('footer.sections.contact')}
+            </h3>
             <ul className="list-none p-0 m-0 flex flex-col gap-3">
               <li>
                 <a
@@ -109,7 +115,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-muted text-[0.87rem]">EN · RU · KZ</li>
-              <li className="text-muted text-[0.87rem]">Available 24/7</li>
+              <li className="text-muted text-[0.87rem]">{t('footer.available')}</li>
             </ul>
           </div>
 
@@ -120,7 +126,7 @@ export default function Footer() {
             {t('footer.copyright')}
           </p>
           <p className="text-muted text-[0.78rem] m-0">
-            Almaty, Kazakhstan
+            {t('footer.city')}
           </p>
         </div>
       </div>

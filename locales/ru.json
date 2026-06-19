@@ -174,12 +174,25 @@
   },
   "footer": {
     "copyright": "© 2026 Crown Services. Все права защищены.",
+    "tagline": "Премиальный туристический и транспортный сервис в Казахстане.",
+    "city": "Алматы, Казахстан",
+    "available": "Доступно 24/7",
+    "sections": {
+      "tours": "Туры",
+      "services": "Услуги",
+      "contact": "Контакты"
+    },
     "links": {
       "home": "Главная",
       "tours": "Туры",
       "carRental": "Аренда авто",
       "apartments": "Апартаменты",
-      "contacts": "Контакты"
+      "contacts": "Контакты",
+      "kzTours": "Туры по Казахстану",
+      "kgTours": "Туры в Кыргызстан",
+      "carWithDriver": "Авто с водителем",
+      "transfer": "Трансфер",
+      "security": "Охрана"
     }
   },
   "tours": {

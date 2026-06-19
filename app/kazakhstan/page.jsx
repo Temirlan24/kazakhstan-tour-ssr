@@ -12,33 +12,33 @@ const OG_IMAGE =
   'https://www.pelago.com/img/products/KZ-Kazakhstan/full-day-private-tour-in-big-almaty-lake/a94846f9-2685-485c-a7f9-e5101d2da7fc_full-day-private-tour-in-big-almaty-lake-xlarge.jpg';
 
 export const metadata = {
-  title: 'Guided Tours in Kazakhstan — Almaty, Astana & Aktau',
+  title: 'Туры по Казахстану — Алматы, Астана и Актау',
   description:
-    'Discover Kazakhstan with guided tours: Big Almaty Lake, Charyn Canyon, Kolsay Lakes, Burabay, Astana city and Aktau steppe. Private & group tours from Almaty.',
+    'Частные и групповые туры по Казахстану: Большое Алматинское озеро, Чарынский каньон, Кольсайские озёра, Бурабай, Астана и Актау. Организация туров из Алматы.',
   keywords: [
-    'tours Kazakhstan',
-    'Almaty tours',
-    'Charyn Canyon tour',
-    'Kolsay Lakes tour',
-    'Big Almaty Lake',
-    'Astana city tour',
-    'Burabay tour',
-    'Aktau tour',
-    'Kazakhstan travel',
-    'guided tours Kazakhstan',
+    'туры Казахстан',
+    'туры Алматы',
+    'Чарынский каньон тур',
+    'Кольсайские озёра тур',
+    'Большое Алматинское озеро',
+    'тур Астана',
+    'Бурабай тур',
+    'Актау тур',
+    'путешествие Казахстан',
+    'групповые туры Казахстан',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Guided Tours in Kazakhstan — Almaty, Astana & Aktau',
+    title: 'Туры по Казахстану — Алматы, Астана и Актау',
     description:
-      'Discover Kazakhstan with guided tours: Big Almaty Lake, Charyn Canyon, Kolsay Lakes, Burabay, Astana city and Aktau steppe.',
+      'Частные и групповые туры по Казахстану: Большое Алматинское озеро, Чарынский каньон, Кольсайские озёра, Бурабай, Астана и Актау.',
     url: PAGE_URL,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Tours in Kazakhstan — Big Almaty Lake' }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Туры по Казахстану — Большое Алматинское озеро' }],
   },
   twitter: {
-    title: 'Tours in Kazakhstan — Almaty, Astana, Aktau',
+    title: 'Туры по Казахстану — Алматы, Астана, Актау',
     description:
-      'Guided tours: Big Almaty Lake, Charyn Canyon, Kolsay Lakes, Burabay, Astana and Aktau steppe.',
+      'Туры по Казахстану: Большое Алматинское озеро, Чарынский каньон, Кольсайские озёра, Бурабай, Астана и Актау.',
     images: [OG_IMAGE],
   },
 };
@@ -47,16 +47,16 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Tours in Kazakhstan', item: PAGE_URL },
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Туры по Казахстану', item: PAGE_URL },
   ],
 };
 
 const toursSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Tours in Kazakhstan',
-  description: 'Guided tours across Kazakhstan from Almaty',
+  name: 'Туры по Казахстану',
+  description: 'Частные и групповые туры по Казахстану из Алматы',
   url: PAGE_URL,
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Big Almaty Lake Tour' },

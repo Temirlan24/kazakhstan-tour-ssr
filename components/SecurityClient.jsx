@@ -270,9 +270,9 @@ function SecurityCard({ id, typeKey }) {
           >
             {t(`security.${id}.typeLabel`)}
           </span>
-          <h2 className="m-0 text-[1.45rem] font-bold text-white tracking-[-0.02em] leading-[1.2] font-sans">
+          <h3 className="m-0 text-[1.45rem] font-bold text-white tracking-[-0.02em] leading-[1.2] font-sans">
             {t(`security.${id}.name`)}
-          </h2>
+          </h3>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 import PhotoLightbox from './PhotoLightbox';
 import { WHATSAPP_URL } from '@/lib/config';
@@ -80,16 +81,30 @@ export default function UnifiedModal({
       >
         <div className="overflow-y-auto flex-1 min-h-0">
           <div
-            className="group/photo relative h-[400px] overflow-hidden bg-black cursor-zoom-in touch-pan-y"
+            className="group/photo relative h-[480px] overflow-hidden bg-black cursor-zoom-in touch-pan-y"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             onClick={() => setLightboxOpen(true)}
           >
-            <img
+            {/* Blurred background fill — hides dark letterbox bars for portrait images */}
+            <Image
+              src={images[imgIdx]}
+              alt=""
+              fill
+              sizes="200px"
+              className="object-cover scale-110 blur-[28px] opacity-70 pointer-events-none"
+              aria-hidden
+            />
+            {/* Sharp main image */}
+            <Image
               key={imgIdx}
               src={images[imgIdx]}
               alt={title}
-              className="modal-img w-full h-full object-cover block transition-transform duration-[400ms] group-hover/photo:scale-[1.04]"
+              fill
+              sizes="(max-width: 768px) 100vw, 1100px"
+              className="modal-img object-contain transition-transform duration-[400ms] group-hover/photo:scale-[1.04]"
+              priority
+              quality={90}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/[0.08] via-black/50 to-[rgba(10,10,11,0.92)] pointer-events-none" />
 
@@ -162,10 +177,10 @@ export default function UnifiedModal({
                 <button
                   key={i}
                   onClick={() => setImgIdx(i)}
-                  className={`modal-thumb shrink-0 w-[72px] h-[50px] rounded-lg overflow-hidden border-2 p-0 cursor-pointer transition-all duration-200
+                  className={`modal-thumb relative shrink-0 w-[72px] h-[50px] rounded-lg overflow-hidden border-2 p-0 cursor-pointer transition-all duration-200
                     ${i === imgIdx ? 'border-amber opacity-100' : 'border-white/[0.08] opacity-50'}`}
                 >
-                  <img src={src} alt="" className="w-full h-full object-cover block" />
+                  <Image src={src} alt="" fill sizes="72px" className="object-cover" />
                 </button>
               ))}
             </div>

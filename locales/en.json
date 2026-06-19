@@ -174,12 +174,25 @@
   },
   "footer": {
     "copyright": "© 2026 Crown Services. All rights reserved.",
+    "tagline": "Premium travel & transport services in Kazakhstan.",
+    "city": "Almaty, Kazakhstan",
+    "available": "Available 24/7",
+    "sections": {
+      "tours": "Tours",
+      "services": "Services",
+      "contact": "Contact"
+    },
     "links": {
       "home": "Home",
       "tours": "Tours",
       "carRental": "Car Rental",
       "apartments": "Apartments",
-      "contacts": "Contacts"
+      "contacts": "Contacts",
+      "kzTours": "Tours in Kazakhstan",
+      "kgTours": "Tours in Kyrgyzstan",
+      "carWithDriver": "Car with Driver",
+      "transfer": "Airport Transfer",
+      "security": "Security Services"
     }
   },
   "tours": {
