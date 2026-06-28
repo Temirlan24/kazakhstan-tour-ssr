@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
 import CTASection from './CTASection';
@@ -45,7 +46,38 @@ const STYLES = `
   .hero-grad-2 {
     background: linear-gradient(to top, #0A0A0B 0%, transparent 32%);
   }
+  .section-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1), transform 0.55s cubic-bezier(0.22,1,0.36,1);
+  }
+  .section-enter.visible { opacity: 1; transform: translateY(0); }
+  .svc-enter {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+  }
+  .svc-enter.visible { opacity: 1; transform: translateY(0); }
 `;
+
+/* Fires once when the element enters the viewport */
+function useInView(threshold = 0.15) {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setInView(true); obs.disconnect(); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return [ref, inView];
+}
+
+/* ─── Icons ─────────────────────────────────────────────────────────── */
 
 function MountainIcon() {
   return (
@@ -91,16 +123,13 @@ function ArrowRightIcon({ size = 14 }) {
   );
 }
 
-function ChevronRightIcon() {
-  return (
-    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="9 18 15 12 9 6"/>
-    </svg>
-  );
-}
+/* ─── Main component ─────────────────────────────────────────────────── */
 
 export default function HomePageClient() {
   const { t } = useTranslation();
+
+  const [headingRef, headingInView] = useInView(0.3);
+  const [cardsRef, cardsInView]     = useInView(0.1);
 
   const SERVICES = [
     {
@@ -145,17 +174,11 @@ export default function HomePageClient() {
     },
   ];
 
-  const stats = [
-    { num: '50+', label: t('home.hero.stat1') },
-    { num: '5★',  label: t('home.hero.stat2') },
-    { num: '1hr', label: t('home.hero.stat3') },
-  ];
-
   return (
     <>
       <style>{STYLES}</style>
 
-      {/* HERO */}
+      {/* ── HERO ── */}
       <section
         className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-cover"
         style={{ backgroundImage: `url(${HERO_BG})`, backgroundPosition: 'center 25%' }}
@@ -209,28 +232,18 @@ export default function HomePageClient() {
             </a>
           </div>
 
-          <div className="ha5 flex flex-wrap border-t border-white/10 pt-[26px]">
-            {stats.map((s, i) => (
-              <div
-                key={i}
-                className={i < stats.length - 1 ? 'pr-7 mr-7 border-r border-white/10' : ''}
-              >
-                <div className="text-[clamp(1.4rem,2.5vw,1.85rem)] font-bold text-amber tracking-[-0.02em] leading-none">
-                  {s.num}
-                </div>
-                <div className="text-[0.72rem] text-white/[0.42] uppercase tracking-[0.09em] mt-[5px] font-medium">
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* ── SERVICES ── */}
       <section className="bg-dark pt-24 pb-[108px]">
         <div className="max-w-[1280px] mx-auto px-6">
-          <div className="mb-[52px]">
+
+          {/* Heading animates in on scroll */}
+          <div
+            ref={headingRef}
+            className={`section-enter mb-[52px] ${headingInView ? 'visible' : ''}`}
+          >
             <p className="text-amber text-[0.73rem] font-bold tracking-[0.15em] uppercase m-0 mb-[10px]">
               {t('home.services.sectionLabel')}
             </p>
@@ -239,9 +252,16 @@ export default function HomePageClient() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(290px,1fr))] gap-5">
-            {SERVICES.map(svc => (
-              <ServiceCard key={svc.key} svc={svc} t={t} />
+          {/* Cards stagger in when grid enters viewport */}
+          <div ref={cardsRef} className="grid grid-cols-[repeat(auto-fill,minmax(290px,1fr))] gap-5">
+            {SERVICES.map((svc, i) => (
+              <div
+                key={svc.key}
+                className={`svc-enter h-full ${cardsInView ? 'visible' : ''}`}
+                style={{ transitionDelay: cardsInView ? `${i * 100}ms` : '0ms' }}
+              >
+                <ServiceCard svc={svc} t={t} />
+              </div>
             ))}
           </div>
         </div>
@@ -254,7 +274,7 @@ export default function HomePageClient() {
 
 function ServiceCard({ svc, t }) {
   return (
-    <div className="hsvc relative bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col cursor-pointer">
+    <div className="hsvc h-full relative bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col cursor-pointer">
       <Link href={svc.to} className="absolute inset-0 z-[1]" aria-label={t(`home.services.${svc.key}.title`)} />
 
       <div

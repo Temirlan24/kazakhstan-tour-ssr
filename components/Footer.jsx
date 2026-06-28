@@ -114,7 +114,6 @@ export default function Footer() {
                   WhatsApp
                 </a>
               </li>
-              <li className="text-muted text-[0.87rem]">EN · RU · KZ</li>
               <li className="text-muted text-[0.87rem]">{t('footer.available')}</li>
             </ul>
           </div>

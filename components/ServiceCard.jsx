@@ -57,6 +57,7 @@ export default function ServiceCard({
           <img
             src={allImages[0]}
             alt={title}
+            loading="lazy"
             className="w-full h-full object-cover block transition-transform duration-500 group-hover/photo:scale-105"
             onError={e => { e.currentTarget.style.display = 'none'; }}
           />
