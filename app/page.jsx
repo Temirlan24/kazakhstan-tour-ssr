@@ -42,7 +42,7 @@ export const metadata = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL }],
+  itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL }],
 };
 
 const websiteSchema = {

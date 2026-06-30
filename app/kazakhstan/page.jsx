@@ -9,7 +9,7 @@ import { SITE_URL } from '@/lib/config';
 
 const PAGE_URL = `${SITE_URL}/kazakhstan`;
 const OG_IMAGE =
-  'https://www.pelago.com/img/products/KZ-Kazakhstan/full-day-private-tour-in-big-almaty-lake/a94846f9-2685-485c-a7f9-e5101d2da7fc_full-day-private-tour-in-big-almaty-lake-xlarge.jpg';
+  'https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=1200&q=80';
 
 export const metadata = {
   title: 'Туры по Казахстану — Алматы, Астана и Актау',
@@ -59,12 +59,12 @@ const toursSchema = {
   description: 'Частные и групповые туры по Казахстану из Алматы',
   url: PAGE_URL,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Big Almaty Lake Tour' },
-    { '@type': 'ListItem', position: 2, name: 'Charyn Canyon Tour' },
-    { '@type': 'ListItem', position: 3, name: 'Kolsay Lakes Tour' },
-    { '@type': 'ListItem', position: 4, name: 'Burabay National Park Tour' },
-    { '@type': 'ListItem', position: 5, name: 'Astana City Tour' },
-    { '@type': 'ListItem', position: 6, name: 'Aktau & Caspian Sea Tour' },
+    { '@type': 'ListItem', position: 1, name: 'Тур на Большое Алматинское озеро' },
+    { '@type': 'ListItem', position: 2, name: 'Тур в Чарынский каньон' },
+    { '@type': 'ListItem', position: 3, name: 'Тур на Кольсайские озёра' },
+    { '@type': 'ListItem', position: 4, name: 'Тур в Бурабай' },
+    { '@type': 'ListItem', position: 5, name: 'Тур в Астану' },
+    { '@type': 'ListItem', position: 6, name: 'Тур в Актау и Каспийское море' },
   ],
 };
 
