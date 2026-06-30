@@ -6,6 +6,7 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import ScrollToTopHandler from '@/components/ScrollToTopHandler';
 import JsonLd from '@/components/JsonLd';
 import { SITE_URL, PHONE } from '@/lib/config';
+import { Analytics } from '@vercel/analytics/next';
 
 import en from '@/locales/en.json';
 import ru from '@/locales/ru.json';
@@ -146,6 +147,7 @@ export default function RootLayout({ children }) {
           <Footer />
           <FloatingWhatsApp />
         </I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
