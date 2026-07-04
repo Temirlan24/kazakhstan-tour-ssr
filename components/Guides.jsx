@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { guides } from '@/data/guides';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 
 const BADGE_ICONS = ['🛡️', '🗣️', '⏱️', '🌿'];
 
@@ -16,8 +17,8 @@ const STYLES = `
 `;
 
 export default function Guides() {
-  const { t } = useTranslation();
-  const badges = t('guides.badges') || [];
+  const t = useTranslations();
+  const badges = t.raw('guides.badges') || [];
 
   return (
     <section id="guides" className="bg-dark py-24 border-t border-divider">
@@ -42,9 +43,11 @@ export default function Guides() {
               key={guide.id}
               className="guide-card bg-surface border border-divider rounded-2xl p-8"
             >
-              <img
+              <Image
                 src={guide.image}
                 alt={guide.name}
+                width={72}
+                height={72}
                 className="w-[72px] h-[72px] rounded-full object-cover mb-5 border-2 border-divider"
               />
               <h3 className="m-0 mb-1 text-white text-[1.1rem] font-bold font-sans">

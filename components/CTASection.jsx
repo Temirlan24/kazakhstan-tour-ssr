@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 import { WHATSAPP_URL } from '@/lib/config';
 
 const STYLES = `
@@ -10,7 +10,7 @@ const STYLES = `
 `;
 
 export default function CTASection({ variant = 'home' }) {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const v = `cta.${variant}`;
 
   return (

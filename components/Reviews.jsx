@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { reviews } from '@/data/reviews';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 
 const AVATAR_GRADIENTS = [
   'linear-gradient(135deg, #C9A86C, #8B6914)',
@@ -60,7 +60,7 @@ function ArrowBtn({ dir, disabled, onClick }) {
 }
 
 export default function Reviews() {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [index, setIndex] = useState(0);
   const max = Math.max(0, reviews.length - VISIBLE);
 

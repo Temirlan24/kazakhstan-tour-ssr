@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useTranslation } from '@/lib/i18n';
+import Image from 'next/image';
+import { useTranslations, useLocale } from 'next-intl';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { WHATSAPP_URL } from '@/lib/config';
 
 const LOGO_URL = "https://drive.google.com/thumbnail?id=1Ruoprk8P8DLCSYibesti599hx4VpCxR2&sz=w200";
@@ -112,7 +112,9 @@ const STYLES = `
 `;
 
 export default function Header() {
-  const { lang, setLang, t } = useTranslation();
+  const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [langOpen, setLangOpen] = useState(false);
@@ -135,11 +137,6 @@ export default function Header() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  useEffect(() => {
-    const map = { EN: 'en', RU: 'ru', KZ: 'kk' };
-    document.documentElement.setAttribute('lang', map[lang] || 'ru');
-  }, [lang]);
 
   // Lock body scroll when drawer is open
   useEffect(() => {
@@ -165,9 +162,12 @@ export default function Header() {
         <div className="px-6 flex items-center justify-between h-16">
 
           <Link href="/" className="flex items-center gap-2.5 shrink-0 no-underline">
-            <img
+            <Image
               src={LOGO_URL}
               alt="Crown Services"
+              width={160}
+              height={36}
+              priority
               className="h-9 w-auto object-contain"
               style={{ filter: 'brightness(0) invert(1) opacity(0.9)' }}
               onError={e => { e.currentTarget.style.display = 'none'; }}
@@ -254,14 +254,19 @@ export default function Header() {
                 onClick={() => setLangOpen(v => !v)}
                 className={`lang-btn w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 shrink-0 cursor-pointer border
                   ${langOpen ? 'lang-btn--open bg-amber/[0.12] border-amber/40 text-amber' : 'bg-white/[0.08] border-white/10 text-white/65'}`}
-                title={lang}
+                title={locale.toUpperCase()}
               >
                 <GlobeIcon />
               </button>
               {langOpen && (
                 <div className="absolute top-[calc(100%+10px)] right-0 bg-surface border border-divider rounded-xl p-[5px] min-w-[110px] shadow-[0_20px_56px_rgba(0,0,0,0.65)] z-[200]">
                   {languages.map(l => (
-                    <LangOption key={l} l={l} current={lang} onSelect={() => { setLang(l); setLangOpen(false); }} />
+                    <LangOption
+                      key={l}
+                      l={l}
+                      current={locale.toUpperCase()}
+                      onSelect={() => { router.replace(pathname, { locale: l.toLowerCase() }); setLangOpen(false); }}
+                    />
                   ))}
                 </div>
               )}
@@ -317,7 +322,7 @@ export default function Header() {
             {/* Drawer header */}
             <div className="flex items-center justify-between px-5 h-16 border-b border-white/[0.06] shrink-0">
               <div className="flex items-center gap-2">
-                <img src={LOGO_URL} alt="Crown Services" className="h-7 w-auto object-contain"
+                <Image src={LOGO_URL} alt="Crown Services" width={125} height={28} className="h-7 w-auto object-contain"
                   style={{ filter: 'brightness(0) invert(1) opacity(0.85)' }}
                   onError={e => { e.currentTarget.style.display = 'none'; }}
                 />
@@ -412,8 +417,8 @@ export default function Header() {
                 {languages.map(l => (
                   <button
                     key={l}
-                    onClick={() => setLang(l)}
-                    className={`mob-lang-pill ${lang === l ? 'mob-lang-pill--active' : ''}`}
+                    onClick={() => router.replace(pathname, { locale: l.toLowerCase() })}
+                    className={`mob-lang-pill ${locale.toUpperCase() === l ? 'mob-lang-pill--active' : ''}`}
                   >
                     {l}
                   </button>

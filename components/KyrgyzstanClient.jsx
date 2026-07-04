@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { kgTours } from '@/data/kgTours';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { WHATSAPP_URL } from '@/lib/config';
 import ServiceCard from './ServiceCard';
 import CustomItinerary from './CustomItinerary';
@@ -58,20 +60,24 @@ const GroupIcon = () => (
 );
 
 export default function KyrgyzstanClient() {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const allImages = [...MARQUEE_IMAGES, ...MARQUEE_IMAGES];
 
   return (
     <>
       <section
         className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark"
-        style={{
-          paddingTop: '88px',
-          backgroundImage: `url(${BG})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 40%',
-        }}
+        style={{ paddingTop: '88px' }}
       >
+        <Image
+          src={BG}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: 'center 40%' }}
+        />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: 'linear-gradient(180deg, rgba(10,10,11,0.78) 0%, rgba(10,10,11,0.52) 52%, rgba(10,10,11,0.12) 100%)' }}
@@ -106,9 +112,9 @@ export default function KyrgyzstanClient() {
           >
             <ol className="flex items-center gap-1.5 list-none p-0 m-0">
               <li>
-                <a href="/" className="text-white/45 text-[0.78rem] font-medium hover:text-white/75 transition-colors no-underline">
+                <Link href="/" className="text-white/45 text-[0.78rem] font-medium hover:text-white/75 transition-colors no-underline">
                   {t('hero.breadcrumbHome')}
-                </a>
+                </Link>
               </li>
               <li aria-hidden="true" className="text-white/25 text-[0.78rem]">/</li>
               <li aria-current="page" className="text-brand-orange text-[0.78rem] font-bold tracking-[0.12em] uppercase">
@@ -212,11 +218,12 @@ export default function KyrgyzstanClient() {
                   boxShadow: '0 12px 40px rgba(0,0,0,0.55)',
                 }}
               >
-                <img
+                <Image
                   src={src}
                   alt={`Kyrgyzstan landscape ${(i % MARQUEE_IMAGES.length) + 1}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  fill
+                  sizes="150px"
+                  className="object-cover"
                 />
                 <div
                   className="absolute inset-0"

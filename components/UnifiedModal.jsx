@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 import PhotoLightbox from './PhotoLightbox';
 import { WHATSAPP_URL } from '@/lib/config';
 
@@ -32,7 +32,7 @@ export default function UnifiedModal({
   askQuestion,
   onClose,
 }) {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [imgIdx, setImgIdx] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const touchStartX = useRef(null);

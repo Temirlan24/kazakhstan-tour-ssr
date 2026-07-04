@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { tours } from '@/data/tours';
 import TourCard from './TourCard';
 import TourModal from './TourModal';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 
 const CITIES = ['all', 'almaty', 'astana', 'aktau'];
 
 export default function TourCatalog() {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [selectedTour, setSelectedTour] = useState(null);
   const [activeCity, setActiveCity] = useState('all');
   const [hoveredCity, setHoveredCity] = useState(null);

@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { carWithDriverCars } from '@/data/carWithDriver';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 import ServiceCard from './ServiceCard';
 import CTASection from './CTASection';
 
@@ -35,17 +36,15 @@ const GearIcon = () => (
 );
 
 export default function CarWithDriverClient() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <>
       <style>{STYLES}</style>
 
       <section
-        className="relative bg-cover"
+        className="relative"
         style={{
-          backgroundImage: `url(${BG})`,
-          backgroundPosition: 'center 60%',
           minHeight: '62vh',
           display: 'flex',
           flexDirection: 'column',
@@ -54,6 +53,7 @@ export default function CarWithDriverClient() {
           paddingBottom: '80px',
         }}
       >
+        <Image src={BG} alt="" fill priority sizes="100vw" className="object-cover" style={{ objectPosition: 'center 60%' }} />
         <div className="driver-hero-overlay absolute inset-0" />
         <div className="absolute bottom-0 inset-x-0 h-[130px] bg-gradient-to-b from-transparent to-dark" />
         <div

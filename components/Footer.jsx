@@ -1,13 +1,14 @@
 'use client';
 
-import Link from 'next/link';
-import { useTranslation } from '@/lib/i18n';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { WHATSAPP_URL, PHONE } from '@/lib/config';
 
 const LOGO_URL = "https://drive.google.com/thumbnail?id=1Ruoprk8P8DLCSYibesti599hx4VpCxR2&sz=w200";
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const tourLinks = [
     { href: '/kazakhstan', label: t('footer.links.kzTours') },
@@ -31,9 +32,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4 lg:col-span-1">
             <Link href="/" className="flex items-center gap-[10px] no-underline" aria-label="Crown Services — Home">
-              <img
+              <Image
                 src={LOGO_URL}
                 alt="Crown Services"
+                width={160}
+                height={36}
                 className="h-9 w-auto"
                 style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
                 onError={e => { e.currentTarget.style.display = 'none'; }}

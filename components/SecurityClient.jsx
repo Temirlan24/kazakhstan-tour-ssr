@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { securityServices, securityTypeColors } from '@/data/security';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 import { WHATSAPP_URL } from '@/lib/config';
 import CTASection from './CTASection';
 
@@ -56,8 +57,8 @@ const STYLES = `
 `;
 
 export default function SecurityClient() {
-  const { t } = useTranslation();
-  const why = t('security.page.why');
+  const t = useTranslations();
+  const why = t.raw('security.page.why');
 
   return (
     <>
@@ -65,10 +66,8 @@ export default function SecurityClient() {
 
       {/* HERO */}
       <section
-        className="relative bg-cover"
+        className="relative"
         style={{
-          backgroundImage: `url(${BG})`,
-          backgroundPosition: 'center 40%',
           minHeight: '72vh',
           display: 'flex',
           flexDirection: 'column',
@@ -77,6 +76,7 @@ export default function SecurityClient() {
           paddingBottom: '88px',
         }}
       >
+        <Image src={BG} alt="" fill priority sizes="100vw" className="object-cover" style={{ objectPosition: 'center 40%' }} />
         <div className="security-hero-overlay absolute inset-0" />
         <div className="absolute bottom-0 inset-x-0 h-[140px] bg-gradient-to-b from-transparent to-dark" />
         <div
@@ -247,9 +247,9 @@ export default function SecurityClient() {
 }
 
 function SecurityCard({ id, typeKey }) {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const color = securityTypeColors[typeKey];
-  const included = t(`security.${id}.included`) || [];
+  const included = t.raw(`security.${id}.included`) || [];
   const isEscort = typeKey === 'ESCORT';
 
   return (

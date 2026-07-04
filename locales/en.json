@@ -702,33 +702,6 @@
         "Extra water"
       ]
     },
-    "17": {
-      "title": "Almaty City Tour",
-      "durationDisplay": "3–5 hours",
-      "groupSize": "any size",
-      "description": "Discover Almaty's most iconic landmarks — the Kok Tobe TV tower, Zenkov Cathedral, Kazakhstan Hotel, Green Bazaar, and Republic Square park — all framed by the snow-capped Tian Shan mountains.",
-      "fullDescription": "A curated sightseeing tour through the highlights of Almaty, Kazakhstan's largest and most vibrant city. You'll visit the legendary Kok Tobe TV tower with its sweeping panorama, the ornate Zenkov Cathedral — one of the tallest wooden churches in the world — the Soviet-era Kazakhstan Hotel fountain square, the colourful and lively Green Bazaar, and the grand Republic Square park with the iconic colonnade framed by Tian Shan mountains. A perfect first introduction to the city.",
-      "itinerary": [
-        { "time": "10:00", "activity": "Pickup from your hotel" },
-        { "time": "10:30", "activity": "Kok Tobe TV tower & panoramic city views" },
-        { "time": "11:30", "activity": "Zenkov Cathedral & Panfilov Park" },
-        { "time": "12:30", "activity": "Kazakhstan Hotel & central fountain square" },
-        { "time": "13:00", "activity": "Green Bazaar — Almaty's famous market" },
-        { "time": "14:00", "activity": "Republic Square park & colonnade" },
-        { "time": "15:00", "activity": "Return drop-off" }
-      ],
-      "included": [
-        "Private vehicle",
-        "English-speaking guide",
-        "All scenic stops & viewpoints"
-      ],
-      "whatToBring": [
-        "Comfortable walking shoes",
-        "Camera",
-        "Cash for market & lunch",
-        "Light jacket"
-      ]
-    },
     "16": {
       "title": "Caspian Sea Tour",
       "durationDisplay": "Upon request",
@@ -747,6 +720,54 @@
         "Camera",
         "Light clothing",
         "Cash for refreshments"
+      ]
+    },
+    "17": {
+      "title": "Almaty City Tour",
+      "durationDisplay": "3–5 hours",
+      "groupSize": "any size",
+      "description": "Discover Almaty's most iconic landmarks — the Kok Tobe TV tower, Zenkov Cathedral, Kazakhstan Hotel, Green Bazaar, and Republic Square park — all framed by the snow-capped Tian Shan mountains.",
+      "fullDescription": "A curated sightseeing tour through the highlights of Almaty, Kazakhstan's largest and most vibrant city. You'll visit the legendary Kok Tobe TV tower with its sweeping panorama, the ornate Zenkov Cathedral — one of the tallest wooden churches in the world — the Soviet-era Kazakhstan Hotel fountain square, the colourful and lively Green Bazaar, and the grand Republic Square park with the iconic colonnade framed by Tian Shan mountains. A perfect first introduction to the city.",
+      "itinerary": [
+        {
+          "time": "10:00",
+          "activity": "Pickup from your hotel"
+        },
+        {
+          "time": "10:30",
+          "activity": "Kok Tobe TV tower & panoramic city views"
+        },
+        {
+          "time": "11:30",
+          "activity": "Zenkov Cathedral & Panfilov Park"
+        },
+        {
+          "time": "12:30",
+          "activity": "Kazakhstan Hotel & central fountain square"
+        },
+        {
+          "time": "13:00",
+          "activity": "Green Bazaar — Almaty's famous market"
+        },
+        {
+          "time": "14:00",
+          "activity": "Republic Square park & colonnade"
+        },
+        {
+          "time": "15:00",
+          "activity": "Return drop-off"
+        }
+      ],
+      "included": [
+        "Private vehicle",
+        "English-speaking guide",
+        "All scenic stops & viewpoints"
+      ],
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Camera",
+        "Cash for market & lunch",
+        "Light jacket"
       ]
     }
   },
@@ -1162,6 +1183,176 @@
       "team": "team",
       "book": "Enquire",
       "perDay": "/day"
+    }
+  },
+  "seo": {
+    "common": {
+      "home": "Home"
+    },
+    "home": {
+      "title": "Crown Services — Airport Transfers, Tours, Car Rental & Apartments in Almaty",
+      "description": "Premium travel & transport services in Kazakhstan: VIP airport transfers, car rental, private tours, security, and apartments in Almaty. One call, full logistics. Book via WhatsApp.",
+      "keywords": [
+        "Crown Services",
+        "Kazakhstan tours",
+        "Almaty tours",
+        "car rental Almaty",
+        "Almaty transfer",
+        "security Kazakhstan",
+        "Almaty apartments",
+        "Kyrgyzstan tours"
+      ]
+    },
+    "kazakhstan": {
+      "title": "Kazakhstan Tours — Almaty, Astana & Aktau",
+      "description": "Private and group tours across Kazakhstan: Big Almaty Lake, Charyn Canyon, Kolsai Lakes, Burabay, Astana and Aktau. Tours organized from Almaty.",
+      "keywords": [
+        "Kazakhstan tours",
+        "Almaty tours",
+        "Charyn Canyon tour",
+        "Kolsai Lakes tour",
+        "Big Almaty Lake",
+        "Astana tour",
+        "Burabay tour",
+        "Aktau tour",
+        "Kazakhstan travel",
+        "Kazakhstan group tours"
+      ],
+      "breadcrumb": "Kazakhstan Tours",
+      "tourItems": [
+        "Big Almaty Lake Tour",
+        "Charyn Canyon Tour",
+        "Kolsai Lakes Tour",
+        "Burabay Tour",
+        "Astana Tour",
+        "Aktau & Caspian Sea Tour"
+      ]
+    },
+    "kyrgyzstan": {
+      "title": "Kyrgyzstan Tours — Issyk-Kul, Bishkek & the Mountains",
+      "description": "Tours to Kyrgyzstan from Almaty: Bishkek city tours, Issyk-Kul Lake, mountain treks and multi-day adventures. Private and group tours. Book via WhatsApp.",
+      "keywords": [
+        "Kyrgyzstan tours",
+        "Issyk-Kul tour",
+        "Bishkek tour",
+        "Kyrgyzstan travel",
+        "tours from Almaty to Kyrgyzstan",
+        "Kyrgyzstan mountain trekking"
+      ],
+      "breadcrumb": "Kyrgyzstan Tours"
+    },
+    "carRent": {
+      "title": "Car Rental in Almaty — Comfort, Business, Luxury & Minivan",
+      "description": "Self-drive car rental in Almaty: Toyota Camry, Lexus LX and more. Comfort, Business, Premium and Luxury classes. Fixed pricing. Book via WhatsApp.",
+      "keywords": [
+        "car rental Almaty",
+        "rent a car Almaty",
+        "car hire Almaty",
+        "Toyota Camry rental Almaty",
+        "Lexus rental Almaty",
+        "self-drive car rental Almaty",
+        "luxury car rental Almaty"
+      ],
+      "breadcrumb": "Car Rental in Almaty",
+      "schemaName": "Car Rental in Almaty",
+      "schemaDescription": "Self-drive car rental in Almaty: Comfort, Business, Premium, Luxury and Minivan classes."
+    },
+    "carRentWithDriver": {
+      "title": "Car with Driver in Almaty — Personal Chauffeur",
+      "description": "Professional chauffeur service in Almaty. Comfort, Premium and Luxury vehicles with experienced drivers. Hourly and daily rental. Book via WhatsApp.",
+      "keywords": [
+        "car with driver Almaty",
+        "chauffeur service Almaty",
+        "hire a driver Almaty",
+        "personal driver Almaty",
+        "VIP driver Almaty",
+        "private driver Kazakhstan"
+      ],
+      "breadcrumb": "Car with Driver in Almaty",
+      "schemaName": "Car Rental with Driver in Almaty",
+      "schemaDescription": "Professional chauffeur service in Almaty: Comfort, Premium and Luxury classes."
+    },
+    "transfer": {
+      "title": "Almaty Airport & City Transfer with Driver — VIP, 24/7",
+      "description": "Reliable chauffeured transfers in Almaty. Economy, Business, Minivan and VIP. Airport pickup, business trips. Arrival in 15 minutes, 24/7. Book via WhatsApp.",
+      "keywords": [
+        "Almaty transfer",
+        "Almaty airport transfer",
+        "VIP transfer Almaty",
+        "chauffeured transfer Almaty",
+        "Almaty airport pickup",
+        "Almaty airport taxi"
+      ],
+      "breadcrumb": "Almaty Transfer",
+      "schemaName": "Almaty Chauffeured Transfer",
+      "schemaDescription": "Reliable chauffeured transfers in Almaty: Economy, Business, Minivan and VIP. Airport pickup, business trips.",
+      "faq": [
+        {
+          "question": "How much does an Almaty airport transfer cost?",
+          "answer": "The cost of an Almaty airport transfer depends on the vehicle class. Prices are fixed before the trip — no meters or hidden fees. Contact us on WhatsApp for the current rate."
+        },
+        {
+          "question": "How fast can a car be arranged in Almaty?",
+          "answer": "Cars can be arranged in Almaty in as little as 15 minutes. Crown Services operates 24/7, including holidays and nighttime."
+        },
+        {
+          "question": "Is transfer available to other cities in Kazakhstan?",
+          "answer": "Yes, Crown Services runs intercity transfers: Almaty–Astana, Almaty–Aktau, Almaty–Shymkent, Almaty–Bishkek and other routes."
+        },
+        {
+          "question": "What vehicle classes are available for transfers?",
+          "answer": "Economy, Business, Minivan (up to 8 seats) and VIP classes are available. All vehicles are clean and well-prepared, with drivers in business attire."
+        }
+      ]
+    },
+    "apartments": {
+      "title": "Business-Class Apartments in Almaty — Short-Stay Rental",
+      "description": "Furnished apartments for business guests in Almaty: city center, Medeu and other districts. Daily and monthly rental. Book via WhatsApp.",
+      "keywords": [
+        "Almaty apartments",
+        "rent apartment Almaty",
+        "short-stay rental Almaty",
+        "daily apartment rental Almaty",
+        "furnished apartments Almaty",
+        "business trip housing Almaty"
+      ],
+      "breadcrumb": "Almaty Apartments"
+    },
+    "security": {
+      "title": "Security & Executive Protection in Kazakhstan — Bodyguard Services",
+      "description": "Professional security in Kazakhstan: personal bodyguard, delegation escort, event security. Unique offer: security + transfer in one package. Book via WhatsApp.",
+      "keywords": [
+        "Kazakhstan security",
+        "bodyguard Almaty",
+        "personal security Kazakhstan",
+        "delegation security Kazakhstan",
+        "VIP security Kazakhstan",
+        "escort Almaty"
+      ],
+      "breadcrumb": "Security in Kazakhstan",
+      "schemaName": "Security & Escort Services in Kazakhstan",
+      "schemaDescription": "Professional security in Kazakhstan: personal bodyguard, delegation escort, event security.",
+      "faq": [
+        {
+          "question": "What security services does Crown Services provide?",
+          "answer": "Crown Services offers: personal bodyguards, corporate delegation escort, event security, corporate security, and round-the-clock protection. Unique in the market: security and transfer coordinated in one package."
+        },
+        {
+          "question": "Which cities in Kazakhstan does Crown Services security cover?",
+          "answer": "Security is available in Almaty, Astana, Aktau and Shymkent. We provide coverage across Kazakhstan for corporate delegations and events."
+        },
+        {
+          "question": "How is Crown Services different from other security agencies?",
+          "answer": "The only company in Kazakhstan that combines security and transfer in one package. All specialists operate under full confidentiality."
+        }
+      ]
+    },
+    "business": {
+      "name": "Crown Services",
+      "description": "Premium travel & transport services in Kazakhstan and Kyrgyzstan: VIP transfers, car rental, tours, security and apartments in Almaty.",
+      "addressLocality": "Almaty",
+      "addressRegion": "Almaty Region",
+      "catalogName": "Tourism & Transport Services"
     }
   }
 }

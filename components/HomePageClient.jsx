@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { useTranslation } from '@/lib/i18n';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import CTASection from './CTASection';
 import { WHATSAPP_URL } from '@/lib/config';
 
@@ -126,7 +127,7 @@ function ArrowRightIcon({ size = 14 }) {
 /* ─── Main component ─────────────────────────────────────────────────── */
 
 export default function HomePageClient() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const [headingRef, headingInView] = useInView(0.3);
   const [cardsRef, cardsInView]     = useInView(0.1);
@@ -179,10 +180,8 @@ export default function HomePageClient() {
       <style>{STYLES}</style>
 
       {/* ── HERO ── */}
-      <section
-        className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-cover"
-        style={{ backgroundImage: `url(${HERO_BG})`, backgroundPosition: 'center 25%' }}
-      >
+      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+        <Image src={HERO_BG} alt="" fill priority sizes="100vw" className="object-cover" style={{ objectPosition: 'center 25%' }} />
         <div className="hero-grad-1 absolute inset-0" />
         <div className="hero-grad-2 absolute inset-0" />
         <div
@@ -277,10 +276,8 @@ function ServiceCard({ svc, t }) {
     <div className="hsvc h-full relative bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col cursor-pointer">
       <Link href={svc.to} className="absolute inset-0 z-[1]" aria-label={t(`home.services.${svc.key}.title`)} />
 
-      <div
-        className="relative h-[215px] shrink-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${svc.bg})` }}
-      >
+      <div className="relative h-[215px] shrink-0">
+        <Image src={svc.bg} alt="" fill sizes="(max-width: 768px) 100vw, 290px" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/[0.12] to-black/[0.65]" />
         <div className="absolute bottom-[-22px] left-[22px] w-[46px] h-[46px] rounded-xl bg-surface-2 border border-divider flex items-center justify-center text-amber">
           <svc.Icon />

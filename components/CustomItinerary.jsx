@@ -1,13 +1,13 @@
 'use client';
 
-import { useTranslation } from '@/lib/i18n';
+import { useTranslations } from 'next-intl';
 import { WHATSAPP_URL } from '@/lib/config';
 
 const FEATURE_ICONS = ['🗺️', '👥', '🏔️', '💬'];
 
 export default function CustomItinerary() {
-  const { t } = useTranslation();
-  const features = t('customItinerary.features') || [];
+  const t = useTranslations();
+  const features = t.raw('customItinerary.features') || [];
 
   return (
     <section className="bg-surface py-24 border-t border-b border-divider">

@@ -1,6 +1,7 @@
 'use client';
 
-import { useTranslation } from '@/lib/i18n';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { WHATSAPP_URL } from '@/lib/config';
 
 const STYLES = `
@@ -22,7 +23,7 @@ const STYLES = `
 `;
 
 export default function TourCard({ tour, onOpen }) {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const title = t(`tours.${tour.id}.title`);
   const durationDisplay = t(`tours.${tour.id}.durationDisplay`);
   const groupSize = t(`tours.${tour.id}.groupSize`);
@@ -36,10 +37,12 @@ export default function TourCard({ tour, onOpen }) {
         className="tour-card group/card bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col cursor-pointer"
       >
         <div className="relative h-[220px] overflow-hidden shrink-0">
-          <img
+          <Image
             src={tour.images[0]}
             alt={title}
-            className="w-full h-full object-cover block transition-transform duration-500 group-hover/card:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, 300px"
+            className="object-cover transition-transform duration-500 group-hover/card:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/[0.08] to-black/[0.48] pointer-events-none" />
         </div>

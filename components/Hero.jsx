@@ -1,7 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslation } from '@/lib/i18n';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { WHATSAPP_URL } from '@/lib/config';
 
 // One representative image per tour/destination — used in the scrolling strip
@@ -39,7 +41,7 @@ function ArrowRightIcon() {
 }
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   // Duplicate for seamless loop
   const allImages = [...MARQUEE_IMAGES, ...MARQUEE_IMAGES];
@@ -47,13 +49,17 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark"
-      style={{
-        paddingTop: '88px',
-        backgroundImage: "url('https://images.unsplash.com/photo-1530480667809-b655d4dc3aaa?w=1920&q=90')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 55%',
-      }}
+      style={{ paddingTop: '88px' }}
     >
+      <Image
+        src="https://images.unsplash.com/photo-1530480667809-b655d4dc3aaa?w=1920&q=90"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+        style={{ objectPosition: 'center 55%' }}
+      />
       {/* Dark overlay — heavy at top for text, fades out so photo bleeds into marquee */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -93,9 +99,9 @@ export default function Hero() {
         >
           <ol className="flex items-center gap-1.5 list-none p-0 m-0">
             <li>
-              <a href="/" className="text-white/45 text-[0.78rem] font-medium hover:text-white/75 transition-colors no-underline">
+              <Link href="/" className="text-white/45 text-[0.78rem] font-medium hover:text-white/75 transition-colors no-underline">
                 {t('hero.breadcrumbHome')}
-              </a>
+              </Link>
             </li>
             <li aria-hidden="true" className="text-white/25 text-[0.78rem]">/</li>
             <li aria-current="page" className="text-brand-orange text-[0.78rem] font-bold tracking-[0.12em] uppercase">
@@ -223,11 +229,12 @@ export default function Hero() {
                 boxShadow: '0 12px 40px rgba(0,0,0,0.55)',
               }}
             >
-              <img
+              <Image
                 src={src}
                 alt={`Kazakhstan landscape ${(i % MARQUEE_IMAGES.length) + 1}`}
-                className="w-full h-full object-cover"
-                loading="lazy"
+                fill
+                sizes="150px"
+                className="object-cover"
               />
               {/* Darkening vignette on each card */}
               <div

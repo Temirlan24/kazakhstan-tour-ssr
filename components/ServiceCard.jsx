@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslation } from '@/lib/i18n';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import UnifiedModal from './UnifiedModal';
 import PhotoLightbox from './PhotoLightbox';
 import { WHATSAPP_URL } from '@/lib/config';
@@ -29,7 +30,7 @@ export default function ServiceCard({
   title, description, meta, price, priceUnit,
   bookLabel,
 }) {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [modalOpen, setModalOpen] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIdx, setLightboxIdx] = useState(0);
@@ -54,11 +55,12 @@ export default function ServiceCard({
           onClick={openLightbox}
           className="relative h-[220px] overflow-hidden shrink-0 cursor-zoom-in group/photo"
         >
-          <img
+          <Image
             src={allImages[0]}
             alt={title}
-            loading="lazy"
-            className="w-full h-full object-cover block transition-transform duration-500 group-hover/photo:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, 300px"
+            className="object-cover transition-transform duration-500 group-hover/photo:scale-105"
             onError={e => { e.currentTarget.style.display = 'none'; }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/[0.08] to-black/[0.48] pointer-events-none" />
