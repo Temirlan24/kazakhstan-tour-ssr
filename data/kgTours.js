@@ -3,18 +3,23 @@ export const kgTours = [
     id: 1,
     category: 'CITY',
     images: [
-      'https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?auto=format&fit=crop&w=800&q=75',
-      'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=800&q=75',
-      'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800&q=75',
+      '/assets/tours/kyrgyzstan/bishkek_1.jpg',
+      '/assets/tours/kyrgyzstan/bishkek_2.jpg',
+      '/assets/tours/kyrgyzstan/bishkek_3.jpg',
+      '/assets/tours/kyrgyzstan/bishkek_4.jpg',
     ],
   },
   {
     id: 2,
     category: 'LAKES',
     images: [
-      'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=75',
-      'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=75',
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=75',
+      '/assets/tours/kyrgyzstan/issykkul_1.jpg',
+      '/assets/tours/kyrgyzstan/issykkul_2.jpg',
+      '/assets/tours/kyrgyzstan/issykkul_3.jpg',
+      '/assets/tours/kyrgyzstan/issykkul_4.jpg',
+      '/assets/tours/kyrgyzstan/issyl_lake_1.jpg',
+      '/assets/tours/kyrgyzstan/issyl_lake_2.jpg',
+      '/assets/tours/kyrgyzstan/issyl_lake_3.jpg',
     ],
   },
   {
@@ -39,9 +44,10 @@ export const kgTours = [
     id: 5,
     category: 'LAKES',
     images: [
-      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=800&q=75',
-      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=75',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=75',
+      '/assets/tours/kyrgyzstan/kel_su_1.jpg',
+      '/assets/tours/kyrgyzstan/kel_su_2.jpg',
+      '/assets/tours/kyrgyzstan/kel_su_3.jpg',
+      '/assets/tours/kyrgyzstan/kel_su_4.jpg',
     ],
   },
 ];

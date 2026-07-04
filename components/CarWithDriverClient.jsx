@@ -93,8 +93,7 @@ export default function CarWithDriverClient() {
                 categoryLabel={t(`carWithDriver.${car.id}.classLabel`)}
                 title={t(`carWithDriver.${car.id}.name`)}
                 description={t(`carWithDriver.${car.id}.description`)}
-                price={t(`carWithDriver.${car.id}.price`)}
-                priceUnit={t('carWithDriver.labels.perDay')}
+
                 meta={[
                   { icon: <SeatIcon />, label: `${t(`carWithDriver.${car.id}.seats`)} ${t('carWithDriver.labels.seats')}` },
                   { icon: <GearIcon />, label: t(`carWithDriver.${car.id}.transmission`) },

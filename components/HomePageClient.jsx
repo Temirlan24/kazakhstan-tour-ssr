@@ -7,8 +7,8 @@ import CTASection from './CTASection';
 import { WHATSAPP_URL } from '@/lib/config';
 
 const HERO_BG  = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80";
-const TOURS_BG = "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80";
-const CARS_BG  = "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&q=80";
+const TOURS_BG = "/assets/tours/almaty/kolsay_1.jpg";
+const CARS_BG  = "/assets/cars/lexus/lexus_lx_1.jpg";
 const SEC_BG   = "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80";
 const APTS_BG  = "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80";
 

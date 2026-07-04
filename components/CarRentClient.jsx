@@ -92,8 +92,7 @@ export default function  CarRentClient() {
                 categoryLabel={t(`carRent.${car.id}.classLabel`)}
                 title={t(`carRent.${car.id}.name`)}
                 description={t(`carRent.${car.id}.description`)}
-                price={t(`carRent.${car.id}.price`)}
-                priceUnit={t('carRent.labels.perDay')}
+
                 meta={[
                   { icon: <SeatIcon />, label: `${t(`carRent.${car.id}.seats`)} ${t('carRent.labels.seats')}` },
                   { icon: <GearIcon />, label: t(`carRent.${car.id}.transmission`) },

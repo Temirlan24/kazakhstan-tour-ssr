@@ -95,8 +95,7 @@ export default function TransferClient() {
                 categoryLabel={t(`transfer.${tr.id}.typeLabel`)}
                 title={t(`transfer.${tr.id}.name`)}
                 description={t(`transfer.${tr.id}.description`)}
-                price={t(`transfer.${tr.id}.price`)}
-                priceUnit={t('transfer.labels.perTrip')}
+
                 meta={[
                   { icon: <PersonIcon />, label: `${t(`transfer.${tr.id}.passengers`)} ${t('transfer.labels.passengers')}` },
                   { icon: <CarIcon />,    label: t(`transfer.${tr.id}.vehicle`) },
