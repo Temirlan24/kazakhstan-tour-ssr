@@ -124,10 +124,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={LOCALE_TO_LANG[locale]}>
       <head>
-        <link
-          rel="icon"
-          href="https://drive.google.com/thumbnail?id=1Ruoprk8P8DLCSYibesti599hx4VpCxR2&sz=w64"
-        />
+        <link rel="icon" href="/premium-service.png" sizes="512x512" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
