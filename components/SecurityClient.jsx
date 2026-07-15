@@ -5,6 +5,7 @@ import { securityServices, securityTypeColors } from '@/data/security';
 import { useTranslations } from 'next-intl';
 import { WHATSAPP_URL } from '@/lib/config';
 import CTASection from './CTASection';
+import FAQAccordion from './FAQAccordion';
 
 const BG = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=80";
 
@@ -59,6 +60,7 @@ const STYLES = `
 export default function SecurityClient() {
   const t = useTranslations();
   const why = t.raw('security.page.why');
+  const faqItems = t.raw('seo.security.faq');
 
   return (
     <>
@@ -240,6 +242,8 @@ export default function SecurityClient() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion label={t('security.page.faqLabel')} title={t('security.page.faqTitle')} items={faqItems} />
 
       <CTASection variant="security" />
     </>

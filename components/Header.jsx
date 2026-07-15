@@ -6,7 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { WHATSAPP_URL } from '@/lib/config';
 
-const LOGO_URL = "https://drive.google.com/thumbnail?id=1Ruoprk8P8DLCSYibesti599hx4VpCxR2&sz=w200";
+const LOGO_URL = "/main_logo.png";
 const languages = ["EN", "RU", "KZ"];
 
 const tourItems = [
@@ -169,8 +169,6 @@ export default function Header() {
               height={36}
               priority
               className="h-9 w-auto object-contain"
-              style={{ filter: 'brightness(0) invert(1) opacity(0.9)' }}
-              onError={e => { e.currentTarget.style.display = 'none'; }}
             />
             <span className="hidden lg:block text-brand-orange font-semibold text-[0.95rem] tracking-[0.01em] font-sans">
               Crown Services
@@ -322,10 +320,7 @@ export default function Header() {
             {/* Drawer header */}
             <div className="flex items-center justify-between px-5 h-16 border-b border-white/[0.06] shrink-0">
               <div className="flex items-center gap-2">
-                <Image src={LOGO_URL} alt="Crown Services" width={125} height={28} className="h-7 w-auto object-contain"
-                  style={{ filter: 'brightness(0) invert(1) opacity(0.85)' }}
-                  onError={e => { e.currentTarget.style.display = 'none'; }}
-                />
+                <Image src={LOGO_URL} alt="Crown Services" width={125} height={28} className="h-7 w-auto object-contain" />
                 <span className="text-brand-orange font-semibold text-[0.85rem] tracking-[0.01em]">Crown Services</span>
               </div>
               <button

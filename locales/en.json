@@ -910,7 +910,7 @@
     "page": {
       "sectionLabel": "Car Rental",
       "title": "Rent a Car in Kazakhstan",
-      "description": "Clean, modern vehicles with experienced local drivers. Flexible bookings available across Almaty and the wider region."
+      "description": "Self-drive rental — clean, modern vehicles ready for pick-up. Insurance and full documentation included. Flexible bookings available across Almaty and the wider region."
     },
     "labels": {
       "seats": "seats",
@@ -992,7 +992,7 @@
       },
       "cars": {
         "title": "Car Services",
-        "description": "Clean, reliable vehicles with experienced local drivers for city rides, airport transfers, and mountain expeditions."
+        "description": "Self-drive rentals, chauffeur hire, and airport transfers — clean, reliable vehicles for city rides and mountain expeditions."
       },
       "security": {
         "title": "Security",
@@ -1092,7 +1092,9 @@
     "page": {
       "sectionLabel": "Transfer Service",
       "title": "Airport & City Transfers",
-      "description": "Punctual door-to-door transfers across Almaty and beyond. Fixed rates, professional drivers, and meet-and-greet at the airport."
+      "description": "Punctual door-to-door transfers across Almaty and beyond. Fixed rates, professional drivers, and meet-and-greet at the airport.",
+      "faqLabel": "FAQ",
+      "faqTitle": "Common Questions"
     },
     "labels": {
       "passengers": "passengers",
@@ -1164,7 +1166,7 @@
     "page": {
       "sectionLabel": "VIP Security & Executive Protection",
       "title": "VIP Security & Executive Protection Services",
-      "description": "At Crown Prestige Travel, we provide premium VIP security and executive protection services designed to ensure the highest level of safety, privacy, and comfort for our distinguished guests.",
+      "description": "At Crown Services, we provide premium VIP security and executive protection services designed to ensure the highest level of safety, privacy, and comfort for our distinguished guests.",
       "ourServicesLabel": "Our Services",
       "ourServicesTitle": "Comprehensive Protection Solutions",
       "whyLabel": "Why Choose Us",
@@ -1177,7 +1179,9 @@
         "Premium Fleet and Secure Transportation Options"
       ],
       "packagesLabel": "Security Packages",
-      "packagesTitle": "Tailored Security Plans"
+      "packagesTitle": "Tailored Security Plans",
+      "faqLabel": "FAQ",
+      "faqTitle": "Common Questions"
     },
     "labels": {
       "team": "team",

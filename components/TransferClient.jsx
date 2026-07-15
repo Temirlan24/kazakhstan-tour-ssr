@@ -5,6 +5,7 @@ import { transfers, transferTypeColors } from '@/data/transfer';
 import { useTranslations } from 'next-intl';
 import ServiceCard from './ServiceCard';
 import CTASection from './CTASection';
+import FAQAccordion from './FAQAccordion';
 
 const BG = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80";
 
@@ -39,6 +40,7 @@ const CarIcon = () => (
 
 export default function TransferClient() {
   const t = useTranslations();
+  const faqItems = t.raw('seo.transfer.faq');
 
   return (
     <>
@@ -106,6 +108,8 @@ export default function TransferClient() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion label={t('transfer.page.faqLabel')} title={t('transfer.page.faqTitle')} items={faqItems} />
 
       <CTASection variant="transfer" />
     </>

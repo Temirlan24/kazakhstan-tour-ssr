@@ -4,6 +4,11 @@ export const routing = defineRouting({
   locales: ['ru', 'en', 'kz'],
   defaultLocale: 'ru',
   localePrefix: 'as-needed',
+  // Always serve the default locale (ru) on unprefixed URLs instead of
+  // redirecting based on the visitor's Accept-Language header/cookie — many
+  // Russian-speaking visitors and Googlebot itself carry an English
+  // browser/OS locale, which was silently bouncing them to /en.
+  localeDetection: false,
 });
 
 // Internal locale ids ('kz') stay aligned with the existing locales/kz.json

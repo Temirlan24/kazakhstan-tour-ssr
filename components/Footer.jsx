@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { WHATSAPP_URL, PHONE } from '@/lib/config';
 
-const LOGO_URL = "https://drive.google.com/thumbnail?id=1Ruoprk8P8DLCSYibesti599hx4VpCxR2&sz=w200";
+const LOGO_URL = "/main_logo.png";
 
 export default function Footer() {
   const t = useTranslations();
@@ -38,8 +38,6 @@ export default function Footer() {
                 width={160}
                 height={36}
                 className="h-9 w-auto"
-                style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
-                onError={e => { e.currentTarget.style.display = 'none'; }}
               />
               <span className="text-brand-orange font-semibold text-[0.9rem]">Crown Services</span>
             </Link>
