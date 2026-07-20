@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { localizedUrl, languageAlternates } from '@/i18n/routing';
+import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 import { SITE_URL, WHATSAPP_URL } from '@/lib/config';
 import { getApartmentBySlug } from '@/lib/apartments';
 import { apartments } from '@/data/apartments';
@@ -34,9 +34,12 @@ export async function generateMetadata({ params }) {
       languages: languageAlternates(SITE_URL, apartmentRoute(slug)),
     },
     openGraph: {
+      type: 'website',
+      siteName: 'Crown Services',
       title: t('name'),
       description: t('description'),
       url: pageUrl,
+      locale: LOCALE_TO_OG[locale],
       images: [{ url: apartment.image, width: 1200, height: 630, alt: t('name') }],
     },
     twitter: {
@@ -59,13 +62,14 @@ export default async function ApartmentDetailPage({ params }) {
 
   const title = t('name');
   const pageUrl = localizedUrl(SITE_URL, locale, apartmentRoute(slug));
+  const homeUrl = localizedUrl(SITE_URL, locale);
   const apartmentsUrl = localizedUrl(SITE_URL, locale, '/apartments');
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: tSeo('common.home'), item: SITE_URL },
+      { '@type': 'ListItem', position: 1, name: tSeo('common.home'), item: homeUrl },
       { '@type': 'ListItem', position: 2, name: tSeo('apartments.breadcrumb'), item: apartmentsUrl },
       { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
     ],

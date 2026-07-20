@@ -21,6 +21,8 @@ export async function generateMetadata({ params }) {
       languages: languageAlternates(SITE_URL, ROUTE),
     },
     openGraph: {
+      type: 'website',
+      siteName: 'Crown Services',
       title: t('title'),
       description: t('description'),
       url: pageUrl,
@@ -39,12 +41,13 @@ export default async function KyrgyzstanToursPage({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'seo' });
   const pageUrl = localizedUrl(SITE_URL, locale, ROUTE);
+  const homeUrl = localizedUrl(SITE_URL, locale);
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: t('common.home'), item: SITE_URL },
+      { '@type': 'ListItem', position: 1, name: t('common.home'), item: homeUrl },
       { '@type': 'ListItem', position: 2, name: t('kyrgyzstan.breadcrumb'), item: pageUrl },
     ],
   };

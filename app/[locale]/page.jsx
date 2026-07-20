@@ -20,6 +20,8 @@ export async function generateMetadata({ params }) {
       languages: languageAlternates(SITE_URL),
     },
     openGraph: {
+      type: 'website',
+      siteName: 'Crown Services',
       title: t('title'),
       description: t('description'),
       url: pageUrl,

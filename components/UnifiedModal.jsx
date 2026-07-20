@@ -180,7 +180,7 @@ export default function UnifiedModal({
                   className={`modal-thumb relative shrink-0 w-[72px] h-[50px] rounded-lg overflow-hidden border-2 p-0 cursor-pointer transition-all duration-200
                     ${i === imgIdx ? 'border-amber opacity-100' : 'border-white/[0.08] opacity-50'}`}
                 >
-                  <Image src={src} alt="" fill sizes="72px" className="object-cover" />
+                  <Image src={src} alt={`${title} — ${i + 1}`} fill sizes="72px" className="object-cover" />
                 </button>
               ))}
             </div>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { localizedUrl, languageAlternates } from '@/i18n/routing';
+import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 import { SITE_URL, WHATSAPP_URL } from '@/lib/config';
 import { getTransferBySlug } from '@/lib/transfer';
 import { transfers } from '@/data/transfer';
@@ -34,9 +34,12 @@ export async function generateMetadata({ params }) {
       languages: languageAlternates(SITE_URL, transferRoute(slug)),
     },
     openGraph: {
+      type: 'website',
+      siteName: 'Crown Services',
       title: t('name'),
       description: t('description'),
       url: pageUrl,
+      locale: LOCALE_TO_OG[locale],
       images: [{ url: transfer.images[0], width: 1200, height: 630, alt: t('name') }],
     },
     twitter: {
@@ -59,13 +62,14 @@ export default async function TransferDetailPage({ params }) {
 
   const title = t('name');
   const pageUrl = localizedUrl(SITE_URL, locale, transferRoute(slug));
+  const homeUrl = localizedUrl(SITE_URL, locale);
   const transferUrl = localizedUrl(SITE_URL, locale, '/transfer');
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: tSeo('common.home'), item: SITE_URL },
+      { '@type': 'ListItem', position: 1, name: tSeo('common.home'), item: homeUrl },
       { '@type': 'ListItem', position: 2, name: tSeo('transfer.breadcrumb'), item: transferUrl },
       { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
     ],
@@ -123,7 +127,7 @@ export default async function TransferDetailPage({ params }) {
             <div className="flex gap-2 mb-8 overflow-x-auto">
               {transfer.images.slice(1).map((src, i) => (
                 <div key={i} className="relative shrink-0 w-[110px] h-[76px] rounded-lg overflow-hidden">
-                  <Image src={src} alt="" fill sizes="110px" className="object-cover" />
+                  <Image src={src} alt={`${title} — ${i + 2}`} fill sizes="110px" className="object-cover" />
                 </div>
               ))}
             </div>
