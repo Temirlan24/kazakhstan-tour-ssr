@@ -98,6 +98,7 @@ export default function  CarRentClient() {
                   { icon: <GearIcon />, label: t(`carRent.${car.id}.transmission`) },
                 ]}
                 bookLabel={t('carRent.labels.book')}
+                detailsHref={car.slug ? `/car-rent/cars/${car.slug}` : undefined}
               />
             ))}
           </div>

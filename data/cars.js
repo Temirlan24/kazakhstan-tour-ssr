@@ -9,6 +9,7 @@ export const carClassColors = {
 export const cars = [
   {
     id: 1,
+    slug: 'hyundai-sonata',
     classKey: 'COMFORT',
     images: [
       '/assets/cars/sonata/sonata_1.jpg',
@@ -18,6 +19,7 @@ export const cars = [
   },
   {
     id: 2,
+    slug: 'toyota-camry-75',
     classKey: 'BUSINESS',
     images: [
       '/assets/cars/camry_75/camry_75_1.jpg',
@@ -33,6 +35,7 @@ export const cars = [
   },
   {
     id: 3,
+    slug: 'toyota-camry-80',
     classKey: 'PREMIUM',
     images: [
       '/assets/cars/camry_80/camry_80_1.jpg',
@@ -52,6 +55,7 @@ export const cars = [
   },
   {
     id: 4,
+    slug: 'lexus-lx',
     classKey: 'LUXURY',
     images: [
       '/assets/cars/lexus/lexus_lx_1.jpg',
@@ -63,6 +67,7 @@ export const cars = [
   },
   {
     id: 5,
+    slug: 'hyundai-staria',
     classKey: 'MINIVAN',
     images: [
       '/assets/cars/staria/staria_1.jpg',

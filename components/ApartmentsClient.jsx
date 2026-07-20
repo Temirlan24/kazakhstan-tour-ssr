@@ -99,6 +99,7 @@ export default function ApartmentsClient() {
                   { icon: <FloorIcon />, label: t(`apartments.${apt.id}.floor`) },
                 ]}
                 bookLabel={t('apartments.labels.book')}
+                detailsHref={apt.slug ? `/apartments/units/${apt.slug}` : undefined}
               />
             ))}
           </div>

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { WHATSAPP_URL } from '@/lib/config';
+import { Link, useRouter } from '@/i18n/navigation';
 
 const STYLES = `
   .tour-card {
@@ -24,16 +25,19 @@ const STYLES = `
 
 export default function TourCard({ tour, onOpen }) {
   const t = useTranslations();
+  const router = useRouter();
   const title = t(`tours.${tour.id}.title`);
   const durationDisplay = t(`tours.${tour.id}.durationDisplay`);
   const groupSize = t(`tours.${tour.id}.groupSize`);
   const description = t(`tours.${tour.id}.description`);
+  const detailsHref = tour.slug ? `/kazakhstan/tours/${tour.slug}` : null;
+  const openDetails = () => (detailsHref ? router.push(detailsHref) : onOpen(tour));
 
   return (
     <>
       <style>{STYLES}</style>
       <div
-        onClick={() => onOpen(tour)}
+        onClick={openDetails}
         className="tour-card group/card bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col cursor-pointer"
       >
         <div className="relative h-[220px] overflow-hidden shrink-0">
@@ -63,15 +67,28 @@ export default function TourCard({ tour, onOpen }) {
           </div>
 
           <div className="flex gap-[9px] mt-auto">
-            <button
-              onClick={e => { e.stopPropagation(); onOpen(tour); }}
-              className="tc-details-btn flex-1 flex items-center justify-center gap-[5px] bg-surface-2 text-white/[0.88] border border-divider text-[0.84rem] font-semibold py-[10px] rounded-full cursor-pointer font-sans transition-colors duration-200"
-            >
-              {t('card.details')}
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </button>
+            {detailsHref ? (
+              <Link
+                href={detailsHref}
+                onClick={e => e.stopPropagation()}
+                className="tc-details-btn flex-1 flex items-center justify-center gap-[5px] bg-surface-2 text-white/[0.88] border border-divider text-[0.84rem] font-semibold py-[10px] rounded-full cursor-pointer font-sans transition-colors duration-200 no-underline"
+              >
+                {t('card.details')}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            ) : (
+              <button
+                onClick={e => { e.stopPropagation(); onOpen(tour); }}
+                className="tc-details-btn flex-1 flex items-center justify-center gap-[5px] bg-surface-2 text-white/[0.88] border border-divider text-[0.84rem] font-semibold py-[10px] rounded-full cursor-pointer font-sans transition-colors duration-200"
+              >
+                {t('card.details')}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            )}
             <a
               href={WHATSAPP_URL}
               target="_blank"

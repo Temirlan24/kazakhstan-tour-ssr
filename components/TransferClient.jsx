@@ -103,6 +103,7 @@ export default function TransferClient() {
                   { icon: <CarIcon />,    label: t(`transfer.${tr.id}.vehicle`) },
                 ]}
                 bookLabel={t('transfer.labels.book')}
+                detailsHref={tr.slug ? `/transfer/options/${tr.slug}` : undefined}
               />
             ))}
           </div>

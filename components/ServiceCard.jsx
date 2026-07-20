@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import UnifiedModal from './UnifiedModal';
 import PhotoLightbox from './PhotoLightbox';
 import { WHATSAPP_URL } from '@/lib/config';
+import { Link, useRouter } from '@/i18n/navigation';
 
 const STYLES = `
   .sc-card {
@@ -28,15 +29,17 @@ const STYLES = `
 export default function ServiceCard({
   image, images, categoryLabel, topBadge,
   title, description, meta, price, priceUnit,
-  bookLabel,
+  bookLabel, detailsHref,
 }) {
   const t = useTranslations();
+  const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIdx, setLightboxIdx] = useState(0);
 
   const allImages = images?.length ? images : (image ? [image] : []);
   const subtitle = topBadge ? `${topBadge} · ${categoryLabel}` : categoryLabel;
+  const openDetails = () => (detailsHref ? router.push(detailsHref) : setModalOpen(true));
 
   function openLightbox(e) {
     e.stopPropagation();
@@ -48,7 +51,7 @@ export default function ServiceCard({
     <>
       <style>{STYLES}</style>
       <div
-        onClick={() => setModalOpen(true)}
+        onClick={openDetails}
         className="sc-card group/card bg-surface border border-divider rounded-[20px] overflow-hidden flex flex-col cursor-pointer"
       >
         <div
@@ -113,15 +116,28 @@ export default function ServiceCard({
           )}
 
           <div className="mt-auto pt-1 flex gap-[9px]">
-            <button
-              onClick={e => { e.stopPropagation(); setModalOpen(true); }}
-              className="sc-details-btn flex-1 flex items-center justify-center gap-[5px] bg-surface-2 text-white/[0.88] border border-divider text-[0.84rem] font-semibold py-[10px] rounded-full cursor-pointer font-sans transition-colors duration-200"
-            >
-              {t('card.details')}
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </button>
+            {detailsHref ? (
+              <Link
+                href={detailsHref}
+                onClick={e => e.stopPropagation()}
+                className="sc-details-btn flex-1 flex items-center justify-center gap-[5px] bg-surface-2 text-white/[0.88] border border-divider text-[0.84rem] font-semibold py-[10px] rounded-full cursor-pointer font-sans transition-colors duration-200 no-underline"
+              >
+                {t('card.details')}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            ) : (
+              <button
+                onClick={e => { e.stopPropagation(); setModalOpen(true); }}
+                className="sc-details-btn flex-1 flex items-center justify-center gap-[5px] bg-surface-2 text-white/[0.88] border border-divider text-[0.84rem] font-semibold py-[10px] rounded-full cursor-pointer font-sans transition-colors duration-200"
+              >
+                {t('card.details')}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            )}
             <a
               href={WHATSAPP_URL}
               target="_blank"

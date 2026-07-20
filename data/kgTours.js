@@ -1,6 +1,7 @@
 export const kgTours = [
   {
     id: 1,
+    slug: 'bishkek-city-tour',
     category: 'CITY',
     images: [
       '/assets/tours/kyrgyzstan/bishkek_1.jpg',
@@ -11,6 +12,7 @@ export const kgTours = [
   },
   {
     id: 2,
+    slug: 'issyk-kul-tour',
     category: 'LAKES',
     images: [
       '/assets/tours/kyrgyzstan/issykkul_1.jpg',
@@ -24,6 +26,7 @@ export const kgTours = [
   },
   {
     id: 3,
+    slug: 'skazka-canyon-tour',
     category: 'MOUNTAINS',
     images: [
       '/assets/tours/kyrgyzstan/issyl_lake_2.jpg',
@@ -31,6 +34,7 @@ export const kgTours = [
   },
   {
     id: 4,
+    slug: 'karakol-tour',
     category: 'MOUNTAINS',
     images: [
       '/assets/tours/kyrgyzstan/kel_su_2.jpg',
@@ -38,6 +42,7 @@ export const kgTours = [
   },
   {
     id: 5,
+    slug: 'kel-suu-tour',
     category: 'LAKES',
     images: [
       '/assets/tours/kyrgyzstan/kel_su_1.jpg',

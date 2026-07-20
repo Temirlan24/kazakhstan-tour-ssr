@@ -13,6 +13,7 @@ export const tours = [
   // ── Almaty ────────────────────────────────────────────────────────────────
   {
     id: 1,
+    slug: 'big-almaty-lake',
     durationTag: 'full-day',
     category: 'LAKES',
     city: 'almaty',
@@ -24,6 +25,7 @@ export const tours = [
   },
   {
     id: 2,
+    slug: 'medeu-shymbulak',
     durationTag: 'half-day',
     category: 'MOUNTAINS',
     city: 'almaty',
@@ -37,6 +39,7 @@ export const tours = [
   },
   {
     id: 3,
+    slug: 'almarasan',
     durationTag: 'full-day',
     category: 'TREKKING',
     city: 'almaty',
@@ -49,6 +52,7 @@ export const tours = [
   },
   {
     id: 4,
+    slug: 'kolsay-lake-charyn-tour',
     durationTag: 'multi-day',
     category: 'LAKES',
     city: 'almaty',
@@ -67,6 +71,7 @@ export const tours = [
   },
   {
     id: 5,
+    slug: 'bear-waterfall-assy-plateau',
     durationTag: 'full-day',
     category: 'TREKKING',
     city: 'almaty',
@@ -83,6 +88,7 @@ export const tours = [
   },
   {
     id: 7,
+    slug: 'konaev-nomad-fortress-tamgaly-tas',
     durationTag: 'half-day',
     category: 'CITY',
     city: 'almaty',
@@ -97,6 +103,7 @@ export const tours = [
   },
   {
     id: 8,
+    slug: 'issyk-lake',
     durationTag: 'full-day',
     category: 'FAMILY',
     city: 'almaty',
@@ -108,6 +115,7 @@ export const tours = [
   },
   {
     id: 9,
+    slug: 'oi-qaragai',
     durationTag: 'full-day',
     category: 'MOUNTAINS',
     city: 'almaty',
@@ -121,6 +129,7 @@ export const tours = [
   },
   {
     id: 17,
+    slug: 'almaty-city-tour',
     durationTag: 'half-day',
     category: 'CITY',
     city: 'almaty',
@@ -140,6 +149,7 @@ export const tours = [
   // ── Astana ────────────────────────────────────────────────────────────────
   {
     id: 10,
+    slug: 'astana-city-tour',
     durationTag: 'half-day',
     category: 'CITY',
     city: 'astana',
@@ -152,6 +162,7 @@ export const tours = [
   },
   {
     id: 11,
+    slug: 'night-astana-tour',
     durationTag: 'half-day',
     category: 'CITY',
     city: 'astana',
@@ -164,6 +175,7 @@ export const tours = [
   },
   {
     id: 12,
+    slug: 'burabay-tour',
     durationTag: 'multi-day',
     category: 'LAKES',
     city: 'astana',
@@ -175,6 +187,7 @@ export const tours = [
   },
   {
     id: 13,
+    slug: 'historical-cultural-tour',
     durationTag: 'full-day',
     category: 'CITY',
     city: 'astana',
@@ -192,6 +205,7 @@ export const tours = [
   // ── Aktau ─────────────────────────────────────────────────────────────────
   {
     id: 6,
+    slug: 'altyn-emel',
     durationTag: 'multi-day',
     category: 'STEPPE',
     city: 'aktau',
@@ -203,6 +217,7 @@ export const tours = [
   },
   {
     id: 14,
+    slug: 'aktau-city-tour',
     durationTag: 'half-day',
     category: 'CITY',
     city: 'aktau',
@@ -215,6 +230,7 @@ export const tours = [
   },
   {
     id: 15,
+    slug: 'bozzhyra-tour',
     durationTag: 'multi-day',
     category: 'STEPPE',
     city: 'aktau',
@@ -226,6 +242,7 @@ export const tours = [
   },
   {
     id: 16,
+    slug: 'caspian-sea-tour',
     durationTag: 'half-day',
     category: 'LAKES',
     city: 'aktau',

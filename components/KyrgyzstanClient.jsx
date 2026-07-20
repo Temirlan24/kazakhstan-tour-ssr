@@ -252,6 +252,7 @@ export default function KyrgyzstanClient() {
                   { icon: <GroupIcon />, label: t(`kgTours.${tour.id}.groupSize`) },
                 ]}
                 bookLabel={t('card.book')}
+                detailsHref={tour.slug ? `/kyrgyzstan/tours/${tour.slug}` : undefined}
               />
             ))}
           </div>

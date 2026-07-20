@@ -8,6 +8,7 @@ export const transferTypeColors = {
 export const transfers = [
   {
     id: 1,
+    slug: 'economy-airport-transfer',
     typeKey: 'ECONOMY',
     images: [
       '/assets/cars/sonata/sonata_1.jpg',
@@ -17,6 +18,7 @@ export const transfers = [
   },
   {
     id: 2,
+    slug: 'business-transfer',
     typeKey: 'BUSINESS',
     images: [
       '/assets/cars/camry_75/camry_75_1.jpg',
@@ -28,6 +30,7 @@ export const transfers = [
   },
   {
     id: 3,
+    slug: 'group-transfer',
     typeKey: 'MINIVAN',
     images: [
       '/assets/cars/staria/staria_1.jpg',
@@ -38,6 +41,7 @@ export const transfers = [
   },
   {
     id: 4,
+    slug: 'vip-transfer',
     typeKey: 'VIP',
     images: [
       '/assets/cars/lexus/lexus_lx_1.jpg',
