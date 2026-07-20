@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
 const ROUTE = '/apartments';
-const OG_IMAGE = 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80';
+const OG_IMAGE = '/assets/hero/apartments.jpg';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -49,9 +49,20 @@ export default async function ApartmentsPage({ params }) {
     ],
   };
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: t('apartments.schemaName'),
+    description: t('apartments.schemaDescription'),
+    provider: { '@type': 'TravelAgency', name: 'Crown Services', url: SITE_URL },
+    areaServed: { '@type': 'City', name: 'Almaty', addressCountry: 'KZ' },
+    serviceType: 'Furnished Apartment Rental',
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
       <ApartmentsClient />
     </>
   );

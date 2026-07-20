@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import ServiceCard from './ServiceCard';
 import CTASection from './CTASection';
 
-const BG = "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1600&q=80";
+const BG = "/assets/cars/camry_80/camry_80_1.jpg";
 
 const STYLES = `
   .driver-hero-overlay {

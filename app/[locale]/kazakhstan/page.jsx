@@ -10,7 +10,7 @@ import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
 const ROUTE = '/kazakhstan';
-const OG_IMAGE = 'https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=1200&q=80';
+const OG_IMAGE = '/assets/tours/almaty/kolsay_2.jpg';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;

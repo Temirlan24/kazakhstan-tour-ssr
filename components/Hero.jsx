@@ -52,7 +52,7 @@ export default function Hero() {
       style={{ paddingTop: '88px' }}
     >
       <Image
-        src="https://images.unsplash.com/photo-1530480667809-b655d4dc3aaa?w=1920&q=90"
+        src="/assets/tours/almaty/kolsay_2.jpg"
         alt=""
         fill
         priority

@@ -7,7 +7,7 @@ import { WHATSAPP_URL } from '@/lib/config';
 import CTASection from './CTASection';
 import FAQAccordion from './FAQAccordion';
 
-const BG = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=80";
+const BG = "/assets/hero/security.jpg";
 
 const SERVICE_KEYS = [
   { key: 'bodyguard', Icon: BodyguardIcon },

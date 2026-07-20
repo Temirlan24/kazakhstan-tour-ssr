@@ -13,9 +13,12 @@ const ROUTES = [
 ];
 
 export default function sitemap() {
+  const lastModified = new Date();
+
   return ROUTES.flatMap((route) =>
     routing.locales.map((locale) => ({
       url: localizedUrl(SITE_URL, locale, route.path),
+      lastModified,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       alternates: { languages: languageAlternates(SITE_URL, route.path) },

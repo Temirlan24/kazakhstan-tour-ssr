@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import ServiceCard from './ServiceCard';
 import CTASection from './CTASection';
 
-const BG = "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80";
+const BG = "/assets/hero/apartments.jpg";
 
 const STYLES = `
   .apt-hero-overlay {

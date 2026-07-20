@@ -2,6 +2,7 @@ import '../globals.css';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
+import { DM_Sans, Playfair_Display } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
@@ -11,7 +12,24 @@ import { SITE_URL, PHONE } from '@/lib/config';
 import { Analytics } from '@vercel/analytics/next';
 import { routing, LOCALE_TO_LANG, LOCALE_TO_OG } from '@/i18n/routing';
 
-const OG_IMAGE = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80';
+const OG_IMAGE = '/assets/tours/almaty/charyn_1.jpg';
+
+// DM Sans has no Cyrillic subset on Google Fonts — this matches the prior
+// hotlinked behavior, where RU/KZ body text already fell back to the system font.
+const dmSans = DM_Sans({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
+  display: 'swap',
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -107,6 +125,13 @@ export default async function RootLayout({ children, params }) {
       availableLanguage: ['Russian', 'Kazakh', 'English'],
     },
     sameAs: ['https://wa.me/77072293635'],
+    // Mirrors the "5.0 · 60+ reviews on Google" rating shown in the Reviews section (components/Reviews.jsx).
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      bestRating: '5',
+      reviewCount: '60',
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: t('catalogName'),
@@ -122,15 +147,13 @@ export default async function RootLayout({ children, params }) {
   };
 
   return (
-    <html lang={LOCALE_TO_LANG[locale]}>
+    <html lang={LOCALE_TO_LANG[locale]} className={`${dmSans.variable} ${playfairDisplay.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" href="/premium-service.png" sizes="512x512" type="image/png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="theme-color" content="#0A0A0B" />
         <JsonLd data={localBusinessSchema} />
       </head>
       <body>

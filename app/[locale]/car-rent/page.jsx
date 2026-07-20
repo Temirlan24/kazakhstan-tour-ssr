@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
 const ROUTE = '/car-rent';
-const OG_IMAGE = 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&q=80';
+const OG_IMAGE = '/assets/cars/lexus/lexus_lx_2.jpg';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;

@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
 const ROUTE = '/kyrgyzstan';
-const OG_IMAGE = 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80';
+const OG_IMAGE = '/assets/tours/kyrgyzstan/kel_su_1.jpg';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -49,9 +49,23 @@ export default async function KyrgyzstanToursPage({ params }) {
     ],
   };
 
+  const toursSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('kyrgyzstan.breadcrumb'),
+    description: t('kyrgyzstan.description'),
+    url: pageUrl,
+    itemListElement: t.raw('kyrgyzstan.tourItems').map((name, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name,
+    })),
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={toursSchema} />
       <KyrgyzstanClient />
     </>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
+import Image from 'next/image';
 
 const STYLES = `
   @keyframes _lbIn { from{opacity:0;transform:scale(0.96)} to{opacity:1;transform:scale(1)} }
@@ -101,12 +102,16 @@ export default function PhotoLightbox({ images, initialIdx = 0, title, onClose }
         onTouchEnd={handleTouchEnd}
         className="flex-1 w-full flex items-center justify-center pt-[80px] px-4 md:px-[80px] pb-4 relative touch-pan-y"
       >
-        <img
-          key={idx}
-          src={images[idx]}
-          alt={title ? `${title} ${idx + 1}` : `Photo ${idx + 1}`}
-          className="lb-img max-w-full max-h-[calc(100vh-210px)] object-contain block rounded-[6px] shadow-[0_28px_72px_rgba(0,0,0,0.65)]"
-        />
+        <div className="relative w-full h-full max-w-full max-h-[calc(100vh-210px)]">
+          <Image
+            key={idx}
+            src={images[idx]}
+            alt={title ? `${title} ${idx + 1}` : `Photo ${idx + 1}`}
+            fill
+            sizes="100vw"
+            className="lb-img object-contain rounded-[6px] shadow-[0_28px_72px_rgba(0,0,0,0.65)]"
+          />
+        </div>
         {idx > 0 && (
           <button
             onClick={e => { e.stopPropagation(); prev(); }}
@@ -139,13 +144,19 @@ export default function PhotoLightbox({ images, initialIdx = 0, title, onClose }
             <button
               key={i}
               onClick={e => { e.stopPropagation(); setIdx(i); }}
-              className={`lb-thumb shrink-0 w-20 h-[54px] rounded-[8px] overflow-hidden p-0 cursor-pointer border-2 transition-[border-color,opacity,transform] duration-200 ${
+              className={`lb-thumb relative shrink-0 w-20 h-[54px] rounded-[8px] overflow-hidden p-0 cursor-pointer border-2 transition-[border-color,opacity,transform] duration-200 ${
                 i === idx
                   ? 'lb-thumb--active border-amber opacity-100 scale-[1.08]'
                   : 'border-white/[0.08] opacity-40 scale-100'
               }`}
             >
-              <img src={src} alt="" className="w-full h-full object-cover block" />
+              <Image
+                src={src}
+                alt={title ? `${title} thumbnail ${i + 1}` : `Photo ${i + 1} thumbnail`}
+                fill
+                sizes="80px"
+                className="object-cover"
+              />
             </button>
           ))}
         </div>

@@ -1194,8 +1194,8 @@
       "home": "Home"
     },
     "home": {
-      "title": "Crown Services — Airport Transfers, Tours, Car Rental & Apartments in Almaty",
-      "description": "Premium travel & transport services in Kazakhstan: VIP airport transfers, car rental, private tours, security, and apartments in Almaty. One call, full logistics. Book via WhatsApp.",
+      "title": "Crown Services — Transfers, Tours, Car Rental & Apartments",
+      "description": "Premium travel & transport services in Kazakhstan: VIP airport transfers, car rental, private tours, security and apartments in Almaty. Book via WhatsApp.",
       "keywords": [
         "Crown Services",
         "Kazakhstan tours",
@@ -1233,7 +1233,7 @@
       ]
     },
     "kyrgyzstan": {
-      "title": "Kyrgyzstan Tours — Issyk-Kul, Bishkek & the Mountains",
+      "title": "Kyrgyzstan Tours — Issyk-Kul, Bishkek & Mountains",
       "description": "Tours to Kyrgyzstan from Almaty: Bishkek city tours, Issyk-Kul Lake, mountain treks and multi-day adventures. Private and group tours. Book via WhatsApp.",
       "keywords": [
         "Kyrgyzstan tours",
@@ -1243,10 +1243,17 @@
         "tours from Almaty to Kyrgyzstan",
         "Kyrgyzstan mountain trekking"
       ],
-      "breadcrumb": "Kyrgyzstan Tours"
+      "breadcrumb": "Kyrgyzstan Tours",
+      "tourItems": [
+        "Bishkek City Tour",
+        "Issyk-Kul Tour",
+        "Skazka Canyon Tour",
+        "Karakol Tour",
+        "Kel-Suu Tour"
+      ]
     },
     "carRent": {
-      "title": "Car Rental in Almaty — Comfort, Business, Luxury & Minivan",
+      "title": "Car Rental in Almaty — Comfort, Business & Luxury",
       "description": "Self-drive car rental in Almaty: Toyota Camry, Lexus LX and more. Comfort, Business, Premium and Luxury classes. Fixed pricing. Book via WhatsApp.",
       "keywords": [
         "car rental Almaty",
@@ -1262,7 +1269,7 @@
       "schemaDescription": "Self-drive car rental in Almaty: Comfort, Business, Premium, Luxury and Minivan classes."
     },
     "carRentWithDriver": {
-      "title": "Car with Driver in Almaty — Personal Chauffeur",
+      "title": "Car with Driver in Almaty — Chauffeur Service",
       "description": "Professional chauffeur service in Almaty. Comfort, Premium and Luxury vehicles with experienced drivers. Hourly and daily rental. Book via WhatsApp.",
       "keywords": [
         "car with driver Almaty",
@@ -1277,7 +1284,7 @@
       "schemaDescription": "Professional chauffeur service in Almaty: Comfort, Premium and Luxury classes."
     },
     "transfer": {
-      "title": "Almaty Airport & City Transfer with Driver — VIP, 24/7",
+      "title": "Almaty Airport & City Transfer — VIP, 24/7",
       "description": "Reliable chauffeured transfers in Almaty. Economy, Business, Minivan and VIP. Airport pickup, business trips. Arrival in 15 minutes, 24/7. Book via WhatsApp.",
       "keywords": [
         "Almaty transfer",
@@ -1310,7 +1317,7 @@
       ]
     },
     "apartments": {
-      "title": "Business-Class Apartments in Almaty — Short-Stay Rental",
+      "title": "Business-Class Apartments in Almaty",
       "description": "Furnished apartments for business guests in Almaty: city center, Medeu and other districts. Daily and monthly rental. Book via WhatsApp.",
       "keywords": [
         "Almaty apartments",
@@ -1320,10 +1327,12 @@
         "furnished apartments Almaty",
         "business trip housing Almaty"
       ],
-      "breadcrumb": "Almaty Apartments"
+      "breadcrumb": "Almaty Apartments",
+      "schemaName": "Apartment Rental in Almaty",
+      "schemaDescription": "Furnished business-class apartments in Almaty, available daily and monthly: city center, Medeu and other districts."
     },
     "security": {
-      "title": "Security & Executive Protection in Kazakhstan — Bodyguard Services",
+      "title": "Security & Executive Protection in Kazakhstan",
       "description": "Professional security in Kazakhstan: personal bodyguard, delegation escort, event security. Unique offer: security + transfer in one package. Book via WhatsApp.",
       "keywords": [
         "Kazakhstan security",

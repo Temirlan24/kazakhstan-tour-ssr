@@ -7,11 +7,11 @@ import { Link } from '@/i18n/navigation';
 import CTASection from './CTASection';
 import { WHATSAPP_URL } from '@/lib/config';
 
-const HERO_BG  = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80";
+const HERO_BG  = "/assets/tours/almaty/charyn_1.jpg";
 const TOURS_BG = "/assets/tours/almaty/kolsay_1.jpg";
 const CARS_BG  = "/assets/cars/lexus/lexus_lx_1.jpg";
-const SEC_BG   = "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80";
-const APTS_BG  = "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80";
+const SEC_BG   = "/assets/hero/security.jpg";
+const APTS_BG  = "/assets/hero/apartments.jpg";
 
 const STYLES = `
   @keyframes homeUp {
@@ -277,7 +277,7 @@ function ServiceCard({ svc, t }) {
       <Link href={svc.to} className="absolute inset-0 z-[1]" aria-label={t(`home.services.${svc.key}.title`)} />
 
       <div className="relative h-[215px] shrink-0">
-        <Image src={svc.bg} alt="" fill sizes="(max-width: 768px) 100vw, 290px" className="object-cover" />
+        <Image src={svc.bg} alt={t(`home.services.${svc.key}.title`)} fill sizes="(max-width: 768px) 100vw, 290px" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/[0.12] to-black/[0.65]" />
         <div className="absolute bottom-[-22px] left-[22px] w-[46px] h-[46px] rounded-xl bg-surface-2 border border-divider flex items-center justify-center text-amber">
           <svc.Icon />

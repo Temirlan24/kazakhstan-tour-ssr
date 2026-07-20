@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
 const ROUTE = '/security';
-const OG_IMAGE = 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80';
+const OG_IMAGE = '/assets/hero/security.jpg';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
