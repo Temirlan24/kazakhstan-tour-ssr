@@ -7,7 +7,7 @@ import ServiceCard from './ServiceCard';
 import CTASection from './CTASection';
 import FAQAccordion from './FAQAccordion';
 
-const BG = "/assets/cars/sonata/sonata_1.jpg";
+const BG = "/assets/cars/sonata/sonata_1.webp";
 
 const STYLES = `
   .transfer-hero-overlay {

@@ -7,11 +7,11 @@ import { Link } from '@/i18n/navigation';
 import CTASection from './CTASection';
 import { WHATSAPP_URL } from '@/lib/config';
 
-const HERO_BG  = "/assets/tours/almaty/charyn_1.jpg";
-const TOURS_BG = "/assets/tours/almaty/kolsay_1.jpg";
-const CARS_BG  = "/assets/cars/lexus/lexus_lx_1.jpg";
-const SEC_BG   = "/assets/hero/security.jpg";
-const APTS_BG  = "/assets/hero/apartments.jpg";
+const HERO_BG  = "/assets/tours/almaty/charyn_1.webp";
+const TOURS_BG = "/assets/tours/almaty/kolsay_1.webp";
+const CARS_BG  = "/assets/cars/lexus/lexus_lx_1.webp";
+const SEC_BG   = "/assets/hero/security.webp";
+const APTS_BG  = "/assets/hero/apartments.webp";
 
 const STYLES = `
   @keyframes homeUp {

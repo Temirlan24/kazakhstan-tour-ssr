@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
 const ROUTE = '/car-rent-with-driver';
-const OG_IMAGE = '/assets/cars/camry_80/camry_80_1.jpg';
+const OG_IMAGE = '/assets/cars/camry_80/camry_80_1.webp';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;

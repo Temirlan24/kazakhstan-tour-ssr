@@ -4,7 +4,7 @@ import { SITE_URL } from '@/lib/config';
 import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
-const OG_IMAGE = '/assets/tours/almaty/charyn_1.jpg';
+const OG_IMAGE = '/assets/tours/almaty/charyn_1.webp';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;

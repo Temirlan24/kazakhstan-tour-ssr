@@ -8,18 +8,18 @@ import { WHATSAPP_URL } from '@/lib/config';
 
 // One representative image per tour/destination — used in the scrolling strip
 const MARQUEE_IMAGES = [
-  '/assets/tours/almaty/issyl_lake_1.jpg',
-  '/assets/tours/almaty/medeu_shymbulak_1.jpg',
-  '/assets/tours/almaty/almarasan_1.jpg',
-  '/assets/tours/almaty/kolsay_1.jpg',
-  '/assets/tours/almaty/charyn_1.jpg',
-  '/assets/tours/almaty/plateau_assy_1.jpg',
-  '/assets/tours/almaty/almaty_1.jpg',
-  '/assets/tours/astana/astana_tour_1.jpg',
-  '/assets/tours/astana/burabay_1.jpg',
-  '/assets/tours/aktau/altyn_emel_1.jpg',
-  '/assets/tours/aktau/aktau_tour_1.jpg',
-  '/assets/tours/aktau/caspian_sea_1.jpg',
+  '/assets/tours/almaty/issyl_lake_1.webp',
+  '/assets/tours/almaty/medeu_shymbulak_1.webp',
+  '/assets/tours/almaty/almarasan_1.webp',
+  '/assets/tours/almaty/kolsay_1.webp',
+  '/assets/tours/almaty/charyn_1.webp',
+  '/assets/tours/almaty/plateau_assy_1.webp',
+  '/assets/tours/almaty/almaty_1.webp',
+  '/assets/tours/astana/astana_tour_1.webp',
+  '/assets/tours/astana/burabay_1.webp',
+  '/assets/tours/aktau/altyn_emel_1.webp',
+  '/assets/tours/aktau/aktau_tour_1.webp',
+  '/assets/tours/aktau/caspian_sea_1.webp',
 ];
 
 // Framer-motion variant: fades up, delay driven by `custom` prop
@@ -52,7 +52,7 @@ export default function Hero() {
       style={{ paddingTop: '88px' }}
     >
       <Image
-        src="/assets/tours/almaty/kolsay_2.jpg"
+        src="/assets/tours/almaty/kolsay_2.webp"
         alt=""
         fill
         priority

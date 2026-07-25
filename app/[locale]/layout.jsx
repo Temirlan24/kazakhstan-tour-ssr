@@ -12,7 +12,7 @@ import { SITE_URL, PHONE } from '@/lib/config';
 import { Analytics } from '@vercel/analytics/next';
 import { routing, LOCALE_TO_LANG, LOCALE_TO_OG } from '@/i18n/routing';
 
-const OG_IMAGE = '/assets/tours/almaty/charyn_1.jpg';
+const OG_IMAGE = '/assets/tours/almaty/charyn_1.webp';
 
 // DM Sans has no Cyrillic subset on Google Fonts — this matches the prior
 // hotlinked behavior, where RU/KZ body text already fell back to the system font.

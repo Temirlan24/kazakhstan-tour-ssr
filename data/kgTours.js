@@ -4,10 +4,10 @@ export const kgTours = [
     slug: 'bishkek-city-tour',
     category: 'CITY',
     images: [
-      '/assets/tours/kyrgyzstan/bishkek_1.jpg',
-      '/assets/tours/kyrgyzstan/bishkek_2.jpg',
-      '/assets/tours/kyrgyzstan/bishkek_3.jpg',
-      '/assets/tours/kyrgyzstan/bishkek_4.jpg',
+      '/assets/tours/kyrgyzstan/bishkek_1.webp',
+      '/assets/tours/kyrgyzstan/bishkek_2.webp',
+      '/assets/tours/kyrgyzstan/bishkek_3.webp',
+      '/assets/tours/kyrgyzstan/bishkek_4.webp',
     ],
   },
   {
@@ -15,13 +15,13 @@ export const kgTours = [
     slug: 'issyk-kul-tour',
     category: 'LAKES',
     images: [
-      '/assets/tours/kyrgyzstan/issykkul_1.jpg',
-      '/assets/tours/kyrgyzstan/issykkul_2.jpg',
-      '/assets/tours/kyrgyzstan/issykkul_3.jpg',
-      '/assets/tours/kyrgyzstan/issykkul_4.jpg',
-      '/assets/tours/kyrgyzstan/issyl_lake_1.jpg',
-      '/assets/tours/kyrgyzstan/issyl_lake_2.jpg',
-      '/assets/tours/kyrgyzstan/issyl_lake_3.jpg',
+      '/assets/tours/kyrgyzstan/issykkul_1.webp',
+      '/assets/tours/kyrgyzstan/issykkul_2.webp',
+      '/assets/tours/kyrgyzstan/issykkul_3.webp',
+      '/assets/tours/kyrgyzstan/issykkul_4.webp',
+      '/assets/tours/kyrgyzstan/issyl_lake_1.webp',
+      '/assets/tours/kyrgyzstan/issyl_lake_2.webp',
+      '/assets/tours/kyrgyzstan/issyl_lake_3.webp',
     ],
   },
   {
@@ -29,7 +29,7 @@ export const kgTours = [
     slug: 'skazka-canyon-tour',
     category: 'MOUNTAINS',
     images: [
-      '/assets/tours/kyrgyzstan/issyl_lake_2.jpg',
+      '/assets/tours/kyrgyzstan/issyl_lake_2.webp',
     ],
   },
   {
@@ -37,7 +37,7 @@ export const kgTours = [
     slug: 'karakol-tour',
     category: 'MOUNTAINS',
     images: [
-      '/assets/tours/kyrgyzstan/kel_su_2.jpg',
+      '/assets/tours/kyrgyzstan/kel_su_2.webp',
     ],
   },
   {
@@ -45,10 +45,10 @@ export const kgTours = [
     slug: 'kel-suu-tour',
     category: 'LAKES',
     images: [
-      '/assets/tours/kyrgyzstan/kel_su_1.jpg',
-      '/assets/tours/kyrgyzstan/kel_su_2.jpg',
-      '/assets/tours/kyrgyzstan/kel_su_3.jpg',
-      '/assets/tours/kyrgyzstan/kel_su_4.jpg',
+      '/assets/tours/kyrgyzstan/kel_su_1.webp',
+      '/assets/tours/kyrgyzstan/kel_su_2.webp',
+      '/assets/tours/kyrgyzstan/kel_su_3.webp',
+      '/assets/tours/kyrgyzstan/kel_su_4.webp',
     ],
   },
 ];

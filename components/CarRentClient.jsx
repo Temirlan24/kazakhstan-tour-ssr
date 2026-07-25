@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import ServiceCard from './ServiceCard';
 import CTASection from './CTASection';
 
-const BG = "/assets/cars/lexus/lexus_lx_2.jpg";
+const BG = "/assets/cars/lexus/lexus_lx_2.webp";
 
 const STYLES = `
   .car-hero-overlay {

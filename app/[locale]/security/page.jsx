@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { localizedUrl, languageAlternates, LOCALE_TO_OG } from '@/i18n/routing';
 
 const ROUTE = '/security';
-const OG_IMAGE = '/assets/hero/security.jpg';
+const OG_IMAGE = '/assets/hero/security.webp';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;

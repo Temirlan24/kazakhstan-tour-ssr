@@ -11,9 +11,9 @@ export const transfers = [
     slug: 'economy-airport-transfer',
     typeKey: 'ECONOMY',
     images: [
-      '/assets/cars/sonata/sonata_1.jpg',
-      '/assets/cars/sonata/sonata_2.jpg',
-      '/assets/cars/sonata/sonata_3.jpg',
+      '/assets/cars/sonata/sonata_1.webp',
+      '/assets/cars/sonata/sonata_2.webp',
+      '/assets/cars/sonata/sonata_3.webp',
     ],
   },
   {
@@ -21,11 +21,11 @@ export const transfers = [
     slug: 'business-transfer',
     typeKey: 'BUSINESS',
     images: [
-      '/assets/cars/camry_75/camry_75_1.jpg',
-      '/assets/cars/camry_75/camry_75_2.jpg',
-      '/assets/cars/camry_75/camry_75_3.jpg',
-      '/assets/cars/camry_75/camry_75_4.jpg',
-      '/assets/cars/camry_75/camry_75_5.jpg',
+      '/assets/cars/camry_75/camry_75_1.webp',
+      '/assets/cars/camry_75/camry_75_2.webp',
+      '/assets/cars/camry_75/camry_75_3.webp',
+      '/assets/cars/camry_75/camry_75_4.webp',
+      '/assets/cars/camry_75/camry_75_5.webp',
     ],
   },
   {
@@ -33,10 +33,10 @@ export const transfers = [
     slug: 'group-transfer',
     typeKey: 'MINIVAN',
     images: [
-      '/assets/cars/staria/staria_1.jpg',
-      '/assets/cars/staria/staria_2.jpg',
-      '/assets/cars/staria/staria_3.jpg',
-      '/assets/cars/staria/staria_4.jpg',
+      '/assets/cars/staria/staria_1.webp',
+      '/assets/cars/staria/staria_2.webp',
+      '/assets/cars/staria/staria_3.webp',
+      '/assets/cars/staria/staria_4.webp',
     ],
   },
   {
@@ -44,11 +44,11 @@ export const transfers = [
     slug: 'vip-transfer',
     typeKey: 'VIP',
     images: [
-      '/assets/cars/lexus/lexus_lx_1.jpg',
-      '/assets/cars/lexus/lexus_lx_2.jpg',
-      '/assets/cars/lexus/lexus_lx_3.jpg',
-      '/assets/cars/lexus/lexus_lx_4.jpg',
-      '/assets/cars/lexus/lexus_lx_5.jpg',
+      '/assets/cars/lexus/lexus_lx_1.webp',
+      '/assets/cars/lexus/lexus_lx_2.webp',
+      '/assets/cars/lexus/lexus_lx_3.webp',
+      '/assets/cars/lexus/lexus_lx_4.webp',
+      '/assets/cars/lexus/lexus_lx_5.webp',
     ],
   },
 ];

@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { WHATSAPP_URL, PHONE } from '@/lib/config';
 
-const LOGO_URL = "/main_logo.png";
+const LOGO_URL = "/main_logo.webp";
 
 export default function Footer() {
   const t = useTranslations();

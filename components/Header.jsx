@@ -6,7 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { WHATSAPP_URL } from '@/lib/config';
 
-const LOGO_URL = "/main_logo.png";
+const LOGO_URL = "/main_logo.webp";
 const languages = ["EN", "RU", "KZ"];
 
 const tourItems = [

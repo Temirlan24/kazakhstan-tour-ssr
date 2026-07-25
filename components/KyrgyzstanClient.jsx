@@ -12,21 +12,21 @@ import Guides from './Guides';
 import Reviews from './Reviews';
 import CTASection from './CTASection';
 
-const BG = '/assets/tours/kyrgyzstan/kel_su_1.jpg';
+const BG = '/assets/tours/kyrgyzstan/kel_su_1.webp';
 
 const MARQUEE_IMAGES = [
-  '/assets/tours/kyrgyzstan/bishkek_1.jpg',
-  '/assets/tours/kyrgyzstan/issykkul_1.jpg',
-  '/assets/tours/kyrgyzstan/kel_su_1.jpg',
-  '/assets/tours/kyrgyzstan/bishkek_2.jpg',
-  '/assets/tours/kyrgyzstan/issykkul_2.jpg',
-  '/assets/tours/kyrgyzstan/kel_su_2.jpg',
-  '/assets/tours/kyrgyzstan/issyl_lake_1.jpg',
-  '/assets/tours/kyrgyzstan/bishkek_3.jpg',
-  '/assets/tours/kyrgyzstan/kel_su_3.jpg',
-  '/assets/tours/kyrgyzstan/issykkul_3.jpg',
-  '/assets/tours/kyrgyzstan/bishkek_4.jpg',
-  '/assets/tours/kyrgyzstan/kel_su_4.jpg',
+  '/assets/tours/kyrgyzstan/bishkek_1.webp',
+  '/assets/tours/kyrgyzstan/issykkul_1.webp',
+  '/assets/tours/kyrgyzstan/kel_su_1.webp',
+  '/assets/tours/kyrgyzstan/bishkek_2.webp',
+  '/assets/tours/kyrgyzstan/issykkul_2.webp',
+  '/assets/tours/kyrgyzstan/kel_su_2.webp',
+  '/assets/tours/kyrgyzstan/issyl_lake_1.webp',
+  '/assets/tours/kyrgyzstan/bishkek_3.webp',
+  '/assets/tours/kyrgyzstan/kel_su_3.webp',
+  '/assets/tours/kyrgyzstan/issykkul_3.webp',
+  '/assets/tours/kyrgyzstan/bishkek_4.webp',
+  '/assets/tours/kyrgyzstan/kel_su_4.webp',
 ];
 
 const fadeUp = {
