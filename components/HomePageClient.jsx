@@ -199,10 +199,10 @@ export default function HomePageClient() {
 
           <h1 className="ha2 mb-[26px] m-0">
             <span className="block font-sans font-bold text-[clamp(2.8rem,6.5vw,5.2rem)] text-white tracking-[-0.03em] leading-[0.96]">
-              {t('home.hero.title')}
+              {t('home.hero.title')}{' '}
             </span>
             <span className="block font-serif italic font-normal text-[clamp(2.8rem,6.5vw,5.2rem)] text-amber tracking-[-0.02em] leading-[1.02]">
-              {t('home.hero.titleAccent')}
+              {t('home.hero.titleAccent')}{' '}
             </span>
             <span className="block font-sans font-bold text-[clamp(2.8rem,6.5vw,5.2rem)] text-white/30 tracking-[-0.03em] leading-[0.96]">
               {t('home.hero.titleSub')}

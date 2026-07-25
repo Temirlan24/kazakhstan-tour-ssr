@@ -144,7 +144,7 @@ export default function Hero() {
           >
             {t('hero.titleLine1')}{' '}
             <em className="font-serif italic font-normal text-amber tracking-normal">
-              {t('hero.titleAccent')}
+              {t('hero.titleAccent')}{' '}
             </em>
           </span>
           <span
