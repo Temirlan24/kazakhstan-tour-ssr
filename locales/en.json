@@ -198,6 +198,13 @@
       "title": "Follow Us",
       "carRent": "Car Rental",
       "tours": "Tours"
+    },
+    "office": {
+      "eyebrow": "Our Office",
+      "headingLine1": "Find Us",
+      "headingLine2": "in Almaty",
+      "address": "8 Nur Alatau St, Almaty 050040, Kazakhstan",
+      "directions": "Get Directions"
     }
   },
   "tours": {
@@ -1444,7 +1451,9 @@
       "description": "Premium travel & transport services in Kazakhstan and Kyrgyzstan: VIP transfers, car rental, tours, security and apartments in Almaty.",
       "addressLocality": "Almaty",
       "addressRegion": "Almaty Region",
-      "catalogName": "Tourism & Transport Services"
+      "catalogName": "Tourism & Transport Services",
+      "streetAddress": "8 Nur Alatau St",
+      "postalCode": "050040"
     }
   },
   "kazakhstan": {

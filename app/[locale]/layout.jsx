@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { DM_Sans, Playfair_Display } from 'next/font/google';
 import Header from '@/components/Header';
+import OfficeMap from '@/components/OfficeMap';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import ScrollToTopHandler from '@/components/ScrollToTopHandler';
@@ -109,8 +110,10 @@ export default async function RootLayout({ children, params }) {
     description: t('description'),
     address: {
       '@type': 'PostalAddress',
+      streetAddress: t('streetAddress'),
       addressLocality: t('addressLocality'),
       addressRegion: t('addressRegion'),
+      postalCode: t('postalCode'),
       addressCountry: 'KZ',
     },
     geo: {
@@ -161,6 +164,7 @@ export default async function RootLayout({ children, params }) {
           <ScrollToTopHandler />
           <Header />
           <main id="main-content">{children}</main>
+          <OfficeMap />
           <Footer />
           <FloatingWhatsApp />
         </NextIntlClientProvider>
