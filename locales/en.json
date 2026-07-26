@@ -193,6 +193,11 @@
       "carWithDriver": "Car with Driver",
       "transfer": "Airport Transfer",
       "security": "Security Services"
+    },
+    "social": {
+      "title": "Follow Us",
+      "carRent": "Car Rental",
+      "tours": "Tours"
     }
   },
   "tours": {
@@ -863,7 +868,9 @@
     "page": {
       "sectionLabel": "Kyrgyzstan",
       "title": "Tours in Kyrgyzstan",
-      "description": "Discover the unspoiled highlands, nomadic culture, and natural wonders of one of Central Asia's most breathtaking destinations."
+      "description": "Discover the unspoiled highlands, nomadic culture, and natural wonders of one of Central Asia's most breathtaking destinations.",
+      "faqLabel": "FAQ",
+      "faqTitle": "Common Questions"
     }
   },
   "carRent": {
@@ -910,7 +917,9 @@
     "page": {
       "sectionLabel": "Car Rental",
       "title": "Rent a Car in Kazakhstan",
-      "description": "Self-drive rental — clean, modern vehicles ready for pick-up. Insurance and full documentation included. Flexible bookings available across Almaty and the wider region."
+      "description": "Self-drive rental — clean, modern vehicles ready for pick-up. Insurance and full documentation included. Flexible bookings available across Almaty and the wider region.",
+      "faqLabel": "FAQ",
+      "faqTitle": "Common Questions"
     },
     "labels": {
       "seats": "seats",
@@ -962,7 +971,9 @@
     "page": {
       "sectionLabel": "Accommodation",
       "title": "Apartments in Almaty",
-      "description": "Comfortable, centrally located apartments for short and long stays — fully equipped and ready to move in."
+      "description": "Comfortable, centrally located apartments for short and long stays — fully equipped and ready to move in.",
+      "faqLabel": "FAQ",
+      "faqTitle": "Common Questions"
     },
     "labels": {
       "book": "Book",
@@ -1230,6 +1241,28 @@
         "Burabay Tour",
         "Astana Tour",
         "Aktau & Caspian Sea Tour"
+      ],
+      "faq": [
+        {
+          "question": "How do I book a tour in Kazakhstan?",
+          "answer": "Message us on WhatsApp with your preferred date — we'll confirm availability, price and itinerary details."
+        },
+        {
+          "question": "How long do the tours last?",
+          "answer": "From a few hours (half-day) up to a full day, depending on the destination. Medeu-Shymbulak takes about half a day, while Big Almaty Lake is a full-day trip."
+        },
+        {
+          "question": "What's included in the price?",
+          "answer": "Most tours include hotel pickup/drop-off, an English-speaking guide, drinking water and entrance tickets. The exact list depends on the specific tour — we confirm it when booking."
+        },
+        {
+          "question": "Can you arrange a custom itinerary?",
+          "answer": "Yes — besides the tours in our catalog, we design custom routes across Kazakhstan around your schedule, from single-day trips to multi-day expeditions."
+        },
+        {
+          "question": "Where does the pickup happen?",
+          "answer": "All Kazakhstan tours start from Almaty — pickup from your hotel or any point within the city is included."
+        }
       ]
     },
     "kyrgyzstan": {
@@ -1250,6 +1283,24 @@
         "Skazka Canyon Tour",
         "Karakol Tour",
         "Kel-Suu Tour"
+      ],
+      "faq": [
+        {
+          "question": "How do I book a tour to Kyrgyzstan?",
+          "answer": "Message us on WhatsApp — we'll confirm the dates, group size and total price."
+        },
+        {
+          "question": "How long do Kyrgyzstan tours last?",
+          "answer": "From 3–5 hours for a Bishkek city tour up to 2–3 days for expeditions like the trip to Kel-Suu Lake."
+        },
+        {
+          "question": "Where do we stay on multi-day tours?",
+          "answer": "Depending on the route — guesthouses, yurts or camping, for full immersion in Kyrgyzstan's nature."
+        },
+        {
+          "question": "Do tours start from Almaty?",
+          "answer": "Yes, Kyrgyzstan tours are organized from Almaty, including the transfer to Bishkek and Issyk-Kul Lake."
+        }
       ]
     },
     "carRent": {
@@ -1266,7 +1317,25 @@
       ],
       "breadcrumb": "Car Rental in Almaty",
       "schemaName": "Car Rental in Almaty",
-      "schemaDescription": "Self-drive car rental in Almaty: Comfort, Business, Premium, Luxury and Minivan classes."
+      "schemaDescription": "Self-drive car rental in Almaty: Comfort, Business, Premium, Luxury and Minivan classes.",
+      "faq": [
+        {
+          "question": "What's included in the car rental price?",
+          "answer": "Insurance and a full document package are included. The car is delivered clean and ready to drive."
+        },
+        {
+          "question": "Is this self-drive or with a driver?",
+          "answer": "This is self-drive rental. If you need a driver, we offer a separate 'Car with Driver' service."
+        },
+        {
+          "question": "What vehicle classes are available?",
+          "answer": "Comfort, Business, Premium and Luxury — from a Hyundai Sonata to a Lexus LX, each with fixed pricing."
+        },
+        {
+          "question": "Can I pick up the car outside central Almaty?",
+          "answer": "Yes, booking is flexible — delivery is available across Almaty and the wider region. Confirm the address and time on WhatsApp."
+        }
+      ]
     },
     "carRentWithDriver": {
       "title": "Car with Driver in Almaty — Chauffeur",
@@ -1329,7 +1398,17 @@
       ],
       "breadcrumb": "Almaty Apartments",
       "schemaName": "Apartment Rental in Almaty",
-      "schemaDescription": "Furnished business-class apartments in Almaty, available daily and monthly: city center, Medeu and other districts."
+      "schemaDescription": "Furnished business-class apartments in Almaty, available daily and monthly: city center, Medeu and other districts.",
+      "faq": [
+        {
+          "question": "How long can I rent an apartment for?",
+          "answer": "Apartments are available for both short-term (daily) and long-term (monthly) rental."
+        },
+        {
+          "question": "What's included in the apartments?",
+          "answer": "All apartments are fully furnished and equipped for comfortable living, including appliances and amenities for business guests."
+        }
+      ]
     },
     "security": {
       "title": "Security & Protection in Kazakhstan",
@@ -1366,6 +1445,12 @@
       "addressLocality": "Almaty",
       "addressRegion": "Almaty Region",
       "catalogName": "Tourism & Transport Services"
+    }
+  },
+  "kazakhstan": {
+    "page": {
+      "faqLabel": "FAQ",
+      "faqTitle": "Common Questions"
     }
   }
 }

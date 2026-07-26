@@ -65,10 +65,21 @@ export default async function KyrgyzstanToursPage({ params }) {
     })),
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: t.raw('kyrgyzstan.faq').map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={toursSchema} />
+      <JsonLd data={faqSchema} />
       <KyrgyzstanClient />
     </>
   );

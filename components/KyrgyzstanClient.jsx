@@ -10,6 +10,7 @@ import ServiceCard from './ServiceCard';
 import CustomItinerary from './CustomItinerary';
 import Guides from './Guides';
 import Reviews from './Reviews';
+import FAQAccordion from './FAQAccordion';
 import CTASection from './CTASection';
 
 const BG = '/assets/tours/kyrgyzstan/kel_su_1.webp';
@@ -262,6 +263,7 @@ export default function KyrgyzstanClient() {
       <CustomItinerary />
       <Guides />
       <Reviews />
+      <FAQAccordion label={t('kgTours.page.faqLabel')} title={t('kgTours.page.faqTitle')} items={t.raw('seo.kyrgyzstan.faq')} />
       <CTASection variant="kyrgyzstan" />
     </>
   );

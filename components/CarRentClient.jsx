@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { cars } from '@/data/cars';
 import { useTranslations } from 'next-intl';
 import ServiceCard from './ServiceCard';
+import FAQAccordion from './FAQAccordion';
 import CTASection from './CTASection';
 
 const BG = "/assets/cars/lexus/lexus_lx_2.webp";
@@ -104,6 +105,8 @@ export default function  CarRentClient() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion label={t('carRent.page.faqLabel')} title={t('carRent.page.faqTitle')} items={t.raw('seo.carRent.faq')} />
 
       <CTASection variant="carRent" />
     </>

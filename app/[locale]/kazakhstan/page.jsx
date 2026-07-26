@@ -3,6 +3,7 @@ import TourCatalog from '@/components/TourCatalog';
 import CustomItinerary from '@/components/CustomItinerary';
 import Guides from '@/components/Guides';
 import Reviews from '@/components/Reviews';
+import FAQAccordion from '@/components/FAQAccordion';
 import CTASection from '@/components/CTASection';
 import JsonLd from '@/components/JsonLd';
 import { SITE_URL } from '@/lib/config';
@@ -45,6 +46,7 @@ export async function generateMetadata({ params }) {
 export default async function KazakhstanToursPage({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'seo' });
+  const tPage = await getTranslations({ locale, namespace: 'kazakhstan.page' });
   const pageUrl = localizedUrl(SITE_URL, locale, ROUTE);
   const homeUrl = localizedUrl(SITE_URL, locale);
 
@@ -70,15 +72,27 @@ export default async function KazakhstanToursPage({ params }) {
     })),
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: t.raw('kazakhstan.faq').map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={toursSchema} />
+      <JsonLd data={faqSchema} />
       <Hero />
       <TourCatalog />
       <CustomItinerary />
       <Guides />
       <Reviews />
+      <FAQAccordion label={tPage('faqLabel')} title={tPage('faqTitle')} items={t.raw('kazakhstan.faq')} />
       <CTASection variant="kazakhstan" />
     </>
   );

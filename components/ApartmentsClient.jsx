@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { apartments } from '@/data/apartments';
 import { useTranslations } from 'next-intl';
 import ServiceCard from './ServiceCard';
+import FAQAccordion from './FAQAccordion';
 import CTASection from './CTASection';
 
 const BG = "/assets/hero/apartments.webp";
@@ -105,6 +106,8 @@ export default function ApartmentsClient() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion label={t('apartments.page.faqLabel')} title={t('apartments.page.faqTitle')} items={t.raw('seo.apartments.faq')} />
 
       <CTASection variant="apartments" />
     </>
